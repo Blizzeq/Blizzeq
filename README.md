@@ -1,7 +1,7 @@
 ## <div align="center">Hello I'm Jakub Krasuski 👋</div>  
   
 
-- 🔭 I’m currently working on [Secret Projects]()  
+- 🔭 I’m currently working on Secret Projects 
   
 
 - 🌱 I’m currently learning Firebase  
