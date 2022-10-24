@@ -1,8 +1,5 @@
 ## <div align="center">Hello I'm Jakub Krasuski 👋</div>  
   
-  
-- 🌱 I’m currently learning Firebase  
-  
 
 - 📧 How to reach me: kj.krasuski.mail@gmail.com  
   
