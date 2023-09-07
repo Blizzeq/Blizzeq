@@ -1,7 +1,7 @@
 ## <div align="center">Hello I'm Jakub Krasuski 👋</div>  
   
 
-- 📧 How to reach me: kj.krasuski.mail@gmail.com / https://krasuski-portfolio.netlify.app/
+- 📧 How to reach me: kj.krasuski.mail@gmail.com / jakubkrasuski.pl
   
 
 <br/>  
