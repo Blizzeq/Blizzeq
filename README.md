@@ -13,7 +13,7 @@
   <br><br>
   
   <!-- Daily Dev Quote -->
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=merko" alt="Dev Quote" />
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=merko" alt="Dev Quote" style="max-width:100%; height:auto; max-height:130px; display:block;"/>
   
 </div>
 
@@ -186,7 +186,7 @@ me.say_hi()
   
   <h3>⚡ Random Dev Joke</h3>
   
-  <img src="https://readme-jokes.vercel.app/api?theme=green" alt="Dev Joke" />
+  <img src="https://readme-jokes.vercel.app/api?theme=green" alt="Dev Joke" style="max-width:100%; height:auto; max-height:130px; display:block;" />
   
 </div>
 
