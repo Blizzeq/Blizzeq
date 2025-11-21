@@ -4,7 +4,7 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:064e3b,100:065f46&height=180&section=header&text=Jakub%20Krasuski&fontSize=75&fontAlignY=35&animation=fadeIn&fontColor=10b981&desc=Data%20Analyst%20|%20Python%20Developer%&descAlignY=55&descSize=18" alt="Header" />
   
   <!-- Typing Animation -->
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&pause=1000&color=10b981&center=true&vCenter=true&width=500&lines=Electricity+Market+Analysis;Energy+Consumption+Forecasting;Trading+Strategy+Optimization" alt="Typing SVG" />
+ <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=10b981&center=true&vCenter=true&width=520&lines=Axpo+International+Trainee;Python+Automation+%26+GCP+Workflows;Energy+Trading+Operations;Optimizing+Data+Pipelines" alt="Typing SVG" />
   
   <!-- Profile Views Counter -->
   <br>
