@@ -174,7 +174,7 @@ me.say_hi()
 
 <div align="center">
   
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-059669?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/krasuski-jakub99)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-059669?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jakub-krasuski-6aa818211/)
   [![Gmail](https://img.shields.io/badge/Gmail-047857?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kj.krasuski.mail@gmail.com)
   [![GitHub](https://img.shields.io/badge/GitHub-065f46?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Blizzeq)
   
