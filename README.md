@@ -6,15 +6,6 @@
   <!-- Typing Animation -->
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=10B981&center=true&vCenter=true&width=600&lines=Data+Analyst+%40+Axpo;Python+Automation+%26+GCP+Data+Pipelines;Energy+Trading+Operations;Building+tools+for+power+markets+%E2%9A%A1" alt="Typing SVG" />
 
-  <br><br>
-
-  <!-- Contribution Snake -->
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Blizzeq/Blizzeq/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Blizzeq/Blizzeq/output/github-snake.svg" />
-    <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/Blizzeq/Blizzeq/output/github-snake-dark.svg" />
-  </picture>
-
 </div>
 
 ---
@@ -65,13 +56,13 @@
 
   <sub><b>Languages & Frameworks</b></sub>
   <br>
-  <img src="https://skillicons.dev/icons?i=py,ts,js,react,nextjs,nodejs,fastapi,flask,html,css,tailwind&theme=dark" alt="Languages and frameworks" />
+  <img src="https://skillicons.dev/icons?i=py,ts,js,react,nextjs,nodejs,fastapi,tailwind&theme=dark" alt="Languages and frameworks" />
 
   <br><br>
 
   <sub><b>Data · Cloud · Tools</b></sub>
   <br>
-  <img src="https://skillicons.dev/icons?i=gcp,postgres,mysql,mongodb,docker,git,githubactions,sklearn,anaconda,vercel,bash,vscode&theme=dark" alt="Data, cloud and tools" />
+  <img src="https://skillicons.dev/icons?i=gcp,postgres,mongodb,docker,git,githubactions,sklearn,vercel&theme=dark" alt="Data, cloud and tools" />
 
   <br><br>
 
@@ -91,12 +82,12 @@
 
 <div align="center">
 
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Blizzeq&show_icons=true&hide_border=true&bg_color=0d1117&title_color=10b981&icon_color=10b981&text_color=c9d1d9&ring_color=059669" alt="GitHub Stats" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Blizzeq&layout=compact&hide_border=true&bg_color=0d1117&title_color=10b981&text_color=c9d1d9&langs_count=8" alt="Top Languages" />
+  <img src="https://raw.githubusercontent.com/Blizzeq/Blizzeq/output/profile-3d-emerald.svg" alt="3D contribution calendar" />
 
   <br><br>
 
-  <img src="https://streak-stats.demolab.com?user=Blizzeq&hide_border=true&background=0d1117&ring=10b981&fire=10b981&currStreakLabel=10b981&currStreakNum=c9d1d9&sideNums=c9d1d9&sideLabels=059669&dates=6b7280&stroke=065f46" alt="GitHub Streak" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Blizzeq&show_icons=true&hide_border=true&bg_color=0d1117&title_color=10b981&icon_color=10b981&text_color=c9d1d9&ring_color=059669" alt="GitHub Stats" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Blizzeq&layout=compact&hide_border=true&bg_color=0d1117&title_color=10b981&text_color=c9d1d9&langs_count=8" alt="Top Languages" />
 
   <br><br>
 
@@ -119,13 +110,5 @@
 ---
 
 <div align="center">
-
-  <img src="https://readme-jokes.vercel.app/api?hideBorder&bgColor=%230d1117&qColor=%2310b981&aColor=%23059669&textColor=%23c9d1d9&codeColor=%2310b981" alt="Dev Joke" style="max-width:100%; height:auto; max-height:130px; display:block;" />
-
-  <br>
-
-  <img src="https://komarev.com/ghpvc/?username=Blizzeq&label=Profile%20Views&color=10b981&style=flat-square" alt="Profile views" />
-
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:064e3b,100:065f46&height=100&section=footer" alt="Footer" />
-
 </div>
