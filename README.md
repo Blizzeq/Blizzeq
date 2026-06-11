@@ -8,16 +8,11 @@
 
 <h2 align="center">About Me</h2>
 
-<p align="center">
-  Data Analyst at <b>Axpo</b> in Warsaw, working in energy trading operations.<br>
-  I automate trading workflows with Python, build data pipelines on GCP<br>
-  and turn power market data into decisions.
-</p>
+<div align="center">
 
-<p align="center">
-  After hours I build tools for European power markets, evolutionary<br>
-  prompt optimization and neuroevolution experiments.
-</p>
+  <img src="assets/about-terminal.svg" alt="About me terminal card" />
+
+</div>
 
 <h2 align="center">Featured Projects</h2>
 

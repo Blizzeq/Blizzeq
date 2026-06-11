@@ -1,0 +1,32 @@
+<svg width="800" height="264" viewBox="0 0 800 264" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace">
+  <rect x="0.5" y="0.5" width="799" height="263" rx="10" fill="#161b22" stroke="#30363d"/>
+  <path d="M10.5,0.5 h779 a10,10 0 0 1 10,10 v25.5 h-799 v-25.5 a10,10 0 0 1 10,-10 z" fill="#21262d"/>
+  <line x1="0.5" y1="36" x2="799.5" y2="36" stroke="#30363d"/>
+  <circle cx="24" cy="18.5" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="18.5" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="18.5" r="6" fill="#27c93f"/>
+  <text x="400" y="23" text-anchor="middle" font-size="12" fill="#8b949e">jakub@axpo: ~</text>
+
+  <text x="24" y="68" font-size="14">
+    <tspan fill="#10b981">$</tspan>
+    <tspan fill="#e6edf3" dx="6">whoami</tspan>
+  </text>
+  <text x="24" y="92" font-size="14" fill="#9da7b3">Jakub Krasuski &#183; <tspan fill="#34d399">Data Analyst @ Axpo</tspan> &#183; Warsaw, Poland</text>
+
+  <text x="24" y="128" font-size="14">
+    <tspan fill="#10b981">$</tspan>
+    <tspan fill="#e6edf3" dx="6">work --current</tspan>
+  </text>
+  <text x="24" y="152" font-size="14" fill="#9da7b3">Energy trading operations &#183; Python automation &#183; GCP pipelines <tspan fill="#34d399">(BigQuery + Airflow)</tspan></text>
+
+  <text x="24" y="188" font-size="14">
+    <tspan fill="#10b981">$</tspan>
+    <tspan fill="#e6edf3" dx="6">work --after-hours</tspan>
+  </text>
+  <text x="24" y="212" font-size="14" fill="#9da7b3">Power market simulators &#183; evolutionary prompt optimization &#183; neuroevolution</text>
+
+  <text x="24" y="242" font-size="14" fill="#10b981">$</text>
+  <rect x="40" y="230" width="9" height="15" fill="#10b981">
+    <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.45;0.5;0.95;1" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+</svg>
