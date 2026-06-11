@@ -145,7 +145,7 @@ me.say_hi()
 
 <div align="center">
 
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Blizzeq&show_icons=true&include_all_commits=true&hide_border=true&bg_color=0d1117&title_color=10b981&icon_color=10b981&text_color=c9d1d9&ring_color=059669" alt="GitHub Stats" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Blizzeq&show_icons=true&hide_border=true&bg_color=0d1117&title_color=10b981&icon_color=10b981&text_color=c9d1d9&ring_color=059669" alt="GitHub Stats" />
   <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Blizzeq&layout=compact&hide_border=true&bg_color=0d1117&title_color=10b981&text_color=c9d1d9&langs_count=8" alt="Top Languages" />
 
   <br><br>
