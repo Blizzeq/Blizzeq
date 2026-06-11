@@ -43,12 +43,12 @@
 
   <br><br>
 
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Blizzeq&show_icons=true&hide_border=true&bg_color=0d1117&title_color=10b981&icon_color=10b981&text_color=c9d1d9&ring_color=059669" alt="GitHub stats" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Blizzeq&layout=compact&hide_border=true&bg_color=0d1117&title_color=10b981&text_color=c9d1d9&langs_count=8" alt="Top languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Blizzeq&show_icons=true&hide=issues,contribs&hide_rank=true&bg_color=161b22&border_color=30363d&title_color=10b981&icon_color=10b981&text_color=c9d1d9" alt="GitHub stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Blizzeq&layout=compact&hide=html,css,java,ejs,makefile,scss,less,shell&langs_count=6&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9" alt="Top languages" />
 
   <br><br>
 
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Blizzeq&bg_color=0d1117&color=10b981&line=059669&point=10b981&area=true&area_color=065f46&title_color=10b981&hide_border=true" alt="Activity graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Blizzeq&bg_color=161b22&color=10b981&line=059669&point=10b981&area=true&area_color=065f46&title_color=10b981&hide_border=true&radius=10" alt="Activity graph" />
 
 </div>
 
