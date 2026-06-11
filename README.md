@@ -25,15 +25,6 @@
   <a href="https://github.com/Blizzeq/neuro-racer-lab"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=neuro-racer-lab&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9&icon_color=10b981&description_lines_count=2" alt="Neuro Racer Lab" /></a>
   <a href="https://github.com/Blizzeq/pathfinder"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=pathfinder&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9&icon_color=10b981&description_lines_count=2" alt="Pathfinder" /></a>
 
-  <br><br>
-
-  <img src="https://img.shields.io/badge/Live_demos-065f46?style=flat-square" alt="Live demos" />
-  <a href="https://gridpulse-eu.vercel.app"><img src="https://img.shields.io/badge/GridPulse-10b981?style=flat-square&logo=vercel&logoColor=white" alt="GridPulse live demo" /></a>
-  <a href="https://grid-balancing-tool.vercel.app"><img src="https://img.shields.io/badge/Grid_Balancing-10b981?style=flat-square&logo=vercel&logoColor=white" alt="Grid Balancing live demo" /></a>
-  <a href="https://prompt-evolution-engine.vercel.app"><img src="https://img.shields.io/badge/Prompt_Engine-10b981?style=flat-square&logo=vercel&logoColor=white" alt="Prompt Engine live demo" /></a>
-  <a href="https://neuro-racer-lab.vercel.app"><img src="https://img.shields.io/badge/Neuro_Racer-10b981?style=flat-square&logo=vercel&logoColor=white" alt="Neuro Racer live demo" /></a>
-  <a href="https://pathfinder-dun.vercel.app"><img src="https://img.shields.io/badge/Pathfinder-10b981?style=flat-square&logo=vercel&logoColor=white" alt="Pathfinder live demo" /></a>
-
 </div>
 
 <h2 align="center">Tech Stack</h2>
