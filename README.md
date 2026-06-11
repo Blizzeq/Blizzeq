@@ -31,37 +31,7 @@
 
 <div align="center">
 
-  <p>
-    <img src="https://img.shields.io/badge/Python-065f46?style=flat-square&logo=python&logoColor=white" alt="Python" />
-    <img src="https://img.shields.io/badge/TypeScript-065f46?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-    <img src="https://img.shields.io/badge/JavaScript-065f46?style=flat-square&logo=javascript&logoColor=white" alt="JavaScript" />
-    <img src="https://img.shields.io/badge/React-065f46?style=flat-square&logo=react&logoColor=white" alt="React" />
-    <img src="https://img.shields.io/badge/Next.js-065f46?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" />
-    <img src="https://img.shields.io/badge/Node.js-065f46?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
-    <img src="https://img.shields.io/badge/FastAPI-065f46?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
-    <img src="https://img.shields.io/badge/Tailwind_CSS-065f46?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
-  </p>
-
-  <p>
-    <img src="https://img.shields.io/badge/Pandas-065f46?style=flat-square&logo=pandas&logoColor=white" alt="Pandas" />
-    <img src="https://img.shields.io/badge/NumPy-065f46?style=flat-square&logo=numpy&logoColor=white" alt="NumPy" />
-    <img src="https://img.shields.io/badge/Plotly-065f46?style=flat-square&logo=plotly&logoColor=white" alt="Plotly" />
-    <img src="https://img.shields.io/badge/scikit--learn-065f46?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
-    <img src="https://img.shields.io/badge/BigQuery-065f46?style=flat-square&logo=googlebigquery&logoColor=white" alt="BigQuery" />
-    <img src="https://img.shields.io/badge/Airflow-065f46?style=flat-square&logo=apacheairflow&logoColor=white" alt="Airflow" />
-    <img src="https://img.shields.io/badge/Snowflake-065f46?style=flat-square&logo=snowflake&logoColor=white" alt="Snowflake" />
-    <img src="https://img.shields.io/badge/Power_BI-065f46?style=flat-square" alt="Power BI" />
-  </p>
-
-  <p>
-    <img src="https://img.shields.io/badge/Google_Cloud-065f46?style=flat-square&logo=googlecloud&logoColor=white" alt="Google Cloud" />
-    <img src="https://img.shields.io/badge/PostgreSQL-065f46?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-    <img src="https://img.shields.io/badge/MongoDB-065f46?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" />
-    <img src="https://img.shields.io/badge/Docker-065f46?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
-    <img src="https://img.shields.io/badge/Git-065f46?style=flat-square&logo=git&logoColor=white" alt="Git" />
-    <img src="https://img.shields.io/badge/GitHub_Actions-065f46?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
-    <img src="https://img.shields.io/badge/Vercel-065f46?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
-  </p>
+  <img src="assets/tech-stack.svg" alt="Tech stack: Python, TypeScript, JavaScript, React, Next.js, Node.js, FastAPI, Tailwind CSS, Pandas, NumPy, Plotly, scikit-learn, BigQuery, Airflow, Snowflake, Power BI, Google Cloud, PostgreSQL, MongoDB, Docker, Git, GitHub Actions, Vercel" />
 
 </div>
 
