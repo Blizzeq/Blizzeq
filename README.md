@@ -43,8 +43,8 @@
 
   <br><br>
 
-  <img src="https://github-readme-stats.vercel.app/api?username=Blizzeq&show_icons=true&hide=issues,contribs&hide_rank=true&bg_color=161b22&border_color=30363d&title_color=10b981&icon_color=10b981&text_color=c9d1d9" alt="GitHub stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Blizzeq&layout=compact&hide=html,css,java,ejs,makefile,scss,less,shell&langs_count=6&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9" alt="Top languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Blizzeq&show_icons=true&hide=issues,contribs&hide_rank=true&disable_animations=true&bg_color=161b22&border_color=30363d&title_color=10b981&icon_color=10b981&text_color=c9d1d9" alt="GitHub stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Blizzeq&layout=compact&hide=html,css,java,ejs,makefile,scss,less,shell&langs_count=6&disable_animations=true&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9" alt="Top languages" />
 
   <br><br>
 
