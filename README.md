@@ -43,8 +43,8 @@
 
   <br><br>
 
-  <img src="https://github-readme-stats.vercel.app/api?username=Blizzeq&show_icons=true&hide=issues,contribs&hide_rank=true&disable_animations=true&bg_color=161b22&border_color=30363d&title_color=10b981&icon_color=10b981&text_color=c9d1d9" alt="GitHub stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Blizzeq&layout=compact&hide=html,css,java,ejs,makefile,scss,less,shell&langs_count=6&disable_animations=true&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9" alt="Top languages" />
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=Blizzeq&show_icons=true&hide=issues,contribs&hide_rank=true&disable_animations=true&bg_color=161b22&border_color=30363d&title_color=10b981&icon_color=10b981&text_color=c9d1d9" alt="GitHub stats" />
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Blizzeq&layout=compact&hide=html,css,java,ejs,makefile,scss,less,shell&langs_count=6&disable_animations=true&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9" alt="Top languages" />
 
   <br><br>
 
@@ -56,9 +56,8 @@
 
 <div align="center">
 
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-059669?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jakub-krasuski-6aa818211/)
-  [![Gmail](https://img.shields.io/badge/Gmail-047857?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kj.krasuski.mail@gmail.com)
-  [![GitHub](https://img.shields.io/badge/GitHub-065f46?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Blizzeq)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-jakub--krasuski-10b981?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=065f46)](https://www.linkedin.com/in/jakub-krasuski-6aa818211/)
+  [![Email](https://img.shields.io/badge/Email-kj.krasuski.mail%40gmail.com-10b981?style=for-the-badge&logo=gmail&logoColor=white&labelColor=065f46)](mailto:kj.krasuski.mail@gmail.com)
 
 </div>
 
