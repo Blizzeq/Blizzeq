@@ -49,7 +49,7 @@ class DataAnalyst:
         ]
 
     def say_hi(self):
-        print("Thanks for dropping by — let's build something with data! 📊")
+        print("Thanks for dropping by, let's build something with data! 📊")
 
 
 me = DataAnalyst()
@@ -64,7 +64,7 @@ me.say_hi()
   <tr>
     <td width="50%" valign="top">
       <h3 align="center">🧬 <a href="https://github.com/Blizzeq/Prompt-Evolution-Engine">Prompt Evolution Engine</a></h3>
-      <p align="center"><sub>Genetic algorithms that evolve LLM prompts automatically — multi-provider (Ollama / Google AI / OpenRouter), LLM-as-Judge evaluation, real-time dashboard.</sub></p>
+      <p align="center"><sub>Genetic algorithms that evolve LLM prompts automatically. Multi-provider (Ollama / Google AI / OpenRouter), LLM-as-Judge evaluation, real-time dashboard.</sub></p>
       <p align="center">
         <img src="https://img.shields.io/badge/TypeScript-065f46?style=flat-square&logo=typescript&logoColor=10b981" alt="TypeScript" />
         <a href="https://prompt-evolution-engine.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-10b981?style=flat-square&logo=vercel&logoColor=white" alt="Live Demo" /></a>
@@ -72,7 +72,7 @@ me.say_hi()
     </td>
     <td width="50%" valign="top">
       <h3 align="center">⚡ <a href="https://github.com/Blizzeq/gridpulse">GridPulse</a></h3>
-      <p align="center"><sub>European Energy Intelligence Platform — real-time electricity prices, interactive map and trading simulator. Powered by ENTSO-E data.</sub></p>
+      <p align="center"><sub>European Energy Intelligence Platform with real-time electricity prices, an interactive map and a trading simulator. Powered by ENTSO-E data.</sub></p>
       <p align="center">
         <img src="https://img.shields.io/badge/TypeScript-065f46?style=flat-square&logo=typescript&logoColor=10b981" alt="TypeScript" />
         <a href="https://gridpulse-eu.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-10b981?style=flat-square&logo=vercel&logoColor=white" alt="Live Demo" /></a>
@@ -82,7 +82,7 @@ me.say_hi()
   <tr>
     <td width="50%" valign="top">
       <h3 align="center">🔋 <a href="https://github.com/Blizzeq/grid-balancing-tool">Grid Balancing Tool</a></h3>
-      <p align="center"><sub>Grid balancing market simulator — bid, dispatch and keep a power grid in balance, right in the browser.</sub></p>
+      <p align="center"><sub>Grid balancing market simulator. Bid, dispatch and keep a power grid in balance, right in the browser.</sub></p>
       <p align="center">
         <img src="https://img.shields.io/badge/TypeScript-065f46?style=flat-square&logo=typescript&logoColor=10b981" alt="TypeScript" />
         <a href="https://grid-balancing-tool.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-10b981?style=flat-square&logo=vercel&logoColor=white" alt="Live Demo" /></a>
@@ -90,7 +90,7 @@ me.say_hi()
     </td>
     <td width="50%" valign="top">
       <h3 align="center">🏎️ <a href="https://github.com/Blizzeq/neuro-racer-lab">Neuro Racer Lab</a></h3>
-      <p align="center"><sub>Interactive neuroevolution racing lab — draw a track, train neural cars and run the fastest champion in the browser.</sub></p>
+      <p align="center"><sub>Interactive neuroevolution racing lab. Draw a track, train neural cars and run the fastest champion in the browser.</sub></p>
       <p align="center">
         <img src="https://img.shields.io/badge/TypeScript-065f46?style=flat-square&logo=typescript&logoColor=10b981" alt="TypeScript" />
         <a href="https://neuro-racer-lab.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-10b981?style=flat-square&logo=vercel&logoColor=white" alt="Live Demo" /></a>
@@ -100,18 +100,18 @@ me.say_hi()
   <tr>
     <td width="50%" valign="top">
       <h3 align="center">🗺️ <a href="https://github.com/Blizzeq/RouteLab">RouteLab</a></h3>
-      <p align="center"><sub>Visual fog-of-war sandbox for pathfinding &amp; target-selection AI — vanilla JS, zero build, fully portable logic.</sub></p>
+      <p align="center"><sub>Visual fog-of-war sandbox for pathfinding and target-selection AI. Vanilla JS, zero build, fully portable logic.</sub></p>
       <p align="center">
         <img src="https://img.shields.io/badge/JavaScript-065f46?style=flat-square&logo=javascript&logoColor=10b981" alt="JavaScript" />
         <a href="https://routelab-nine.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-10b981?style=flat-square&logo=vercel&logoColor=white" alt="Live Demo" /></a>
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="center">🎮 <a href="https://github.com/Blizzeq/league-of-legends-data-collector">LoL Data Collector</a></h3>
-      <p align="center"><sub>Python tool collecting detailed match &amp; player statistics from the Riot Games API — clean CSV output ready for analysis.</sub></p>
+      <h3 align="center">📊 <a href="https://github.com/Blizzeq/ai-student-impact-analysis">AI Student Impact Analysis</a></h3>
+      <p align="center"><sub>Data analysis of GenAI usage among students: outcomes, skill retention and burnout risk, with publication-ready figures.</sub></p>
       <p align="center">
         <img src="https://img.shields.io/badge/Python-065f46?style=flat-square&logo=python&logoColor=10b981" alt="Python" />
-        <a href="https://github.com/Blizzeq/league-of-legends-data-collector/stargazers"><img src="https://img.shields.io/github/stars/Blizzeq/league-of-legends-data-collector?style=flat-square&logo=github&label=Stars&color=10b981&labelColor=065f46" alt="Stars" /></a>
+        <img src="https://img.shields.io/badge/Pandas-059669?style=flat-square&logo=pandas&logoColor=white" alt="Pandas" />
       </p>
     </td>
   </tr>
