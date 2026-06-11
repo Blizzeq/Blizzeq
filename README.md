@@ -18,12 +18,12 @@
 
 <div align="center">
 
-  <a href="https://github.com/Blizzeq/gridpulse"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=gridpulse&bg_color=0d1117&title_color=10b981&text_color=c9d1d9&icon_color=10b981&hide_border=true" alt="GridPulse" /></a>
-  <a href="https://github.com/Blizzeq/grid-balancing-tool"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=grid-balancing-tool&bg_color=0d1117&title_color=10b981&text_color=c9d1d9&icon_color=10b981&hide_border=true" alt="Grid Balancing Tool" /></a>
-  <a href="https://github.com/Blizzeq/Prompt-Evolution-Engine"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=Prompt-Evolution-Engine&bg_color=0d1117&title_color=10b981&text_color=c9d1d9&icon_color=10b981&hide_border=true" alt="Prompt Evolution Engine" /></a>
-  <a href="https://github.com/Blizzeq/ai-student-impact-analysis"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=ai-student-impact-analysis&bg_color=0d1117&title_color=10b981&text_color=c9d1d9&icon_color=10b981&hide_border=true" alt="AI Student Impact Analysis" /></a>
-  <a href="https://github.com/Blizzeq/neuro-racer-lab"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=neuro-racer-lab&bg_color=0d1117&title_color=10b981&text_color=c9d1d9&icon_color=10b981&hide_border=true" alt="Neuro Racer Lab" /></a>
-  <a href="https://github.com/Blizzeq/RouteLab"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=RouteLab&bg_color=0d1117&title_color=10b981&text_color=c9d1d9&icon_color=10b981&hide_border=true" alt="RouteLab" /></a>
+  <a href="https://github.com/Blizzeq/gridpulse"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=gridpulse&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9&icon_color=10b981&description_lines_count=2" alt="GridPulse" /></a>
+  <a href="https://github.com/Blizzeq/grid-balancing-tool"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=grid-balancing-tool&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9&icon_color=10b981&description_lines_count=2" alt="Grid Balancing Tool" /></a>
+  <a href="https://github.com/Blizzeq/Prompt-Evolution-Engine"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=Prompt-Evolution-Engine&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9&icon_color=10b981&description_lines_count=2" alt="Prompt Evolution Engine" /></a>
+  <a href="https://github.com/Blizzeq/ai-student-impact-analysis"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=ai-student-impact-analysis&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9&icon_color=10b981&description_lines_count=2" alt="AI Student Impact Analysis" /></a>
+  <a href="https://github.com/Blizzeq/neuro-racer-lab"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=neuro-racer-lab&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9&icon_color=10b981&description_lines_count=2" alt="Neuro Racer Lab" /></a>
+  <a href="https://github.com/Blizzeq/pathfinder"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=pathfinder&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9&icon_color=10b981&description_lines_count=2" alt="Pathfinder" /></a>
 
   <br><br>
 
@@ -32,7 +32,7 @@
   <a href="https://grid-balancing-tool.vercel.app"><img src="https://img.shields.io/badge/Grid_Balancing-10b981?style=flat-square&logo=vercel&logoColor=white" alt="Grid Balancing live demo" /></a>
   <a href="https://prompt-evolution-engine.vercel.app"><img src="https://img.shields.io/badge/Prompt_Engine-10b981?style=flat-square&logo=vercel&logoColor=white" alt="Prompt Engine live demo" /></a>
   <a href="https://neuro-racer-lab.vercel.app"><img src="https://img.shields.io/badge/Neuro_Racer-10b981?style=flat-square&logo=vercel&logoColor=white" alt="Neuro Racer live demo" /></a>
-  <a href="https://routelab-nine.vercel.app"><img src="https://img.shields.io/badge/RouteLab-10b981?style=flat-square&logo=vercel&logoColor=white" alt="RouteLab live demo" /></a>
+  <a href="https://pathfinder-dun.vercel.app"><img src="https://img.shields.io/badge/Pathfinder-10b981?style=flat-square&logo=vercel&logoColor=white" alt="Pathfinder live demo" /></a>
 
 </div>
 
