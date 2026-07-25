@@ -110,7 +110,7 @@ const contacts = [
 ];
 for (const c of contacts) await emit(c.file, badge(c));
 
-await emit('footer.svg', footer());
+await emit('footer.svg', footer(profile.identity.tagline));
 
 // The README is generated too, so the card files, links and group headings can
 // never drift from data/profile.json — editing that one file is the whole
@@ -259,7 +259,7 @@ function previewPage(groups) {
 ${groups.map(section).join('\n')}
 <h2>Tech stack</h2>${img('tech-stack.svg')}
 <h2>GitHub activity</h2>${img('stats.svg')}
-<h2>Contact</h2><div class="row">${contacts.map((c) => `<img style="width:auto" src="../assets/${c.file}" alt="${c.title}">`).join('')}</div>
+<h2>Contact</h2><div class="row" style="justify-content:center">${contacts.map((c) => `<img style="width:auto" src="../assets/${c.file}" alt="${c.title}">`).join('')}</div>
 ${img('footer.svg')}
 
 <div class="light">

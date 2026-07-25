@@ -8,6 +8,7 @@
 
 import { color, emerald, textWidth } from '../lib/tokens.mjs';
 import { doc, text, n, ENTRANCE } from '../lib/svg.mjs';
+import { dayCurvePath } from './hero.mjs';
 
 /** Monochrome glyphs, drawn rather than fetched. */
 const ICONS = {
@@ -38,24 +39,22 @@ export function badge({ icon, label, title }) {
   return doc({ width: Math.ceil(w), height: H, title, style: ENTRANCE, body });
 }
 
-/** Closing rule: the hero's curve motif reduced to one quiet line. */
-export function footer() {
+/**
+ * Closing rule.
+ *
+ * Draws the hero's own day curve rather than a generic sine, so the page opens
+ * and closes on the same shape. Static: the animation budget is spent at the
+ * top, and a drifting line down here would only compete with it.
+ */
+export function footer(tagline) {
   const W = 1000;
-  const H = 70;
-  const lambda = 250;
-  const pts = [];
-  for (let x = -lambda; x <= W + lambda; x += 4) {
-    pts.push(`${n(x)} ${n(34 + Math.sin((x / lambda) * Math.PI * 2) * 10)}`);
-  }
-
-  const style = `
-.drift{animation:drift 12s linear infinite}
-@keyframes drift{from{transform:translateX(0)}to{transform:translateX(${-lambda}px)}}
-@media (prefers-reduced-motion: reduce){.drift{animation:none}}`;
+  const H = 78;
+  const curve = dayCurvePath({ width: W, top: 16, base: 46, pad: 40 });
 
   const defs = `<linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
   <stop offset="0%" stop-color="${emerald[500]}" stop-opacity="0"/>
-  <stop offset="50%" stop-color="${emerald[500]}" stop-opacity="0.5"/>
+  <stop offset="22%" stop-color="${emerald[500]}" stop-opacity="0.42"/>
+  <stop offset="78%" stop-color="${emerald[500]}" stop-opacity="0.42"/>
   <stop offset="100%" stop-color="${emerald[500]}" stop-opacity="0"/>
 </linearGradient>`;
 
@@ -64,8 +63,10 @@ export function footer() {
     height: H,
     title: '',
     defs,
-    style,
-    body: `<g class="drift"><path d="M${pts[0]} L${pts.slice(1).join(' L')}" fill="none" stroke="url(#fade)" stroke-width="1.5"/></g>
-${text('Open to interesting problems in energy, data and AI.', { x: W / 2, y: 62, size: 10.5, fill: color.dim, anchor: 'middle', spacing: 1.4 })}`,
+    style: ENTRANCE,
+    body: `<g class="fade">
+  <path d="${curve}" fill="none" stroke="url(#fade)" stroke-width="1.5" stroke-linecap="round"/>
+  ${tagline ? text(tagline, { x: W / 2, y: 70, size: 10.5, fill: color.dim, anchor: 'middle', spacing: 1.4 }) : ''}
+</g>`,
   });
 }
