@@ -37,9 +37,11 @@
 @keyframes shimmer{0%,12%{transform:translateX(0)}62%,100%{transform:translateX(1120px)}}
 
 /* CSS motion path, not SMIL, so reduced-motion pins the cursor at the start
-   of the curve — exactly where the resting readout says it is. */
+   of the curve — exactly where the resting readout says it is.
+   One keyframe per hour, placed at that hour's true arc-length fraction, so
+   the dot and its readout stay on the same sample. */
 .cursor{offset-path:path("M64 263.4 C70.32 264.22, 89.28 266.95, 101.91 268.32 C114.55 269.69, 127.19 270.92, 139.83 271.6 C152.46 272.28, 165.1 272.69, 177.74 272.42 C190.38 272.15, 203.01 271.46, 215.65 269.96 C228.29 268.46, 240.93 266.41, 253.57 263.4 C266.2 260.39, 278.84 255.75, 291.48 251.92 C304.12 248.09, 316.75 243.45, 329.39 240.44 C342.03 237.43, 354.67 235.38, 367.3 233.88 C379.94 232.38, 392.58 231.42, 405.22 231.42 C417.86 231.42, 430.49 232.92, 443.13 233.88 C455.77 234.84, 468.41 236.34, 481.04 237.16 C493.68 237.98, 506.32 238.8, 518.96 238.8 C531.59 238.8, 544.23 237.98, 556.87 237.16 C569.51 236.34, 582.14 235.25, 594.78 233.88 C607.42 232.51, 620.06 231.28, 632.7 228.96 C645.33 226.64, 657.97 223.08, 670.61 219.94 C683.25 216.8, 695.88 211.33, 708.52 210.1 C721.16 208.87, 733.8 210.51, 746.43 212.56 C759.07 214.61, 771.71 219.12, 784.35 222.4 C796.99 225.68, 809.62 228.96, 822.26 232.24 C834.9 235.52, 847.54 238.8, 860.17 242.08 C872.81 245.36, 885.45 248.91, 898.09 251.92 C910.72 254.93, 929.68 258.75, 936 260.12");offset-rotate:0deg;animation:ride 9s linear 1.4s infinite}
-@keyframes ride{from{offset-distance:0%}to{offset-distance:100%}}
+@keyframes ride{0%{offset-distance:0%}4.17%{offset-distance:4.31%}8.33%{offset-distance:8.61%}12.5%{offset-distance:12.88%}16.67%{offset-distance:17.17%}20.83%{offset-distance:21.51%}25%{offset-distance:25.98%}29.17%{offset-distance:30.45%}33.33%{offset-distance:34.79%}37.5%{offset-distance:39.08%}41.67%{offset-distance:43.37%}45.83%{offset-distance:47.66%}50%{offset-distance:51.94%}54.17%{offset-distance:56.22%}58.33%{offset-distance:60.52%}62.5%{offset-distance:64.83%}66.67%{offset-distance:69.23%}70.83%{offset-distance:73.65%}75%{offset-distance:77.95%}79.17%{offset-distance:82.37%}83.33%{offset-distance:86.79%}87.5%{offset-distance:91.21%}91.67%{offset-distance:95.62%}95.83%{offset-distance:100%}100%{offset-distance:100%}}
 
 .v{opacity:0;animation:slot 9s linear 1.4s infinite}
 .v0{opacity:1}

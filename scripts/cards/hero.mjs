@@ -47,6 +47,58 @@ function points() {
   }));
 }
 
+/** Control points of the cubic segment between pts[i] and pts[i+1]. */
+function segment(pts, i) {
+  const p0 = pts[i - 1] ?? pts[i];
+  const p1 = pts[i];
+  const p2 = pts[i + 1];
+  const p3 = pts[i + 2] ?? p2;
+  return {
+    p1,
+    c1: { x: p1.x + (p2.x - p0.x) / 6, y: p1.y + (p2.y - p0.y) / 6 },
+    c2: { x: p2.x - (p3.x - p1.x) / 6, y: p2.y - (p3.y - p1.y) / 6 },
+    p2,
+  };
+}
+
+/**
+ * Where each hourly sample sits along the path, as a fraction of total length.
+ *
+ * The cursor is driven by `offset-distance`, which measures arc length, while
+ * the readout switches on a plain time slot. Arc length is not linear in x —
+ * a steep stretch of the curve carries more length per hour — so a cursor
+ * moving at constant length ran ahead of its own label on the ramps and behind
+ * it on the flats. The readout showed 16:00 while the dot sat around 13:00.
+ * Emitting a keyframe per sample at its true arc-length fraction pins the two
+ * together.
+ */
+function nodeArcFractions(pts) {
+  const lengths = [0];
+  let total = 0;
+
+  for (let i = 0; i < pts.length - 1; i++) {
+    const { p1, c1, c2, p2 } = segment(pts, i);
+    let length = 0;
+    let prev = p1;
+
+    for (let step = 1; step <= 24; step++) {
+      const t = step / 24;
+      const u = 1 - t;
+      const point = {
+        x: u ** 3 * p1.x + 3 * u * u * t * c1.x + 3 * u * t * t * c2.x + t ** 3 * p2.x,
+        y: u ** 3 * p1.y + 3 * u * u * t * c1.y + 3 * u * t * t * c2.y + t ** 3 * p2.y,
+      };
+      length += Math.hypot(point.x - prev.x, point.y - prev.y);
+      prev = point;
+    }
+
+    total += length;
+    lengths.push(total);
+  }
+
+  return lengths.map((length) => length / total);
+}
+
 /** Catmull-Rom through the samples, emitted as cubic beziers. */
 function smoothPath(pts) {
   let d = `M${n(pts[0].x)} ${n(pts[0].y)}`;
@@ -79,6 +131,7 @@ export function hero(profile) {
   const { name, role, location, github } = profile.identity;
   const pts = points();
   const curve = smoothPath(pts);
+  const arcFractions = nodeArcFractions(pts);
   const area = `${curve} L${n(pts.at(-1).x)} ${BASE} L${n(pts[0].x)} ${BASE} Z`;
 
   const NAME_SIZE = 46;
@@ -155,9 +208,13 @@ export function hero(profile) {
 @keyframes shimmer{0%,12%{transform:translateX(0)}62%,100%{transform:translateX(${n(shineTravel)}px)}}
 
 /* CSS motion path, not SMIL, so reduced-motion pins the cursor at the start
-   of the curve — exactly where the resting readout says it is. */
+   of the curve — exactly where the resting readout says it is.
+   One keyframe per hour, placed at that hour's true arc-length fraction, so
+   the dot and its readout stay on the same sample. */
 .cursor{offset-path:path("${curve}");offset-rotate:0deg;animation:ride ${RIDE}s linear 1.4s infinite}
-@keyframes ride{from{offset-distance:0%}to{offset-distance:100%}}
+@keyframes ride{${arcFractions
+    .map((fraction, i) => `${n((i / HOURS) * 100)}%{offset-distance:${n(fraction * 100)}%}`)
+    .join('')}100%{offset-distance:100%}}
 
 .v{opacity:0;animation:slot ${RIDE}s linear 1.4s infinite}
 .v0{opacity:1}
