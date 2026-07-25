@@ -26,8 +26,10 @@ export function terminal(profile) {
     for (const out of [entry.out]) rows.push({ kind: 'out', segs: out });
   }
 
-  const H = CHROME + PAD + rows.length * LINE + 34;
-
+  // Height is derived from where the layout actually finishes, further down.
+  // Deriving it from a row count instead silently under-measures as soon as
+  // the block spacing below changes, which pushed the closing prompt clean
+  // off the bottom of the card.
   let y = CHROME + PAD + 14;
   let clips = '';
   let body = '';
@@ -57,7 +59,10 @@ export function terminal(profile) {
     if (row.kind === 'out') y += 12;
   });
 
+  // The trailing `$` sits one block-gap below the last output, and the card
+  // closes with the same padding it opens with.
   const promptY = y + 2;
+  const H = Math.round(promptY + 6 + PAD);
 
   const defs = clips;
 

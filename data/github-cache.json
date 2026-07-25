@@ -2,8 +2,13 @@
   "createdAt": "2021-06-15T21:41:47Z",
   "publicRepos": 26,
   "contributions": 4884,
+<<<<<<< HEAD
   "publicCommits": 196,
   "privateContributions": 4670,
+=======
+  "publicCommits": 197,
+  "privateContributions": 4669,
+>>>>>>> 2874842 (fix(terminal): derive card height from the finished layout)
   "activeRepos": 19,
   "languagesByRepo": {
     "gridpulse": {
