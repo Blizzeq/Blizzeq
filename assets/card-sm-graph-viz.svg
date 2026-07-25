@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="325" height="132" viewBox="0 0 325 132" role="img" aria-label="Graph Visualizer — Seven graph algorithms animated in real time, including Kruskal and Prim." font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace">
+<title>Graph Visualizer — Seven graph algorithms animated in real time, including Kruskal and Prim.</title>
+<defs>
+<clipPath id="card"><rect width="325" height="132" rx="10"/></clipPath>
+<linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0%" stop-color="#34d399" stop-opacity="0"/>
+  <stop offset="50%" stop-color="#34d399" stop-opacity="0.07"/>
+  <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0%" stop-color="#047857"/>
+  <stop offset="50%" stop-color="#34d399"/>
+  <stop offset="100%" stop-color="#047857"/>
+</linearGradient></defs>
+<style>
+.fade{animation:fade .9s ease-out}
+@keyframes fade{from{opacity:0}}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.langbar{transform-box:fill-box;transform-origin:left center;animation:grow 1s cubic-bezier(.4,0,.2,1) .25s}
+@keyframes grow{from{transform:scaleX(0)}}
+
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
+
+<rect x="0.5" y="0.5" width="324" height="131" rx="10" fill="#161b22" stroke="#30363d"/>
+
+<!-- Accent stays emerald on every card; language colour lives in the data bar
+     at the foot, where it reads as information rather than decoration. -->
+<rect x="0.5" y="0.5" width="324" height="2.5" rx="1" fill="url(#accent)" opacity="0.9"/>
+
+<g class="fade">
+  <text x="16" y="26.14" font-size="13" fill="#6ee7b7" font-weight="bold">Graph Visualizer</text>
+  <g><rect x="237.1" y="12" width="71.9" height="16" rx="8" fill="rgba(16,185,129,0.12)" stroke="#047857"/><circle cx="248.1" cy="20" r="3" fill="#34d399" class="pulse"/><text x="279.05" y="22.98" font-size="8.5" fill="#6ee7b7" text-anchor="middle">live demo</text></g>
+  <text x="16" y="50.14" font-size="10" fill="#8b949e">Seven graph algorithms animated in real time,</text><text x="16" y="66.14" font-size="10" fill="#8b949e">including Kruskal and Prim.</text>
+  
+  <g class="langbar" style="animation-delay:0.25s"><rect x="16" y="102" width="289.13" height="4" fill="#3b82f6"/><rect x="305.13" y="102" width="3.57" height="4" fill="#a78bfa"/></g>
+  <text x="16" y="118" font-size="8.5" fill="#6b7280">graph-viz</text>
+  <text x="309" y="118" font-size="8.5" fill="#6b7280" text-anchor="end">TypeScript</text>
+</g>
+</svg>

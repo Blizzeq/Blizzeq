@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="261" height="46" viewBox="0 0 261 46" role="img" aria-label="Email" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace">
+<title>Email</title>
+<defs></defs>
+<style>
+.fade{animation:fade .9s ease-out}
+@keyframes fade{from{opacity:0}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
+<g class="fade">
+  <rect x="0.5" y="5.5" width="260" height="35" rx="17.5" fill="rgba(16,185,129,0.09)" stroke="#065f46"/>
+  <g fill="none" stroke="#6ee7b7" stroke-width="1.7" transform="translate(17,15)"><rect x="0" y="0" width="21" height="16" rx="2.5"/><path d="M1 1.4 10.5 9.4 20 1.4"/></g>
+  <text x="49" y="27.5" font-size="12.5" fill="#a7f3d0">kj.krasuski.mail@gmail.com</text>
+</g>
+</svg>

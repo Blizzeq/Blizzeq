@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="119" height="46" viewBox="0 0 119 46" role="img" aria-label="GitHub" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace">
+<title>GitHub</title>
+<defs></defs>
+<style>
+.fade{animation:fade .9s ease-out}
+@keyframes fade{from{opacity:0}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
+<g class="fade">
+  <rect x="0.5" y="5.5" width="117.5" height="35" rx="17.5" fill="rgba(16,185,129,0.09)" stroke="#065f46"/>
+  <g fill="#6ee7b7" transform="translate(17,13) scale(0.043)"><path d="M248 8C111 8 0 119 0 256c0 110 71 203 170 236 12 2 16-5 16-12v-42c-69 15-84-33-84-33-11-29-28-37-28-37-23-15 2-15 2-15 25 2 38 26 38 26 22 38 58 27 72 21 2-16 9-27 16-33-55-6-113-28-113-124 0-27 10-50 26-67-3-7-11-33 2-69 0 0 21-7 69 26 20-6 41-9 62-9s42 3 62 9c48-33 69-26 69-26 13 36 5 62 2 69 16 17 26 40 26 67 0 96-58 118-113 124 9 8 17 23 17 46v68c0 7 4 14 17 12 99-33 170-126 170-236C496 119 385 8 248 8z"/></g>
+  <text x="49" y="27.5" font-size="12.5" fill="#a7f3d0">Blizzeq</text>
+</g>
+</svg>
