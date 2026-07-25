@@ -22,8 +22,24 @@ const TOP = 206;
 const BASE = 288;
 const PAD = 64;
 
-const RIDE = 9; // seconds for one traversal
 const HOURS = 24;
+
+// Cursor timing.
+//
+// The lead-in and the closing beat are *inside* the cycle rather than in
+// `animation-delay`, and nothing here carries a delay in its shorthand. That is
+// deliberate: the readouts must set `animation-delay` per element to pick their
+// slot, and an inline delay silently overrides the one in a shorthand. When the
+// cursor kept a 1.4s delay and the readouts did not, the two ran 1.4s — a full
+// 3.7 hours — out of phase: the dot sat on 13:00 under a label reading 17:00,
+// parked at the right edge while the clock ran on, then restarted at 00:00 with
+// the label already at 03:44. With every animation phased from t=0 there is no
+// offset left to disagree about.
+const LEAD = 1.4; // parked on 00:00 while the curve draws itself in
+const SWEEP = 9; // 00:00 → 23:00
+const TAIL = 0.6; // a beat on 23:00 before the loop restarts
+const CYCLE = LEAD + SWEEP + TAIL;
+const STEP = SWEEP / (HOURS - 1); // seconds per hour
 
 /**
  * A day-shaped curve: overnight trough, morning ramp, midday plateau, evening
@@ -150,7 +166,22 @@ export function hero(profile) {
   const READ_SIZE = 10.5;
   const readW = 14 * READ_SIZE * ADVANCE + 20;
 
-  const slot = 100 / HOURS; // % of the cycle each hour owns
+  // Slot boundaries are set in seconds (animation-delay) but slot widths in
+  // percent (keyframe offsets). Rounded independently to 2dp those two land up
+  // to ~5ms apart, and the slots stop tiling: a frame caught in the seam shows
+  // two labels stacked on the same pill. Four decimals puts the disagreement
+  // near a tenth of a millisecond — two orders of magnitude under a frame —
+  // while staying a fixed-width decimal, so builds remain byte-stable.
+  const fixed = (v) => Number(v.toFixed(4));
+  const pct = (seconds) => fixed((seconds / CYCLE) * 100);
+
+  // Each readout owns the stretch of the cycle in which its own sample is the
+  // one nearest the cursor, so the label flips at the midpoint between two
+  // hours — the way a crosshair snapping to the closest datapoint behaves. The
+  // first and last slots also absorb the lead-in and the closing beat, so the
+  // label is pinned to 00:00 and 23:00 exactly while the dot is parked there.
+  const slotStart = (i) => (i === 0 ? 0 : LEAD + (i - 0.5) * STEP);
+  const slotEnd = (i) => (i === HOURS - 1 ? CYCLE : LEAD + (i + 0.5) * STEP);
 
   const hourTicks = [0, 6, 12, 18]
     .map((i) => `${text(String(i).padStart(2, '0'), { x: n(pts[i].x), y: BASE + 16, size: 9, fill: color.dim, anchor: 'middle', spacing: 1.2 })}`)
@@ -162,15 +193,32 @@ export function hero(profile) {
 
   const readouts = PROFILE.map((v, i) => {
     const label = `${String(i).padStart(2, '0')}:00 · ${value(v).toFixed(2)}`;
+    const shape = i === 0 ? 'vA' : i === HOURS - 1 ? 'vZ' : 'vM';
+    // Every delay lands negative, so each readout is already mid-cycle at t=0
+    // and exactly one of them is on screen from the first painted frame.
     return text(label, {
       x: 0,
       y: -20,
       size: READ_SIZE,
       fill: emerald[200],
       anchor: 'middle',
-      cls: i === 0 ? 'v v0' : 'v',
-    }).replace('<text ', `<text style="animation-delay:${n(i * (RIDE / HOURS) - RIDE)}s" `);
+      cls: `v ${shape}`,
+    }).replace('<text ', `<text style="animation-delay:${fixed(slotStart(i) - CYCLE)}s" `);
   }).join('');
+
+  /**
+   * A slot that opens at 0%, holds for `width` seconds, then stays shut.
+   *
+   * `step-end` on the element does the switching. Written the obvious way —
+   * opacity 1 held to just before the boundary, then 0 — the two keyframes
+   * cannot share a percentage (the later one would win outright and the slot
+   * would cross-fade instead of cut), so it needs a sliver of a gap. At this
+   * cycle length that sliver is ~5ms, which is under a frame but lands inside
+   * one often enough to dim the label on roughly every third hour change.
+   * A step function tiles the slots exactly instead: no gap, no overlap.
+   */
+  const slotFrames = (name, width) =>
+    `@keyframes ${name}{0%{opacity:1}${pct(width)}%,100%{opacity:0}}`;
 
   const defs = `
 <linearGradient id="nameGrad" x1="0" y1="0" x2="1" y2="0">
@@ -211,14 +259,19 @@ export function hero(profile) {
    of the curve — exactly where the resting readout says it is.
    One keyframe per hour, placed at that hour's true arc-length fraction, so
    the dot and its readout stay on the same sample. */
-.cursor{offset-path:path("${curve}");offset-rotate:0deg;animation:ride ${RIDE}s linear 1.4s infinite}
-@keyframes ride{${arcFractions
-    .map((fraction, i) => `${n((i / HOURS) * 100)}%{offset-distance:${n(fraction * 100)}%}`)
+.cursor{offset-path:path("${curve}");offset-rotate:0deg;animation:ride ${CYCLE}s linear infinite}
+@keyframes ride{0%,${pct(LEAD)}%{offset-distance:0%}${arcFractions
+    .slice(1)
+    .map((fraction, k) => `${pct(LEAD + (k + 1) * STEP)}%{offset-distance:${n(fraction * 100)}%}`)
     .join('')}100%{offset-distance:100%}}
 
-.v{opacity:0;animation:slot ${RIDE}s linear 1.4s infinite}
-.v0{opacity:1}
-@keyframes slot{0%,${n(slot - 0.05)}%{opacity:1}${n(slot)}%,100%{opacity:0}}
+.v{opacity:0;animation-duration:${CYCLE}s;animation-timing-function:step-end;animation-iteration-count:infinite}
+.vA{opacity:1;animation-name:slotA}
+.vM{animation-name:slotM}
+.vZ{animation-name:slotZ}
+${slotFrames('slotA', slotEnd(0) - slotStart(0))}
+${slotFrames('slotM', STEP)}
+${slotFrames('slotZ', slotEnd(HOURS - 1) - slotStart(HOURS - 1))}
 
 .pulse{animation:pulse 2.6s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}`;
