@@ -269,10 +269,22 @@
           "label": "OpenAI API"
         },
         {
-          "label": "MCP"
+          "label": "Gemini API"
+        },
+        {
+          "label": "Ollama"
         },
         {
           "label": "Claude Code"
+        },
+        {
+          "label": "Codex"
+        },
+        {
+          "label": "Antigravity"
+        },
+        {
+          "label": "MCP"
         }
       ]
     },
