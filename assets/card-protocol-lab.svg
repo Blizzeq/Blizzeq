@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="492" height="204" viewBox="0 0 492 204" role="img" aria-label="Protocol Lab — One task board served over REST, GraphQL, WebSocket, webhooks, gRPC and MCP." font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace">
+<svg xmlns="http://www.w3.org/2000/svg" width="492" height="169" viewBox="0 0 492 169" role="img" aria-label="Protocol Lab — One task board served over REST, GraphQL, WebSocket, webhooks, gRPC and MCP." font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace">
 <title>Protocol Lab — One task board served over REST, GraphQL, WebSocket, webhooks, gRPC and MCP.</title>
 <defs>
-<clipPath id="card"><rect width="492" height="204" rx="10"/></clipPath>
+<clipPath id="card"><rect width="492" height="169" rx="10"/></clipPath>
 <linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
   <stop offset="0%" stop-color="#34d399" stop-opacity="0"/>
   <stop offset="50%" stop-color="#34d399" stop-opacity="0.07"/>
@@ -25,8 +25,8 @@
 @keyframes sweep{0%,22%{transform:translateX(0)}70%,100%{transform:translateX(792px)}}
 @media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
 
-<rect x="0.5" y="0.5" width="491" height="203" rx="10" fill="#161b22" stroke="#30363d"/>
-<g clip-path="url(#card)"><rect class="sweep" x="-260" y="0" width="180" height="204" fill="url(#sweepGrad)" transform="skewX(-18)"/></g>
+<rect x="0.5" y="0.5" width="491" height="168" rx="10" fill="#161b22" stroke="#30363d"/>
+<g clip-path="url(#card)"><rect class="sweep" x="-260" y="0" width="180" height="169" fill="url(#sweepGrad)" transform="skewX(-18)"/></g>
 <!-- Accent stays emerald on every card; language colour lives in the data bar
      at the foot, where it reads as information rather than decoration. -->
 <rect x="0.5" y="0.5" width="491" height="2.5" rx="1" fill="url(#accent)" opacity="0.9"/>
@@ -34,10 +34,10 @@
 <g class="fade">
   <text x="20" y="32.09" font-size="15.5" fill="#6ee7b7" font-weight="bold">Protocol Lab</text>
   <g><rect x="394.7" y="16" width="77.3" height="18" rx="9" fill="rgba(16,185,129,0.12)" stroke="#047857"/><circle cx="405.7" cy="25" r="3" fill="#34d399" class="pulse"/><text x="439.35" y="28.33" font-size="9.5" fill="#6ee7b7" text-anchor="middle">live demo</text></g>
-  <text x="20" y="56.09" font-size="11.5" fill="#8b949e">One task board served over REST, GraphQL, WebSocket, webhooks,</text><text x="20" y="73.59" font-size="11.5" fill="#8b949e">gRPC and MCP.</text>
-  <g><rect x="20" y="116" width="60" height="22" rx="6" fill="rgba(16,185,129,0.14)" stroke="rgba(52,211,153,0.55)"/><text x="50" y="130.6" font-size="10" fill="#6ee7b7" text-anchor="middle">FastAPI</text></g><g><rect x="87" y="116" width="60" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="117" y="130.6" font-size="10" fill="#34d399" text-anchor="middle">GraphQL</text></g><g><rect x="154" y="116" width="42" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="175" y="130.6" font-size="10" fill="#34d399" text-anchor="middle">gRPC</text></g><g><rect x="203" y="116" width="36" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="221" y="130.6" font-size="10" fill="#34d399" text-anchor="middle">MCP</text></g>
-  <g class="langbar" style="animation-delay:0.25s"><rect x="20" y="162" width="248.83" height="5" fill="#3b82f6"/><rect x="268.83" y="162" width="196.16" height="5" fill="#34d399"/><rect x="464.99" y="162" width="5.76" height="5" fill="#a78bfa"/><rect x="470.75" y="162" width="1.25" height="5" fill="#fbbf24"/></g>
-  <text x="20" y="188" font-size="9.5" fill="#6b7280">protocol-lab</text>
-  <text x="472" y="188" font-size="9.5" fill="#6b7280" text-anchor="end">TypeScript</text>
+  <text x="20" y="56.09" font-size="11.5" fill="#8b949e">One task board served over REST, GraphQL, WebSocket, webhooks,</text><text x="20" y="74.09" font-size="11.5" fill="#8b949e">gRPC and MCP.</text>
+  <g><rect x="20" y="92.09" width="60" height="22" rx="6" fill="rgba(16,185,129,0.14)" stroke="rgba(52,211,153,0.55)"/><text x="50" y="106.69" font-size="10" fill="#6ee7b7" text-anchor="middle">FastAPI</text></g><g><rect x="87" y="92.09" width="60" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="117" y="106.69" font-size="10" fill="#34d399" text-anchor="middle">GraphQL</text></g><g><rect x="154" y="92.09" width="42" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="175" y="106.69" font-size="10" fill="#34d399" text-anchor="middle">gRPC</text></g><g><rect x="203" y="92.09" width="36" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="221" y="106.69" font-size="10" fill="#34d399" text-anchor="middle">MCP</text></g><g><rect x="246" y="92.09" width="72" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="282" y="106.69" font-size="10" fill="#34d399" text-anchor="middle">WebSocket</text></g>
+  <g class="langbar" style="animation-delay:0.25s"><rect x="20" y="134.09" width="248.83" height="5" fill="#3b82f6"/><rect x="268.83" y="134.09" width="196.16" height="5" fill="#34d399"/><rect x="464.99" y="134.09" width="5.76" height="5" fill="#a78bfa"/><rect x="470.75" y="134.09" width="1.25" height="5" fill="#fbbf24"/></g>
+  <text x="20" y="155.09" font-size="9.5" fill="#6b7280">protocol-lab</text>
+  <text x="472" y="155.09" font-size="9.5" fill="#6b7280" text-anchor="end">TypeScript</text>
 </g>
 </svg>

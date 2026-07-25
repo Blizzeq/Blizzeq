@@ -8,141 +8,308 @@
     "linkedinLabel": "in/jakub-krasuski",
     "email": "kj.krasuski.mail@gmail.com"
   },
-
   "terminal": [
-    { "cmd": "whoami", "out": [["Jakub Krasuski", "dim"], [" · ", "dim"], ["Data Scientist", "accent"], [" · Warsaw, Poland", "dim"]] },
-    { "cmd": "work --current", "out": [["Energy trading data · pipelines, API integrations, reconciliation", "dim"]] },
-    { "cmd": "stack --core", "out": [["Python · SQL · ", "dim"], ["dbt · Snowflake · BigQuery · Airflow", "accent"], [" on GCP", "dim"]] },
-    { "cmd": "work --after-hours", "out": [["Power market simulators · evolutionary prompt optimization · neuroevolution", "dim"]] }
+    {
+      "cmd": "whoami",
+      "out": [
+        [
+          "Jakub Krasuski",
+          "dim"
+        ],
+        [
+          " · ",
+          "dim"
+        ],
+        [
+          "Data Scientist",
+          "accent"
+        ],
+        [
+          " · Warsaw, Poland",
+          "dim"
+        ]
+      ]
+    },
+    {
+      "cmd": "work --current",
+      "out": [
+        [
+          "Energy trading data · pipelines, API integrations, reconciliation",
+          "dim"
+        ]
+      ]
+    },
+    {
+      "cmd": "stack --core",
+      "out": [
+        [
+          "Python · SQL · ",
+          "dim"
+        ],
+        [
+          "dbt · Snowflake · BigQuery · Airflow",
+          "accent"
+        ],
+        [
+          " on GCP",
+          "dim"
+        ]
+      ]
+    },
+    {
+      "cmd": "work --after-hours",
+      "out": [
+        [
+          "Power market simulators · evolutionary prompt optimization · neuroevolution",
+          "dim"
+        ]
+      ]
+    }
   ],
-
   "flagship": "gridpulse",
-
   "projectGroups": [
     {
       "title": "AI & Machine Learning",
-      "projects": ["Prompt-Evolution-Engine", "neuro-racer-lab"]
+      "projects": [
+        "Prompt-Evolution-Engine",
+        "neuro-racer-lab"
+      ]
     },
     {
-      "title": "Quantitative & Analysis",
-      "projects": ["black-scholes-viz", "ai-student-impact-analysis"]
+      "title": "Analysis & Modelling",
+      "projects": [
+        "black-scholes-viz",
+        "ai-student-impact-analysis"
+      ]
     },
     {
       "title": "Systems & Algorithms",
-      "projects": ["protocol-lab", "league-of-legends-data-collector"],
-      "compact": ["graph-viz", "pathfinder", "sort-vizualzation"]
+      "projects": [
+        "protocol-lab",
+        "league-of-legends-data-collector"
+      ],
+      "compact": [
+        "graph-viz",
+        "pathfinder",
+        "sort-vizualzation"
+      ]
     }
   ],
-
   "projects": {
     "gridpulse": {
       "display": "GridPulse",
       "size": "hero",
       "pitch": "Live European power prices, cross-border flows and a trading simulator, built on real ENTSO-E market data across 28+ countries.",
-      "tags": ["Next.js", "TypeScript", "D3.js", "Supabase", "ENTSO-E API"],
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "D3.js",
+        "Supabase",
+        "ENTSO-E API"
+      ],
       "demo": "https://gridpulse-eu.vercel.app"
     },
     "black-scholes-viz": {
       "display": "Black-Scholes Simulator",
       "pitch": "Monte Carlo price paths with fan charts, VaR and expected shortfall.",
-      "tags": ["Python", "Monte Carlo", "Quant"],
+      "tags": [
+        "Python",
+        "Monte Carlo",
+        "VaR / CVaR"
+      ],
       "badge": "Python · Desktop"
     },
     "Prompt-Evolution-Engine": {
       "display": "Prompt Evolution Engine",
       "pitch": "Genetic algorithms that evolve LLM prompts, scored by an LLM judge.",
-      "tags": ["TypeScript", "Genetic Algorithms", "LLM-as-Judge"],
+      "tags": [
+        "TypeScript",
+        "Genetic Algorithms",
+        "LLM-as-Judge"
+      ],
       "demo": "https://prompt-evolution-engine.vercel.app"
     },
     "neuro-racer-lab": {
       "display": "Neuro Racer Lab",
       "pitch": "Draw a track, train neural-net cars on it, then race the champion.",
-      "tags": ["Neuroevolution", "Phaser 3", "Matter.js"],
+      "tags": [
+        "Neuroevolution",
+        "Phaser 3",
+        "Matter.js"
+      ],
       "demo": "https://neuro-racer-lab.vercel.app"
     },
     "ai-student-impact-analysis": {
-      "display": "AI Student Impact",
+      "display": "GenAI & Student Outcomes",
       "pitch": "How GenAI use relates to student grades, skill retention and burnout.",
-      "tags": ["Python", "pandas", "scikit-learn"],
+      "tags": [
+        "Python",
+        "pandas",
+        "scikit-learn"
+      ],
       "badge": "Python · Analysis"
     },
     "protocol-lab": {
       "display": "Protocol Lab",
       "pitch": "One task board served over REST, GraphQL, WebSocket, webhooks, gRPC and MCP.",
-      "tags": ["FastAPI", "GraphQL", "gRPC", "MCP"],
+      "tags": [
+        "FastAPI",
+        "GraphQL",
+        "gRPC",
+        "MCP",
+        "WebSocket"
+      ],
       "demo": "https://protocol-lab-three.vercel.app"
     },
     "league-of-legends-data-collector": {
       "display": "LoL Data Collector",
       "pitch": "Python ETL pulling match and player stats from the Riot API into CSV.",
-      "tags": ["Python", "ETL", "REST API"],
+      "tags": [
+        "Python",
+        "ETL",
+        "REST API"
+      ],
       "badge": "Python · ETL"
     },
     "graph-viz": {
       "display": "Graph Visualizer",
       "pitch": "Seven graph algorithms animated in real time, including Kruskal and Prim.",
-      "tags": ["React Flow"],
+      "tags": [
+        "React Flow"
+      ],
       "demo": "https://graph-viz-one.vercel.app"
     },
     "pathfinder": {
       "display": "Pathfinder",
       "pitch": "A*, Dijkstra, BFS and DFS with waypoints, mazes and live comparison.",
-      "tags": ["TypeScript"],
+      "tags": [
+        "TypeScript"
+      ],
       "demo": "https://pathfinder-dun.vercel.app"
     },
     "sort-vizualzation": {
       "display": "Sort Visualizer",
       "pitch": "Sorting algorithms visualised with real-time complexity analysis.",
-      "tags": ["TypeScript"],
+      "tags": [
+        "TypeScript"
+      ],
       "demo": "https://sort-vizualzation.vercel.app"
     }
   },
-
   "stack": [
     {
       "group": "Core — daily",
       "items": [
-        { "label": "Python", "tone": "strong" },
-        { "label": "SQL", "tone": "strong" },
-        { "label": "dbt", "tone": "strong" },
-        { "label": "Snowflake", "tone": "strong" },
-        { "label": "BigQuery", "tone": "strong" },
-        { "label": "Airflow", "tone": "strong" },
-        { "label": "Google Cloud", "tone": "strong" },
-        { "label": "Docker", "tone": "strong" },
-        { "label": "GitLab CI", "tone": "strong" }
+        {
+          "label": "Python",
+          "tone": "strong"
+        },
+        {
+          "label": "SQL",
+          "tone": "strong"
+        },
+        {
+          "label": "dbt",
+          "tone": "strong"
+        },
+        {
+          "label": "Snowflake",
+          "tone": "strong"
+        },
+        {
+          "label": "BigQuery",
+          "tone": "strong"
+        },
+        {
+          "label": "Airflow",
+          "tone": "strong"
+        },
+        {
+          "label": "Google Cloud",
+          "tone": "strong"
+        },
+        {
+          "label": "Docker",
+          "tone": "strong"
+        },
+        {
+          "label": "GitLab CI",
+          "tone": "strong"
+        }
       ]
     },
     {
       "group": "Data & ML",
       "items": [
-        { "label": "pandas" },
-        { "label": "NumPy" },
-        { "label": "scikit-learn" },
-        { "label": "Plotly" },
-        { "label": "Terraform" },
-        { "label": "Power BI" }
+        {
+          "label": "pandas"
+        },
+        {
+          "label": "NumPy"
+        },
+        {
+          "label": "scikit-learn"
+        },
+        {
+          "label": "Plotly"
+        },
+        {
+          "label": "Terraform"
+        },
+        {
+          "label": "Power BI"
+        }
       ]
     },
     {
       "group": "AI & LLM",
       "items": [
-        { "label": "Claude / OpenAI APIs" },
-        { "label": "LLM-assisted pipelines" },
-        { "label": "Prompt evaluation" }
+        {
+          "label": "Claude / OpenAI APIs"
+        },
+        {
+          "label": "LLM-assisted pipelines"
+        },
+        {
+          "label": "Prompt evaluation"
+        }
       ]
     },
     {
       "group": "Build",
       "items": [
-        { "label": "TypeScript", "tone": "quiet" },
-        { "label": "React", "tone": "quiet" },
-        { "label": "Next.js", "tone": "quiet" },
-        { "label": "Node.js", "tone": "quiet" },
-        { "label": "FastAPI", "tone": "quiet" },
-        { "label": "PostgreSQL", "tone": "quiet" },
-        { "label": "Tailwind", "tone": "quiet" },
-        { "label": "Vercel", "tone": "quiet" }
+        {
+          "label": "TypeScript",
+          "tone": "quiet"
+        },
+        {
+          "label": "React",
+          "tone": "quiet"
+        },
+        {
+          "label": "Next.js",
+          "tone": "quiet"
+        },
+        {
+          "label": "Node.js",
+          "tone": "quiet"
+        },
+        {
+          "label": "FastAPI",
+          "tone": "quiet"
+        },
+        {
+          "label": "PostgreSQL",
+          "tone": "quiet"
+        },
+        {
+          "label": "Tailwind",
+          "tone": "quiet"
+        },
+        {
+          "label": "Vercel",
+          "tone": "quiet"
+        }
       ]
     }
   ]

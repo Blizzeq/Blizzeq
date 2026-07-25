@@ -14,7 +14,7 @@ import { dirname, join } from 'node:path';
 
 import { hero } from './cards/hero.mjs';
 import { terminal } from './cards/terminal.mjs';
-import { projectCard } from './cards/project.mjs';
+import { projectCard, ctaButton } from './cards/project.mjs';
 import { stack } from './cards/stack.mjs';
 import { stats as statsCard } from './cards/stats.mjs';
 import { badge, footer } from './cards/contact.mjs';
@@ -58,25 +58,42 @@ const data = await loadStats();
 await emit('hero.svg', hero(profile));
 await emit('about-terminal.svg', terminal(profile));
 
+const CARD_W = { hero: 1000, std: 492, compact: 325 };
+
+/**
+ * Emit a card plus the strip beneath it.
+ *
+ * The card goes to the live demo when there is one — that is what the badge
+ * drawn on it promises, and a link inside an SVG does nothing once GitHub
+ * embeds it through <img>. The strip carries the repository link, so both
+ * destinations stay reachable and every row keeps the same shape.
+ */
+async function emitProject(repo, variant) {
+  const project = profile.projects[repo];
+  const prefix = variant === 'compact' ? 'card-sm' : 'card';
+  const file = `${prefix}-${repo}.svg`;
+  const cta = `${prefix}-${repo}-cta.svg`;
+  const url = `https://github.com/Blizzeq/${repo}`;
+
+  await emit(file, projectCard(repo, project, data, variant));
+  await emit(cta, ctaButton({ width: CARD_W[variant], label: 'view code' }));
+
+  return { file, cta, repo, href: project.demo ?? url, ctaHref: url };
+}
+
 // One full-width flagship, then groups of exactly two half cards, so no row is
 // ever left with a hole in it.
-const flagshipFile = `card-${profile.flagship}.svg`;
-await emit(flagshipFile, projectCard(profile.flagship, profile.projects[profile.flagship], data, 'hero'));
+const flagship = await emitProject(profile.flagship, 'hero');
 
 const layout = [];
 for (const group of profile.projectGroups) {
   const entry = { title: group.title, cards: [], compact: [] };
 
   for (const repo of group.projects ?? []) {
-    const file = `card-${repo}.svg`;
-    await emit(file, projectCard(repo, profile.projects[repo], data, 'std'));
-    entry.cards.push({ file, repo, href: `https://github.com/Blizzeq/${repo}` });
+    entry.cards.push(await emitProject(repo, 'std'));
   }
-
   for (const repo of group.compact ?? []) {
-    const file = `card-sm-${repo}.svg`;
-    await emit(file, projectCard(repo, profile.projects[repo], data, 'compact'));
-    entry.compact.push({ file, repo, href: `https://github.com/Blizzeq/${repo}` });
+    entry.compact.push(await emitProject(repo, 'compact'));
   }
 
   layout.push(entry);
@@ -122,24 +139,24 @@ console.log(`\n${written.length} assets · ${(total / 1024).toFixed(0)} kB total
 
 function readme(groups) {
   const USER = 'Blizzeq';
+  const p = (c) => profile.projects[c.repo];
   const card = (c, width) =>
-    `<a href="${c.href}"><img width="${width}" src="assets/${c.file}" alt="${profile.projects[c.repo].display} — ${profile.projects[c.repo].pitch}" /></a>`;
+    `<a href="${c.href}"><img width="${width}" src="assets/${c.file}" alt="${p(c).display} — ${p(c).pitch}" /></a>`;
+  const cta = (c, width) =>
+    `<a href="${c.ctaHref}"><img width="${width}" src="assets/${c.cta}" alt="${p(c).display} source code" /></a>`;
+
+  // Cards first, then their strips: at 49% two fit per line, so the strips land
+  // directly under the cards they belong to.
+  const grid = (cards, width) => `<div align="center">
+
+${cards.map((c) => card(c, width)).join('\n')}
+${cards.map((c) => cta(c, width)).join('\n')}
+
+</div>`;
 
   const group = (g) => `<h3 align="center">${g.title}</h3>
 
-<div align="center">
-
-${g.cards.map((c) => card(c, '49%')).join('\n')}
-
-</div>${g.compact.length
-      ? `
-
-<div align="center">
-
-${g.compact.map((c) => card(c, '32%')).join('\n')}
-
-</div>`
-      : ''}`;
+${grid(g.cards, '49%')}${g.compact.length ? `\n\n${grid(g.compact, '32%')}` : ''}`;
 
   return `<div align="center">
 
@@ -159,7 +176,8 @@ ${g.compact.map((c) => card(c, '32%')).join('\n')}
 
 <div align="center">
 
-<a href="https://github.com/${USER}/${profile.flagship}"><img src="assets/card-${profile.flagship}.svg" alt="${profile.projects[profile.flagship].display} — ${profile.projects[profile.flagship].pitch}" /></a>
+<a href="${flagship.href}"><img src="assets/${flagship.file}" alt="${profile.projects[profile.flagship].display} — ${profile.projects[profile.flagship].pitch}" /></a>
+<a href="${flagship.ctaHref}"><img src="assets/${flagship.cta}" alt="${profile.projects[profile.flagship].display} source code" /></a>
 
 </div>
 
@@ -201,10 +219,11 @@ ${contacts.map((c) => `<a href="${c.href}"><img src="assets/${c.file}" alt="${c.
 
 function previewPage(groups) {
   const img = (f, cls = '') => `<img class="${cls}" src="../assets/${f}" alt="${f}">`;
+  const pair = (c, cls) => `<div class="${cls}">${img(c.file)}${img(c.cta)}</div>`;
   const section = (g) => `
   <h2>${g.title}</h2>
-  <div class="row">${g.cards.map((c) => img(c.file, 'half')).join('')}</div>
-  ${g.compact.length ? `<div class="row" style="margin-top:14px">${g.compact.map((c) => img(c.file, 'third')).join('')}</div>` : ''}`;
+  <div class="row">${g.cards.map((c) => pair(c, 'half')).join('')}</div>
+  ${g.compact.length ? `<div class="row" style="margin-top:14px">${g.compact.map((c) => pair(c, 'third')).join('')}</div>` : ''}`;
 
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><title>Profile assets — review</title>
@@ -220,10 +239,12 @@ function previewPage(groups) {
      text-transform:uppercase;margin:40px 0 12px;padding-bottom:8px;
      border-bottom:1px solid #21262d}
   img{display:block;max-width:100%;margin-bottom:14px}
-  .row{display:flex;gap:14px;flex-wrap:wrap}
+  .row{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-start}
   .row img{margin-bottom:0}
   .half{width:calc(50% - 7px)}
   .third{width:calc(33.333% - 10px)}
+  .half img,.third img{width:100%}
+  .half img+img,.third img+img{margin-top:8px}
   .light{background:#fff;padding:24px;border-radius:12px;margin-top:56px}
   .light h2{color:#57606a;border-color:#d0d7de}
   .note{font-size:11px;color:#6b7280;margin:6px 0 18px;letter-spacing:.4px}
@@ -234,7 +255,7 @@ function previewPage(groups) {
 
 <h2>Hero</h2>${img('hero.svg')}
 <h2>About</h2>${img('about-terminal.svg')}
-<h2>Featured</h2>${img(flagshipFile)}
+<h2>Featured</h2>${img(flagship.file)}${img(flagship.cta)}
 ${groups.map(section).join('\n')}
 <h2>Tech stack</h2>${img('tech-stack.svg')}
 <h2>GitHub activity</h2>${img('stats.svg')}

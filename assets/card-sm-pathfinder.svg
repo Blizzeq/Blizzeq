@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="325" height="132" viewBox="0 0 325 132" role="img" aria-label="Pathfinder — A*, Dijkstra, BFS and DFS with waypoints, mazes and live comparison." font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace">
+<svg xmlns="http://www.w3.org/2000/svg" width="325" height="109" viewBox="0 0 325 109" role="img" aria-label="Pathfinder — A*, Dijkstra, BFS and DFS with waypoints, mazes and live comparison." font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace">
 <title>Pathfinder — A*, Dijkstra, BFS and DFS with waypoints, mazes and live comparison.</title>
 <defs>
-<clipPath id="card"><rect width="325" height="132" rx="10"/></clipPath>
+<clipPath id="card"><rect width="325" height="109" rx="10"/></clipPath>
 <linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
   <stop offset="0%" stop-color="#34d399" stop-opacity="0"/>
   <stop offset="50%" stop-color="#34d399" stop-opacity="0.07"/>
@@ -22,7 +22,7 @@
 
 @media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
 
-<rect x="0.5" y="0.5" width="324" height="131" rx="10" fill="#161b22" stroke="#30363d"/>
+<rect x="0.5" y="0.5" width="324" height="108" rx="10" fill="#161b22" stroke="#30363d"/>
 
 <!-- Accent stays emerald on every card; language colour lives in the data bar
      at the foot, where it reads as information rather than decoration. -->
@@ -31,10 +31,10 @@
 <g class="fade">
   <text x="16" y="26.14" font-size="13" fill="#6ee7b7" font-weight="bold">Pathfinder</text>
   <g><rect x="237.1" y="12" width="71.9" height="16" rx="8" fill="rgba(16,185,129,0.12)" stroke="#047857"/><circle cx="248.1" cy="20" r="3" fill="#34d399" class="pulse"/><text x="279.05" y="22.98" font-size="8.5" fill="#6ee7b7" text-anchor="middle">live demo</text></g>
-  <text x="16" y="50.14" font-size="10" fill="#8b949e">A*, Dijkstra, BFS and DFS with waypoints, mazes</text><text x="16" y="66.14" font-size="10" fill="#8b949e">and live comparison.</text>
+  <text x="16" y="48.14" font-size="10" fill="#8b949e">A*, Dijkstra, BFS and DFS with waypoints, mazes</text><text x="16" y="63.14" font-size="10" fill="#8b949e">and live comparison.</text>
   
-  <g class="langbar" style="animation-delay:0.25s"><rect x="16" y="102" width="277.8" height="4" fill="#3b82f6"/><rect x="293.8" y="102" width="14.75" height="4" fill="#a78bfa"/></g>
-  <text x="16" y="118" font-size="8.5" fill="#6b7280">pathfinder</text>
-  <text x="309" y="118" font-size="8.5" fill="#6b7280" text-anchor="end">TypeScript</text>
+  <g class="langbar" style="animation-delay:0.25s"><rect x="16" y="79.14" width="277.8" height="4" fill="#3b82f6"/><rect x="293.8" y="79.14" width="14.75" height="4" fill="#a78bfa"/></g>
+  <text x="16" y="97.14" font-size="8.5" fill="#6b7280">pathfinder</text>
+  <text x="309" y="97.14" font-size="8.5" fill="#6b7280" text-anchor="end">TypeScript</text>
 </g>
 </svg>

@@ -12,10 +12,12 @@
      text-transform:uppercase;margin:40px 0 12px;padding-bottom:8px;
      border-bottom:1px solid #21262d}
   img{display:block;max-width:100%;margin-bottom:14px}
-  .row{display:flex;gap:14px;flex-wrap:wrap}
+  .row{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-start}
   .row img{margin-bottom:0}
   .half{width:calc(50% - 7px)}
   .third{width:calc(33.333% - 10px)}
+  .half img,.third img{width:100%}
+  .half img+img,.third img+img{margin-top:8px}
   .light{background:#fff;padding:24px;border-radius:12px;margin-top:56px}
   .light h2{color:#57606a;border-color:#d0d7de}
   .note{font-size:11px;color:#6b7280;margin:6px 0 18px;letter-spacing:.4px}
@@ -26,19 +28,19 @@
 
 <h2>Hero</h2><img class="" src="../assets/hero.svg" alt="hero.svg">
 <h2>About</h2><img class="" src="../assets/about-terminal.svg" alt="about-terminal.svg">
-<h2>Featured</h2><img class="" src="../assets/card-gridpulse.svg" alt="card-gridpulse.svg">
+<h2>Featured</h2><img class="" src="../assets/card-gridpulse.svg" alt="card-gridpulse.svg"><img class="" src="../assets/card-gridpulse-cta.svg" alt="card-gridpulse-cta.svg">
 
   <h2>AI & Machine Learning</h2>
-  <div class="row"><img class="half" src="../assets/card-Prompt-Evolution-Engine.svg" alt="card-Prompt-Evolution-Engine.svg"><img class="half" src="../assets/card-neuro-racer-lab.svg" alt="card-neuro-racer-lab.svg"></div>
+  <div class="row"><div class="half"><img class="" src="../assets/card-Prompt-Evolution-Engine.svg" alt="card-Prompt-Evolution-Engine.svg"><img class="" src="../assets/card-Prompt-Evolution-Engine-cta.svg" alt="card-Prompt-Evolution-Engine-cta.svg"></div><div class="half"><img class="" src="../assets/card-neuro-racer-lab.svg" alt="card-neuro-racer-lab.svg"><img class="" src="../assets/card-neuro-racer-lab-cta.svg" alt="card-neuro-racer-lab-cta.svg"></div></div>
   
 
-  <h2>Quantitative & Analysis</h2>
-  <div class="row"><img class="half" src="../assets/card-black-scholes-viz.svg" alt="card-black-scholes-viz.svg"><img class="half" src="../assets/card-ai-student-impact-analysis.svg" alt="card-ai-student-impact-analysis.svg"></div>
+  <h2>Analysis & Modelling</h2>
+  <div class="row"><div class="half"><img class="" src="../assets/card-black-scholes-viz.svg" alt="card-black-scholes-viz.svg"><img class="" src="../assets/card-black-scholes-viz-cta.svg" alt="card-black-scholes-viz-cta.svg"></div><div class="half"><img class="" src="../assets/card-ai-student-impact-analysis.svg" alt="card-ai-student-impact-analysis.svg"><img class="" src="../assets/card-ai-student-impact-analysis-cta.svg" alt="card-ai-student-impact-analysis-cta.svg"></div></div>
   
 
   <h2>Systems & Algorithms</h2>
-  <div class="row"><img class="half" src="../assets/card-protocol-lab.svg" alt="card-protocol-lab.svg"><img class="half" src="../assets/card-league-of-legends-data-collector.svg" alt="card-league-of-legends-data-collector.svg"></div>
-  <div class="row" style="margin-top:14px"><img class="third" src="../assets/card-sm-graph-viz.svg" alt="card-sm-graph-viz.svg"><img class="third" src="../assets/card-sm-pathfinder.svg" alt="card-sm-pathfinder.svg"><img class="third" src="../assets/card-sm-sort-vizualzation.svg" alt="card-sm-sort-vizualzation.svg"></div>
+  <div class="row"><div class="half"><img class="" src="../assets/card-protocol-lab.svg" alt="card-protocol-lab.svg"><img class="" src="../assets/card-protocol-lab-cta.svg" alt="card-protocol-lab-cta.svg"></div><div class="half"><img class="" src="../assets/card-league-of-legends-data-collector.svg" alt="card-league-of-legends-data-collector.svg"><img class="" src="../assets/card-league-of-legends-data-collector-cta.svg" alt="card-league-of-legends-data-collector-cta.svg"></div></div>
+  <div class="row" style="margin-top:14px"><div class="third"><img class="" src="../assets/card-sm-graph-viz.svg" alt="card-sm-graph-viz.svg"><img class="" src="../assets/card-sm-graph-viz-cta.svg" alt="card-sm-graph-viz-cta.svg"></div><div class="third"><img class="" src="../assets/card-sm-pathfinder.svg" alt="card-sm-pathfinder.svg"><img class="" src="../assets/card-sm-pathfinder-cta.svg" alt="card-sm-pathfinder-cta.svg"></div><div class="third"><img class="" src="../assets/card-sm-sort-vizualzation.svg" alt="card-sm-sort-vizualzation.svg"><img class="" src="../assets/card-sm-sort-vizualzation-cta.svg" alt="card-sm-sort-vizualzation-cta.svg"></div></div>
 <h2>Tech stack</h2><img class="" src="../assets/tech-stack.svg" alt="tech-stack.svg">
 <h2>GitHub activity</h2><img class="" src="../assets/stats.svg" alt="stats.svg">
 <h2>Contact</h2><div class="row"><img style="width:auto" src="../assets/contact-linkedin.svg" alt="LinkedIn"><img style="width:auto" src="../assets/contact-email.svg" alt="Email"><img style="width:auto" src="../assets/contact-github.svg" alt="GitHub"></div>

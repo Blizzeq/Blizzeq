@@ -16,7 +16,8 @@
 
 <div align="center">
 
-<a href="https://github.com/Blizzeq/gridpulse"><img src="assets/card-gridpulse.svg" alt="GridPulse — Live European power prices, cross-border flows and a trading simulator, built on real ENTSO-E market data across 28+ countries." /></a>
+<a href="https://gridpulse-eu.vercel.app"><img src="assets/card-gridpulse.svg" alt="GridPulse — Live European power prices, cross-border flows and a trading simulator, built on real ENTSO-E market data across 28+ countries." /></a>
+<a href="https://github.com/Blizzeq/gridpulse"><img src="assets/card-gridpulse-cta.svg" alt="GridPulse source code" /></a>
 
 </div>
 
@@ -24,17 +25,21 @@
 
 <div align="center">
 
-<a href="https://github.com/Blizzeq/Prompt-Evolution-Engine"><img width="49%" src="assets/card-Prompt-Evolution-Engine.svg" alt="Prompt Evolution Engine — Genetic algorithms that evolve LLM prompts, scored by an LLM judge." /></a>
-<a href="https://github.com/Blizzeq/neuro-racer-lab"><img width="49%" src="assets/card-neuro-racer-lab.svg" alt="Neuro Racer Lab — Draw a track, train neural-net cars on it, then race the champion." /></a>
+<a href="https://prompt-evolution-engine.vercel.app"><img width="49%" src="assets/card-Prompt-Evolution-Engine.svg" alt="Prompt Evolution Engine — Genetic algorithms that evolve LLM prompts, scored by an LLM judge." /></a>
+<a href="https://neuro-racer-lab.vercel.app"><img width="49%" src="assets/card-neuro-racer-lab.svg" alt="Neuro Racer Lab — Draw a track, train neural-net cars on it, then race the champion." /></a>
+<a href="https://github.com/Blizzeq/Prompt-Evolution-Engine"><img width="49%" src="assets/card-Prompt-Evolution-Engine-cta.svg" alt="Prompt Evolution Engine source code" /></a>
+<a href="https://github.com/Blizzeq/neuro-racer-lab"><img width="49%" src="assets/card-neuro-racer-lab-cta.svg" alt="Neuro Racer Lab source code" /></a>
 
 </div>
 
-<h3 align="center">Quantitative & Analysis</h3>
+<h3 align="center">Analysis & Modelling</h3>
 
 <div align="center">
 
 <a href="https://github.com/Blizzeq/black-scholes-viz"><img width="49%" src="assets/card-black-scholes-viz.svg" alt="Black-Scholes Simulator — Monte Carlo price paths with fan charts, VaR and expected shortfall." /></a>
-<a href="https://github.com/Blizzeq/ai-student-impact-analysis"><img width="49%" src="assets/card-ai-student-impact-analysis.svg" alt="AI Student Impact — How GenAI use relates to student grades, skill retention and burnout." /></a>
+<a href="https://github.com/Blizzeq/ai-student-impact-analysis"><img width="49%" src="assets/card-ai-student-impact-analysis.svg" alt="GenAI & Student Outcomes — How GenAI use relates to student grades, skill retention and burnout." /></a>
+<a href="https://github.com/Blizzeq/black-scholes-viz"><img width="49%" src="assets/card-black-scholes-viz-cta.svg" alt="Black-Scholes Simulator source code" /></a>
+<a href="https://github.com/Blizzeq/ai-student-impact-analysis"><img width="49%" src="assets/card-ai-student-impact-analysis-cta.svg" alt="GenAI & Student Outcomes source code" /></a>
 
 </div>
 
@@ -42,16 +47,21 @@
 
 <div align="center">
 
-<a href="https://github.com/Blizzeq/protocol-lab"><img width="49%" src="assets/card-protocol-lab.svg" alt="Protocol Lab — One task board served over REST, GraphQL, WebSocket, webhooks, gRPC and MCP." /></a>
+<a href="https://protocol-lab-three.vercel.app"><img width="49%" src="assets/card-protocol-lab.svg" alt="Protocol Lab — One task board served over REST, GraphQL, WebSocket, webhooks, gRPC and MCP." /></a>
 <a href="https://github.com/Blizzeq/league-of-legends-data-collector"><img width="49%" src="assets/card-league-of-legends-data-collector.svg" alt="LoL Data Collector — Python ETL pulling match and player stats from the Riot API into CSV." /></a>
+<a href="https://github.com/Blizzeq/protocol-lab"><img width="49%" src="assets/card-protocol-lab-cta.svg" alt="Protocol Lab source code" /></a>
+<a href="https://github.com/Blizzeq/league-of-legends-data-collector"><img width="49%" src="assets/card-league-of-legends-data-collector-cta.svg" alt="LoL Data Collector source code" /></a>
 
 </div>
 
 <div align="center">
 
-<a href="https://github.com/Blizzeq/graph-viz"><img width="32%" src="assets/card-sm-graph-viz.svg" alt="Graph Visualizer — Seven graph algorithms animated in real time, including Kruskal and Prim." /></a>
-<a href="https://github.com/Blizzeq/pathfinder"><img width="32%" src="assets/card-sm-pathfinder.svg" alt="Pathfinder — A*, Dijkstra, BFS and DFS with waypoints, mazes and live comparison." /></a>
-<a href="https://github.com/Blizzeq/sort-vizualzation"><img width="32%" src="assets/card-sm-sort-vizualzation.svg" alt="Sort Visualizer — Sorting algorithms visualised with real-time complexity analysis." /></a>
+<a href="https://graph-viz-one.vercel.app"><img width="32%" src="assets/card-sm-graph-viz.svg" alt="Graph Visualizer — Seven graph algorithms animated in real time, including Kruskal and Prim." /></a>
+<a href="https://pathfinder-dun.vercel.app"><img width="32%" src="assets/card-sm-pathfinder.svg" alt="Pathfinder — A*, Dijkstra, BFS and DFS with waypoints, mazes and live comparison." /></a>
+<a href="https://sort-vizualzation.vercel.app"><img width="32%" src="assets/card-sm-sort-vizualzation.svg" alt="Sort Visualizer — Sorting algorithms visualised with real-time complexity analysis." /></a>
+<a href="https://github.com/Blizzeq/graph-viz"><img width="32%" src="assets/card-sm-graph-viz-cta.svg" alt="Graph Visualizer source code" /></a>
+<a href="https://github.com/Blizzeq/pathfinder"><img width="32%" src="assets/card-sm-pathfinder-cta.svg" alt="Pathfinder source code" /></a>
+<a href="https://github.com/Blizzeq/sort-vizualzation"><img width="32%" src="assets/card-sm-sort-vizualzation-cta.svg" alt="Sort Visualizer source code" /></a>
 
 </div>
 
