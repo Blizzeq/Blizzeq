@@ -20,7 +20,7 @@
   <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
 </radialGradient>
 <mask id="nameMask">
-  <text x="494.5" y="126" font-size="44" font-weight="bold" letter-spacing="11" text-anchor="middle" fill="#fff">JAKUB KRASUSKI</text>
+  <text x="496" y="126" font-family="system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="46" font-weight="700" letter-spacing="8" text-anchor="middle" fill="#fff">JAKUB KRASUSKI</text>
 </mask>
 <path id="curve" d="M64 263.4 C70.32 264.22, 89.28 266.95, 101.91 268.32 C114.55 269.69, 127.19 270.92, 139.83 271.6 C152.46 272.28, 165.1 272.69, 177.74 272.42 C190.38 272.15, 203.01 271.46, 215.65 269.96 C228.29 268.46, 240.93 266.41, 253.57 263.4 C266.2 260.39, 278.84 255.75, 291.48 251.92 C304.12 248.09, 316.75 243.45, 329.39 240.44 C342.03 237.43, 354.67 235.38, 367.3 233.88 C379.94 232.38, 392.58 231.42, 405.22 231.42 C417.86 231.42, 430.49 232.92, 443.13 233.88 C455.77 234.84, 468.41 236.34, 481.04 237.16 C493.68 237.98, 506.32 238.8, 518.96 238.8 C531.59 238.8, 544.23 237.98, 556.87 237.16 C569.51 236.34, 582.14 235.25, 594.78 233.88 C607.42 232.51, 620.06 231.28, 632.7 228.96 C645.33 226.64, 657.97 223.08, 670.61 219.94 C683.25 216.8, 695.88 211.33, 708.52 210.1 C721.16 208.87, 733.8 210.51, 746.43 212.56 C759.07 214.61, 771.71 219.12, 784.35 222.4 C796.99 225.68, 809.62 228.96, 822.26 232.24 C834.9 235.52, 847.54 238.8, 860.17 242.08 C872.81 245.36, 885.45 248.91, 898.09 251.92 C910.72 254.93, 929.68 258.75, 936 260.12"/></defs>
 <style>
@@ -34,7 +34,7 @@
 
 /* Highlight parks off the left edge of the name at rest. */
 .shimmer{animation:shimmer 7s ease-in-out 1.4s infinite}
-@keyframes shimmer{0%,12%{transform:translateX(0)}62%,100%{transform:translateX(1112.6px)}}
+@keyframes shimmer{0%,12%{transform:translateX(0)}62%,100%{transform:translateX(1120px)}}
 
 /* CSS motion path, not SMIL, so reduced-motion pins the cursor at the start
    of the curve — exactly where the resting readout says it is. */
@@ -62,8 +62,8 @@
 
 <g class="fade d1">
   <g mask="url(#nameMask)">
-    <rect x="223.7" y="82" width="552.6" height="60" fill="url(#nameGrad)"/>
-    <rect class="shimmer" x="-56.3" y="82" width="180" height="60" fill="url(#shine)"/>
+    <rect x="170" y="80" width="660" height="62" fill="url(#nameGrad)"/>
+    <rect class="shimmer" x="-70" y="80" width="180" height="62" fill="url(#shine)"/>
   </g>
   <text x="500" y="160" font-size="14" fill="#e6edf3" text-anchor="middle" letter-spacing="3.6">Data Scientist · Energy Trading</text>
 </g>

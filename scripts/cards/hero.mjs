@@ -10,7 +10,7 @@
 //      composed banner instead of a half-drawn one.
 //   2. Motion is CSS, never SMIL, so prefers-reduced-motion actually applies.
 
-import { color, emerald, ADVANCE } from '../lib/tokens.mjs';
+import { color, emerald, display, ADVANCE } from '../lib/tokens.mjs';
 import { doc, text, n, esc, ENTRANCE } from '../lib/svg.mjs';
 
 const W = 1000;
@@ -81,14 +81,17 @@ export function hero(profile) {
   const curve = smoothPath(pts);
   const area = `${curve} L${n(pts.at(-1).x)} ${BASE} L${n(pts[0].x)} ${BASE} Z`;
 
-  const NAME_SIZE = 44;
-  const SPACING = 11;
+  const NAME_SIZE = 46;
+  const SPACING = 8;
   const nameY = 126;
   // letter-spacing leaves a trailing gap after the last glyph, shifting a
   // middle-anchored run right by half a step; pull it back.
   const nameX = W / 2 - SPACING / 2;
-  const nameW = name.length * NAME_SIZE * ADVANCE + (name.length - 1) * SPACING;
-  const shineTravel = nameW + 600;
+  // The display face is not monospaced, so the run cannot be measured from an
+  // advance width. Everything that has to cover the name is sized generously
+  // and centred instead — the mask clips it to the glyphs either way.
+  const NAME_BOX = 660;
+  const shineTravel = NAME_BOX + 460;
 
   // Readout labels are fixed-width (HH:00 · NNN.NN), so one pill fits them all.
   const READ_SIZE = 10.5;
@@ -136,7 +139,7 @@ export function hero(profile) {
   <stop offset="100%" stop-color="${emerald[500]}" stop-opacity="0"/>
 </radialGradient>
 <mask id="nameMask">
-  <text x="${n(nameX)}" y="${nameY}" font-size="${NAME_SIZE}" font-weight="bold" letter-spacing="${SPACING}" text-anchor="middle" fill="#fff">${esc(name)}</text>
+  <text x="${n(nameX)}" y="${nameY}" font-family="${display}" font-size="${NAME_SIZE}" font-weight="700" letter-spacing="${SPACING}" text-anchor="middle" fill="#fff">${esc(name)}</text>
 </mask>
 <path id="curve" d="${curve}"/>`;
 
@@ -177,8 +180,8 @@ export function hero(profile) {
 
 <g class="fade d1">
   <g mask="url(#nameMask)">
-    <rect x="${n(W / 2 - nameW / 2 - 20)}" y="${nameY - NAME_SIZE}" width="${n(nameW + 40)}" height="${NAME_SIZE + 16}" fill="url(#nameGrad)"/>
-    <rect class="shimmer" x="${n(W / 2 - nameW / 2 - 300)}" y="${nameY - NAME_SIZE}" width="180" height="${NAME_SIZE + 16}" fill="url(#shine)"/>
+    <rect x="${n(W / 2 - NAME_BOX / 2)}" y="${nameY - NAME_SIZE}" width="${NAME_BOX}" height="${NAME_SIZE + 16}" fill="url(#nameGrad)"/>
+    <rect class="shimmer" x="${n(W / 2 - NAME_BOX / 2 - 240)}" y="${nameY - NAME_SIZE}" width="180" height="${NAME_SIZE + 16}" fill="url(#shine)"/>
   </g>
   ${text(role, { x: W / 2, y: 160, size: 14, fill: color.text, anchor: 'middle', spacing: 3.6 })}
 </g>

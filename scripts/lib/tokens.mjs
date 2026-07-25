@@ -30,6 +30,17 @@ export const emerald = {
 export const font =
   "ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace";
 
+// Display face, used only for the name in the hero.
+//
+// Monospace is right for data and terminal text, but it is the wrong tool for
+// a headline: every glyph occupies the same box, so narrow letters like I and
+// J float in too much space and the word loses its rhythm. This resolves to
+// SF Pro on macOS, Segoe UI on Windows and Roboto elsewhere — all clean
+// grotesques. Widths differ slightly per platform, which is harmless because
+// the name is centred with text-anchor rather than measured.
+export const display =
+  "system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif";
+
 // Widest common monospace advance ratio. Consolas (Windows) is narrower at
 // ~0.55, so boxes sized with this value never clip — text just gains a little
 // breathing room. Always pair with text-anchor="middle" so the difference
