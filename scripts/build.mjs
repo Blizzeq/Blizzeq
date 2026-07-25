@@ -9,6 +9,7 @@
 
 import { readFile, writeFile, mkdir, readdir, rm } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -49,7 +50,29 @@ async function loadStats() {
 const written = [];
 async function emit(name, svg) {
   await writeFile(join(assets, name), svg);
-  written.push({ name, bytes: svg.length });
+  written.push({ name, bytes: svg.length, hash: createHash('sha256').update(svg).digest('hex').slice(0, 8) });
+}
+
+/**
+ * Stamp every asset URL with a hash of that asset's own bytes.
+ *
+ * GitHub serves README images through its camo proxy, which caches by URL.
+ * These URLs are stable filenames, so a regenerated asset can keep rendering
+ * the *old* picture long after the new bytes are committed — the fix is on
+ * GitHub, the reader still sees the bug. That is not hypothetical: it is how
+ * the cursor timing fix landed, verified correct in the file and in a browser,
+ * and still wrong on the profile page.
+ *
+ * A content hash gives changed assets a new URL, so camo has to fetch them,
+ * while assets that did not change keep their URL and their cache entry. The
+ * build stays deterministic, so this adds no churn on its own.
+ */
+function stamp(markup) {
+  const hashes = new Map(written.map((w) => [w.name, w.hash]));
+  return markup.replace(/src="((?:\.\.\/)?assets\/)([\w.-]+\.svg)"/g, (whole, dir, file) => {
+    const hash = hashes.get(file);
+    return hash ? `src="${dir}${file}?v=${hash}"` : whole;
+  });
 }
 
 await mkdir(assets, { recursive: true });
@@ -115,11 +138,11 @@ await emit('footer.svg', footer(profile.identity.tagline));
 // The README is generated too, so the card files, links and group headings can
 // never drift from data/profile.json — editing that one file is the whole
 // maintenance story.
-await writeFile(join(root, 'README.md'), readme(layout));
+await writeFile(join(root, 'README.md'), stamp(readme(layout)));
 
 // A review page mirroring the README layout, so what gets checked locally is
 // what ships. Regenerated on every build so it cannot go stale.
-await writeFile(join(root, 'scripts', 'preview.html'), previewPage(layout));
+await writeFile(join(root, 'scripts', 'preview.html'), stamp(previewPage(layout)));
 
 // Drop assets this build no longer produces, so renaming or removing a project
 // cannot leave an orphan file behind that the README quietly stops using.
