@@ -100,7 +100,7 @@ for (const group of profile.projectGroups) {
 }
 
 await emit('tech-stack.svg', stack(profile));
-await emit('stats.svg', statsCard(profile, data));
+await emit('stats.svg', statsCard(profile, data, featuredRepos(profile).length));
 
 const { linkedin, linkedinLabel, email, github } = profile.identity;
 const contacts = [
