@@ -1,16 +1,14 @@
 <div align="center">
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:064e3b,100:065f46&height=180&section=header&text=Jakub%20Krasuski&fontSize=70&fontAlignY=35&animation=fadeIn&fontColor=10b981&desc=Data%20Analyst%20@%20Axpo%20%7C%20Python%20%E2%80%A2%20SQL%20%E2%80%A2%20GCP%20%7C%20Energy%20Trading&descAlignY=55&descSize=18" alt="Header" />
-
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=10B981&center=true&vCenter=true&width=600&lines=Data+Analyst+%40+Axpo;Python+Automation+%26+GCP+Data+Pipelines;Energy+Trading+Operations;Building+tools+for+power+markets" alt="Typing animation" />
+<img src="assets/hero.svg" alt="Jakub Krasuski — Data Scientist · Energy Trading" />
 
 </div>
 
-<h2 align="center">About Me</h2>
+<h2 align="center">About</h2>
 
 <div align="center">
 
-  <img src="assets/about-terminal.svg" alt="About me terminal card" />
+<img src="assets/about-terminal.svg" alt="Terminal session: whoami, current work, core stack, after-hours projects" />
 
 </div>
 
@@ -18,12 +16,42 @@
 
 <div align="center">
 
-  <a href="https://github.com/Blizzeq/gridpulse"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=gridpulse&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9&icon_color=10b981&description_lines_count=2" alt="GridPulse" /></a>
-  <a href="https://github.com/Blizzeq/grid-balancing-tool"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=grid-balancing-tool&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9&icon_color=10b981&description_lines_count=2" alt="Grid Balancing Tool" /></a>
-  <a href="https://github.com/Blizzeq/Prompt-Evolution-Engine"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=Prompt-Evolution-Engine&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9&icon_color=10b981&description_lines_count=2" alt="Prompt Evolution Engine" /></a>
-  <a href="https://github.com/Blizzeq/ai-student-impact-analysis"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=ai-student-impact-analysis&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9&icon_color=10b981&description_lines_count=2" alt="AI Student Impact Analysis" /></a>
-  <a href="https://github.com/Blizzeq/neuro-racer-lab"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=neuro-racer-lab&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9&icon_color=10b981&description_lines_count=2" alt="Neuro Racer Lab" /></a>
-  <a href="https://github.com/Blizzeq/pathfinder"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=Blizzeq&repo=pathfinder&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9&icon_color=10b981&description_lines_count=2" alt="Pathfinder" /></a>
+<a href="https://github.com/Blizzeq/gridpulse"><img src="assets/card-gridpulse.svg" alt="GridPulse — Live European power prices, cross-border flows and a trading simulator, built on real ENTSO-E market data across 28+ countries." /></a>
+
+</div>
+
+<h3 align="center">AI & Machine Learning</h3>
+
+<div align="center">
+
+<a href="https://github.com/Blizzeq/Prompt-Evolution-Engine"><img width="49%" src="assets/card-Prompt-Evolution-Engine.svg" alt="Prompt Evolution Engine — Genetic algorithms that evolve LLM prompts, scored by an LLM judge." /></a>
+<a href="https://github.com/Blizzeq/neuro-racer-lab"><img width="49%" src="assets/card-neuro-racer-lab.svg" alt="Neuro Racer Lab — Draw a track, train neural-net cars on it, then race the champion." /></a>
+
+</div>
+
+<h3 align="center">Quantitative & Analysis</h3>
+
+<div align="center">
+
+<a href="https://github.com/Blizzeq/black-scholes-viz"><img width="49%" src="assets/card-black-scholes-viz.svg" alt="Black-Scholes Simulator — Monte Carlo price paths with fan charts, VaR and expected shortfall." /></a>
+<a href="https://github.com/Blizzeq/ai-student-impact-analysis"><img width="49%" src="assets/card-ai-student-impact-analysis.svg" alt="AI Student Impact — How GenAI use relates to student grades, skill retention and burnout." /></a>
+
+</div>
+
+<h3 align="center">Systems & Algorithms</h3>
+
+<div align="center">
+
+<a href="https://github.com/Blizzeq/protocol-lab"><img width="49%" src="assets/card-protocol-lab.svg" alt="Protocol Lab — One task board served over REST, GraphQL, WebSocket, webhooks, gRPC and MCP." /></a>
+<a href="https://github.com/Blizzeq/league-of-legends-data-collector"><img width="49%" src="assets/card-league-of-legends-data-collector.svg" alt="LoL Data Collector — Python ETL pulling match and player stats from the Riot API into CSV." /></a>
+
+</div>
+
+<div align="center">
+
+<a href="https://github.com/Blizzeq/graph-viz"><img width="32%" src="assets/card-sm-graph-viz.svg" alt="Graph Visualizer — Seven graph algorithms animated in real time, including Kruskal and Prim." /></a>
+<a href="https://github.com/Blizzeq/pathfinder"><img width="32%" src="assets/card-sm-pathfinder.svg" alt="Pathfinder — A*, Dijkstra, BFS and DFS with waypoints, mazes and live comparison." /></a>
+<a href="https://github.com/Blizzeq/sort-vizualzation"><img width="32%" src="assets/card-sm-sort-vizualzation.svg" alt="Sort Visualizer — Sorting algorithms visualised with real-time complexity analysis." /></a>
 
 </div>
 
@@ -31,24 +59,17 @@
 
 <div align="center">
 
-  <img src="assets/tech-stack.svg" alt="Tech stack: Python, TypeScript, JavaScript, React, Next.js, Node.js, FastAPI, Tailwind CSS, Pandas, NumPy, Plotly, scikit-learn, BigQuery, Airflow, Snowflake, Power BI, Google Cloud, PostgreSQL, MongoDB, Docker, Git, GitHub Actions, Vercel" />
+<img src="assets/tech-stack.svg" alt="Tech stack grouped by how often each tool is used" />
 
 </div>
 
-<h2 align="center">GitHub Analytics</h2>
+<h2 align="center">GitHub Activity</h2>
 
 <div align="center">
 
-  <img src="https://raw.githubusercontent.com/Blizzeq/Blizzeq/output/profile-3d-emerald.svg" alt="3D contribution calendar" />
+<img src="assets/stats.svg" alt="Contributions, repositories touched, public repositories, years on GitHub, and language mix" />
 
-  <br><br>
-
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=Blizzeq&show_icons=true&hide=issues,contribs&hide_rank=true&disable_animations=true&bg_color=161b22&border_color=30363d&title_color=10b981&icon_color=10b981&text_color=c9d1d9" alt="GitHub stats" />
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Blizzeq&layout=compact&hide=html,css,java,ejs,makefile,scss,less,shell&langs_count=6&disable_animations=true&bg_color=161b22&border_color=30363d&title_color=10b981&text_color=c9d1d9" alt="Top languages" />
-
-  <br><br>
-
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Blizzeq&bg_color=161b22&color=10b981&line=059669&point=10b981&area=true&area_color=065f46&title_color=10b981&hide_border=true&radius=10" alt="Activity graph" />
+<img src="https://raw.githubusercontent.com/Blizzeq/Blizzeq/output/profile-3d-emerald.svg" alt="3D contribution calendar" />
 
 </div>
 
@@ -56,11 +77,14 @@
 
 <div align="center">
 
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-jakub--krasuski-10b981?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=065f46)](https://www.linkedin.com/in/jakub-krasuski-6aa818211/)
-  [![Email](https://img.shields.io/badge/Email-kj.krasuski.mail%40gmail.com-10b981?style=for-the-badge&logo=gmail&logoColor=white&labelColor=065f46)](mailto:kj.krasuski.mail@gmail.com)
+<a href="https://www.linkedin.com/in/jakub-krasuski-6aa818211/"><img src="assets/contact-linkedin.svg" alt="LinkedIn" /></a>
+<a href="mailto:kj.krasuski.mail@gmail.com"><img src="assets/contact-email.svg" alt="Email" /></a>
+<a href="https://github.com/Blizzeq"><img src="assets/contact-github.svg" alt="GitHub" /></a>
 
 </div>
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:064e3b,100:065f46&height=100&section=footer" alt="Footer" />
+
+<img src="assets/footer.svg" alt="" />
+
 </div>

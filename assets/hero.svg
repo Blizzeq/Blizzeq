@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320" viewBox="0 0 1000 320" role="img" aria-label="JAKUB KRASUSKI — Data Scientist · Energy Trading" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace">
+<title>JAKUB KRASUSKI — Data Scientist · Energy Trading</title>
+<defs>
+<linearGradient id="nameGrad" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0%" stop-color="#059669"/>
+  <stop offset="50%" stop-color="#6ee7b7"/>
+  <stop offset="100%" stop-color="#059669"/>
+</linearGradient>
+<linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0%" stop-color="#fff" stop-opacity="0"/>
+  <stop offset="50%" stop-color="#fff" stop-opacity="0.75"/>
+  <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#10b981" stop-opacity="0.32"/>
+  <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="glow" cx="50%" cy="32%" r="62%">
+  <stop offset="0%" stop-color="#10b981" stop-opacity="0.10"/>
+  <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+</radialGradient>
+<mask id="nameMask">
+  <text x="494.5" y="126" font-size="44" font-weight="bold" letter-spacing="11" text-anchor="middle" fill="#fff">JAKUB KRASUSKI</text>
+</mask>
+<path id="curve" d="M64 263.4 C70.32 264.22, 89.28 266.95, 101.91 268.32 C114.55 269.69, 127.19 270.92, 139.83 271.6 C152.46 272.28, 165.1 272.69, 177.74 272.42 C190.38 272.15, 203.01 271.46, 215.65 269.96 C228.29 268.46, 240.93 266.41, 253.57 263.4 C266.2 260.39, 278.84 255.75, 291.48 251.92 C304.12 248.09, 316.75 243.45, 329.39 240.44 C342.03 237.43, 354.67 235.38, 367.3 233.88 C379.94 232.38, 392.58 231.42, 405.22 231.42 C417.86 231.42, 430.49 232.92, 443.13 233.88 C455.77 234.84, 468.41 236.34, 481.04 237.16 C493.68 237.98, 506.32 238.8, 518.96 238.8 C531.59 238.8, 544.23 237.98, 556.87 237.16 C569.51 236.34, 582.14 235.25, 594.78 233.88 C607.42 232.51, 620.06 231.28, 632.7 228.96 C645.33 226.64, 657.97 223.08, 670.61 219.94 C683.25 216.8, 695.88 211.33, 708.52 210.1 C721.16 208.87, 733.8 210.51, 746.43 212.56 C759.07 214.61, 771.71 219.12, 784.35 222.4 C796.99 225.68, 809.62 228.96, 822.26 232.24 C834.9 235.52, 847.54 238.8, 860.17 242.08 C872.81 245.36, 885.45 248.91, 898.09 251.92 C910.72 254.93, 929.68 258.75, 936 260.12"/></defs>
+<style>
+.fade{animation:fade .9s ease-out}
+@keyframes fade{from{opacity:0}}
+.d1{animation-delay:.1s}.d2{animation-delay:.22s}
+
+/* Curve draws itself in; resting dashoffset is 0, i.e. fully drawn. */
+.draw{stroke-dasharray:2600;animation:draw 2.2s cubic-bezier(.4,0,.2,1) .2s}
+@keyframes draw{from{stroke-dashoffset:2600}}
+
+/* Highlight parks off the left edge of the name at rest. */
+.shimmer{animation:shimmer 7s ease-in-out 1.4s infinite}
+@keyframes shimmer{0%,12%{transform:translateX(0)}62%,100%{transform:translateX(1112.6px)}}
+
+/* CSS motion path, not SMIL, so reduced-motion pins the cursor at the start
+   of the curve — exactly where the resting readout says it is. */
+.cursor{offset-path:path("M64 263.4 C70.32 264.22, 89.28 266.95, 101.91 268.32 C114.55 269.69, 127.19 270.92, 139.83 271.6 C152.46 272.28, 165.1 272.69, 177.74 272.42 C190.38 272.15, 203.01 271.46, 215.65 269.96 C228.29 268.46, 240.93 266.41, 253.57 263.4 C266.2 260.39, 278.84 255.75, 291.48 251.92 C304.12 248.09, 316.75 243.45, 329.39 240.44 C342.03 237.43, 354.67 235.38, 367.3 233.88 C379.94 232.38, 392.58 231.42, 405.22 231.42 C417.86 231.42, 430.49 232.92, 443.13 233.88 C455.77 234.84, 468.41 236.34, 481.04 237.16 C493.68 237.98, 506.32 238.8, 518.96 238.8 C531.59 238.8, 544.23 237.98, 556.87 237.16 C569.51 236.34, 582.14 235.25, 594.78 233.88 C607.42 232.51, 620.06 231.28, 632.7 228.96 C645.33 226.64, 657.97 223.08, 670.61 219.94 C683.25 216.8, 695.88 211.33, 708.52 210.1 C721.16 208.87, 733.8 210.51, 746.43 212.56 C759.07 214.61, 771.71 219.12, 784.35 222.4 C796.99 225.68, 809.62 228.96, 822.26 232.24 C834.9 235.52, 847.54 238.8, 860.17 242.08 C872.81 245.36, 885.45 248.91, 898.09 251.92 C910.72 254.93, 929.68 258.75, 936 260.12");offset-rotate:0deg;animation:ride 9s linear 1.4s infinite}
+@keyframes ride{from{offset-distance:0%}to{offset-distance:100%}}
+
+.v{opacity:0;animation:slot 9s linear 1.4s infinite}
+.v0{opacity:1}
+@keyframes slot{0%,4.12%{opacity:1}4.17%,100%{opacity:0}}
+
+.pulse{animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
+
+<rect width="1000" height="320" rx="14" fill="#0d1117"/>
+<rect width="1000" height="320" rx="14" fill="url(#glow)"/>
+<rect x="0.5" y="0.5" width="999" height="319" rx="14" fill="none" stroke="#30363d"/>
+
+<g class="fade">
+  <line x1="1" y1="40" x2="999" y2="40" stroke="#30363d"/>
+  <circle cx="64" cy="24.5" r="3.5" fill="#34d399" class="pulse"/>
+  <text x="77" y="28.5" font-size="11" fill="#8b949e" letter-spacing="1.6">github.com/Blizzeq</text>
+  <text x="936" y="28.5" font-size="11" fill="#8b949e" text-anchor="end" letter-spacing="1.6">Warsaw, Poland</text>
+</g>
+
+<g class="fade d1">
+  <g mask="url(#nameMask)">
+    <rect x="223.7" y="82" width="552.6" height="60" fill="url(#nameGrad)"/>
+    <rect class="shimmer" x="-56.3" y="82" width="180" height="60" fill="url(#shine)"/>
+  </g>
+  <text x="500" y="160" font-size="14" fill="#e6edf3" text-anchor="middle" letter-spacing="3.6">Data Scientist · Energy Trading</text>
+</g>
+
+<g class="fade d2">
+  <line x1="64" y1="196" x2="64" y2="288" stroke="#064e3b" stroke-width="1" opacity="0.5"/><line x1="291.48" y1="196" x2="291.48" y2="288" stroke="#064e3b" stroke-width="1" opacity="0.5"/><line x1="518.96" y1="196" x2="518.96" y2="288" stroke="#064e3b" stroke-width="1" opacity="0.5"/><line x1="746.43" y1="196" x2="746.43" y2="288" stroke="#064e3b" stroke-width="1" opacity="0.5"/>
+  <line x1="64" y1="288" x2="936" y2="288" stroke="#30363d"/>
+  <path d="M64 263.4 C70.32 264.22, 89.28 266.95, 101.91 268.32 C114.55 269.69, 127.19 270.92, 139.83 271.6 C152.46 272.28, 165.1 272.69, 177.74 272.42 C190.38 272.15, 203.01 271.46, 215.65 269.96 C228.29 268.46, 240.93 266.41, 253.57 263.4 C266.2 260.39, 278.84 255.75, 291.48 251.92 C304.12 248.09, 316.75 243.45, 329.39 240.44 C342.03 237.43, 354.67 235.38, 367.3 233.88 C379.94 232.38, 392.58 231.42, 405.22 231.42 C417.86 231.42, 430.49 232.92, 443.13 233.88 C455.77 234.84, 468.41 236.34, 481.04 237.16 C493.68 237.98, 506.32 238.8, 518.96 238.8 C531.59 238.8, 544.23 237.98, 556.87 237.16 C569.51 236.34, 582.14 235.25, 594.78 233.88 C607.42 232.51, 620.06 231.28, 632.7 228.96 C645.33 226.64, 657.97 223.08, 670.61 219.94 C683.25 216.8, 695.88 211.33, 708.52 210.1 C721.16 208.87, 733.8 210.51, 746.43 212.56 C759.07 214.61, 771.71 219.12, 784.35 222.4 C796.99 225.68, 809.62 228.96, 822.26 232.24 C834.9 235.52, 847.54 238.8, 860.17 242.08 C872.81 245.36, 885.45 248.91, 898.09 251.92 C910.72 254.93, 929.68 258.75, 936 260.12 L936 288 L64 288 Z" fill="url(#areaFill)"/>
+  <use href="#curve" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" class="draw"/>
+  <text x="64" y="304" font-size="9" fill="#6b7280" text-anchor="middle" letter-spacing="1.2">00</text><text x="291.48" y="304" font-size="9" fill="#6b7280" text-anchor="middle" letter-spacing="1.2">06</text><text x="518.96" y="304" font-size="9" fill="#6b7280" text-anchor="middle" letter-spacing="1.2">12</text><text x="746.43" y="304" font-size="9" fill="#6b7280" text-anchor="middle" letter-spacing="1.2">18</text>
+
+  <g class="cursor">
+    <line x1="0" y1="0" x2="0" y2="-8" stroke="#6ee7b7" stroke-width="1" opacity="0.5"/>
+    <rect x="-54.1" y="-32" width="108.2" height="19" rx="5" fill="#1c2128" stroke="#065f46"/>
+    <text style="animation-delay:-9s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v v0">00:00 · 239.18</text><text style="animation-delay:-8.62s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">01:00 · 215.20</text><text style="animation-delay:-8.25s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">02:00 · 201.49</text><text style="animation-delay:-7.87s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">03:00 · 198.35</text><text style="animation-delay:-7.5s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">04:00 · 208.11</text><text style="animation-delay:-7.12s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">05:00 · 239.18</text><text style="animation-delay:-6.75s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">06:00 · 310.00</text><text style="animation-delay:-6.37s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">07:00 · 400.14</text><text style="animation-delay:-6s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">08:00 · 459.80</text><text style="animation-delay:-5.62s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">09:00 · 483.65</text><text style="animation-delay:-5.25s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">10:00 · 459.80</text><text style="animation-delay:-4.87s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">11:00 · 429.25</text><text style="animation-delay:-4.5s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">12:00 · 414.51</text><text style="animation-delay:-4.12s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">13:00 · 429.25</text><text style="animation-delay:-3.75s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">14:00 · 459.80</text><text style="animation-delay:-3.37s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">15:00 · 508.29</text><text style="animation-delay:-3s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">16:00 · 605.27</text><text style="animation-delay:-2.62s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">17:00 · 722.63</text><text style="animation-delay:-2.25s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">18:00 · 692.18</text><text style="animation-delay:-1.87s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">19:00 · 577.80</text><text style="animation-delay:-1.5s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">20:00 · 475.61</text><text style="animation-delay:-1.12s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">21:00 · 386.14</text><text style="animation-delay:-0.75s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">22:00 · 310.00</text><text style="animation-delay:-0.37s" x="0" y="-20" font-size="10.5" fill="#a7f3d0" text-anchor="middle" class="v">23:00 · 257.35</text>
+    <circle r="3.2" fill="#d1fae5"/>
+  </g>
+</g>
+
+</svg>

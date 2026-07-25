@@ -1,0 +1,65 @@
+{
+  "createdAt": "2021-06-15T21:41:47Z",
+  "publicRepos": 26,
+  "contributions": 4878,
+  "publicCommits": 191,
+  "privateContributions": 4669,
+  "activeRepos": 19,
+  "languagesByRepo": {
+    "gridpulse": {
+      "TypeScript": 253267,
+      "CSS": 9085,
+      "JavaScript": 559
+    },
+    "Prompt-Evolution-Engine": {
+      "TypeScript": 373562,
+      "CSS": 11327,
+      "JavaScript": 559
+    },
+    "neuro-racer-lab": {
+      "TypeScript": 138386,
+      "JavaScript": 19582,
+      "CSS": 8098,
+      "HTML": 1520
+    },
+    "black-scholes-viz": {
+      "Python": 65444
+    },
+    "ai-student-impact-analysis": {
+      "Python": 57693,
+      "Makefile": 940
+    },
+    "protocol-lab": {
+      "TypeScript": 154962,
+      "Python": 122158,
+      "CSS": 3586,
+      "JavaScript": 781
+    },
+    "league-of-legends-data-collector": {
+      "Python": 45593
+    },
+    "graph-viz": {
+      "TypeScript": 148620,
+      "CSS": 1835,
+      "JavaScript": 156
+    },
+    "pathfinder": {
+      "TypeScript": 118298,
+      "CSS": 6282,
+      "JavaScript": 192
+    },
+    "sort-vizualzation": {
+      "TypeScript": 107904,
+      "CSS": 4168,
+      "JavaScript": 605
+    }
+  },
+  "languageTotals": {
+    "TypeScript": 1294999,
+    "CSS": 44381,
+    "JavaScript": 22434,
+    "HTML": 1520,
+    "Python": 290888,
+    "Makefile": 940
+  }
+}

@@ -1,0 +1,57 @@
+name: Build profile assets
+
+# Regenerates every SVG the README embeds, plus the README itself, and commits
+# the result. The README never points at a third-party image service, so it
+# cannot break when somebody else's deployment goes down.
+
+on:
+  schedule:
+    # After profile-3d (03:00 UTC), so both are fresh each morning.
+    - cron: "20 3 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    # Deliberately narrow. This job commits assets/, README.md and
+    # data/github-cache.json — none of which are listed here, so it cannot
+    # retrigger itself.
+    paths:
+      - "scripts/**"
+      - "data/profile.json"
+      - ".github/workflows/build-assets.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-assets
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # No dependencies to install: the generator is plain Node with no
+      # packages, which is one fewer thing that can break a scheduled run.
+      - name: Generate assets
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/build.mjs
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets README.md data/github-cache.json
+          if git diff --staged --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git commit -m "chore(profile): refresh generated assets [skip ci]"
+          git push

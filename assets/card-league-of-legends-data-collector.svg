@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="492" height="204" viewBox="0 0 492 204" role="img" aria-label="LoL Data Collector — Python ETL pulling match and player stats from the Riot API into CSV." font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace">
+<title>LoL Data Collector — Python ETL pulling match and player stats from the Riot API into CSV.</title>
+<defs>
+<clipPath id="card"><rect width="492" height="204" rx="10"/></clipPath>
+<linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0%" stop-color="#34d399" stop-opacity="0"/>
+  <stop offset="50%" stop-color="#34d399" stop-opacity="0.07"/>
+  <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0%" stop-color="#047857"/>
+  <stop offset="50%" stop-color="#34d399"/>
+  <stop offset="100%" stop-color="#047857"/>
+</linearGradient></defs>
+<style>
+.fade{animation:fade .9s ease-out}
+@keyframes fade{from{opacity:0}}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.langbar{transform-box:fill-box;transform-origin:left center;animation:grow 1s cubic-bezier(.4,0,.2,1) .25s}
+@keyframes grow{from{transform:scaleX(0)}}
+
+/* Slow diagonal sweep. Parks off the left edge at rest, so a still frame is clean. */
+.sweep{animation:sweep 9s ease-in-out infinite}
+@keyframes sweep{0%,22%{transform:translateX(0)}70%,100%{transform:translateX(792px)}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
+
+<rect x="0.5" y="0.5" width="491" height="203" rx="10" fill="#161b22" stroke="#30363d"/>
+<g clip-path="url(#card)"><rect class="sweep" x="-260" y="0" width="180" height="204" fill="url(#sweepGrad)" transform="skewX(-18)"/></g>
+<!-- Accent stays emerald on every card; language colour lives in the data bar
+     at the foot, where it reads as information rather than decoration. -->
+<rect x="0.5" y="0.5" width="491" height="2.5" rx="1" fill="url(#accent)" opacity="0.9"/>
+
+<g class="fade">
+  <text x="20" y="32.09" font-size="15.5" fill="#6ee7b7" font-weight="bold">LoL Data Collector</text>
+  <g><rect x="385.6" y="16" width="86.4" height="18" rx="9" fill="#0d1117" stroke="#30363d"/><text x="428.8" y="28.33" font-size="9.5" fill="#8b949e" text-anchor="middle">Python · ETL</text></g>
+  <text x="20" y="56.09" font-size="11.5" fill="#8b949e">Python ETL pulling match and player stats from the Riot API into</text><text x="20" y="73.59" font-size="11.5" fill="#8b949e">CSV.</text>
+  <g><rect x="20" y="116" width="54" height="22" rx="6" fill="rgba(16,185,129,0.14)" stroke="rgba(52,211,153,0.55)"/><text x="47" y="130.6" font-size="10" fill="#6ee7b7" text-anchor="middle">Python</text></g><g><rect x="81" y="116" width="36" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="99" y="130.6" font-size="10" fill="#34d399" text-anchor="middle">ETL</text></g><g><rect x="124" y="116" width="66" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="157" y="130.6" font-size="10" fill="#34d399" text-anchor="middle">REST API</text></g>
+  <g class="langbar" style="animation-delay:0.25s"><rect x="20" y="162" width="452" height="5" fill="#34d399"/></g>
+  <text x="20" y="188" font-size="9.5" fill="#6b7280">league-of-legends-data-collector</text>
+  <text x="472" y="188" font-size="9.5" fill="#6b7280" text-anchor="end">Python</text>
+</g>
+</svg>
