@@ -19,12 +19,17 @@ export function stack(profile) {
 
   for (const group of profile.stack) {
     body += caption(group.group, { cx: W / 2, y });
-    y += 16;
+    y += 18;
     const rows = chipRows(group.items, {
       cx: W / 2,
       y,
       maxW: W - PAD * 2,
-      size: 12,
+      // Slightly larger chips than the default: the widest row was only
+      // filling about two thirds of the card, which left it looking sparse.
+      size: 13,
+      padX: 14,
+      h: 28,
+      gap: 9,
       delayBase: delay,
       stagger: 0.035,
     });

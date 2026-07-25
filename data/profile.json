@@ -225,11 +225,11 @@
           "tone": "strong"
         },
         {
-          "label": "Google Cloud",
+          "label": "Docker",
           "tone": "strong"
         },
         {
-          "label": "Docker",
+          "label": "Google Cloud",
           "tone": "strong"
         },
         {
@@ -239,7 +239,7 @@
       ]
     },
     {
-      "group": "Data & ML",
+      "group": "Analysis & ML",
       "items": [
         {
           "label": "pandas"
@@ -254,9 +254,6 @@
           "label": "Plotly"
         },
         {
-          "label": "Terraform"
-        },
-        {
           "label": "Power BI"
         }
       ]
@@ -265,18 +262,21 @@
       "group": "AI & LLM",
       "items": [
         {
-          "label": "Claude / OpenAI APIs"
+          "label": "Claude API"
         },
         {
-          "label": "LLM-assisted pipelines"
+          "label": "OpenAI API"
         },
         {
-          "label": "Prompt evaluation"
+          "label": "MCP"
+        },
+        {
+          "label": "Claude Code"
         }
       ]
     },
     {
-      "group": "Build",
+      "group": "Also build with",
       "items": [
         {
           "label": "TypeScript",
@@ -291,10 +291,6 @@
           "tone": "quiet"
         },
         {
-          "label": "Node.js",
-          "tone": "quiet"
-        },
-        {
           "label": "FastAPI",
           "tone": "quiet"
         },
@@ -303,7 +299,11 @@
           "tone": "quiet"
         },
         {
-          "label": "Tailwind",
+          "label": "Supabase",
+          "tone": "quiet"
+        },
+        {
+          "label": "Terraform",
           "tone": "quiet"
         },
         {

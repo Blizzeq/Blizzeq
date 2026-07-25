@@ -2,7 +2,7 @@
 // strings, because the output has to survive being loaded through <img> on
 // GitHub, where no script ever runs.
 
-import { color, font, textWidth, radius } from './tokens.mjs';
+import { color, emerald, font, textWidth, radius } from './tokens.mjs';
 
 /**
  * Shared entrance animation.
@@ -90,10 +90,13 @@ export function text(s, { x, y, size = 13, fill = color.text, anchor = 'start', 
  */
 export function chip(label, { x, y, size = 12, tone = 'normal', padX = 11, h = 26, cls } = {}) {
   const w = textWidth(label, size) + padX * 2;
+  // Three clearly separated steps. The previous `strong` and `normal` differed
+  // only by a faint tint and read as the same weight, which defeated the point
+  // of encoding how often something is actually used.
   const tones = {
-    strong: { fill: 'rgba(16,185,129,0.14)', stroke: 'rgba(52,211,153,0.55)', text: '#6ee7b7' },
-    normal: { fill: color.bg, stroke: color.border, text: '#34d399' },
-    quiet: { fill: 'transparent', stroke: color.borderSoft, text: '#7d8894' },
+    strong: { fill: 'rgba(16,185,129,0.22)', stroke: emerald[500], text: emerald[200] },
+    normal: { fill: color.bg, stroke: color.border, text: emerald[400] },
+    quiet: { fill: 'transparent', stroke: color.borderSoft, text: '#6f7b87' },
   };
   const t = tones[tone] ?? tones.normal;
   return {
@@ -107,11 +110,11 @@ export function chip(label, { x, y, size = 12, tone = 'normal', padX = 11, h = 2
  * Returns the markup plus the height consumed, so callers can stack sections
  * without hand-tuning coordinates the way the old hand-written assets did.
  */
-export function chipRows(items, { cx, y, maxW, gap = 8, rowGap = 10, size = 12, h = 26, delayBase = 0, stagger = 0.04 }) {
+export function chipRows(items, { cx, y, maxW, gap = 8, rowGap = 10, size = 12, h = 26, padX = 11, delayBase = 0, stagger = 0.04 }) {
   const measured = items.map((it) => {
     const label = typeof it === 'string' ? it : it.label;
     const tone = typeof it === 'string' ? 'normal' : it.tone;
-    return { label, tone, w: textWidth(label, size) + 22 };
+    return { label, tone, w: textWidth(label, size) + padX * 2 };
   });
 
   const rows = [];
@@ -136,7 +139,7 @@ export function chipRows(items, { cx, y, maxW, gap = 8, rowGap = 10, size = 12, 
     let x = cx - r.w / 2;
     const ry = y + ri * (h + rowGap);
     for (const m of r.items) {
-      const c = chip(m.label, { x, y: ry, size, tone: m.tone, h, cls: 'chip' });
+      const c = chip(m.label, { x, y: ry, size, tone: m.tone, h, padX, cls: 'chip' });
       out += c.svg.replace('<g class="chip">', `<g class="chip" style="animation-delay:${n(delayBase + i * stagger)}s">`);
       x += m.w + gap;
       i++;
