@@ -260,7 +260,7 @@
       ]
     },
     {
-      "group": "AI & LLM",
+      "group": "LLM integration",
       "items": [
         {
           "label": "Claude API"
@@ -270,18 +270,6 @@
         },
         {
           "label": "Gemini API"
-        },
-        {
-          "label": "Ollama"
-        },
-        {
-          "label": "Claude Code"
-        },
-        {
-          "label": "Codex"
-        },
-        {
-          "label": "Antigravity"
         },
         {
           "label": "MCP"
