@@ -21,6 +21,17 @@
 
 </div>
 
+<h3 align="center">Energy & Quantitative</h3>
+
+<div align="center">
+
+<a href="https://grid-balancing-tool.vercel.app"><img width="49%" src="assets/card-grid-balancing-tool.svg?v=ffe735fe" alt="Grid Balancing Simulator — Trade Poland's balancing market against a bot, settled at the imbalance price." /></a>
+<a href="https://github.com/Blizzeq/black-scholes-viz"><img width="49%" src="assets/card-black-scholes-viz.svg?v=d51af9e8" alt="Black-Scholes Simulator — Monte Carlo price paths with fan charts, VaR and expected shortfall." /></a>
+<a href="https://github.com/Blizzeq/grid-balancing-tool"><img width="49%" src="assets/card-grid-balancing-tool-cta.svg?v=bd5d0271" alt="Grid Balancing Simulator source code" /></a>
+<a href="https://github.com/Blizzeq/black-scholes-viz"><img width="49%" src="assets/card-black-scholes-viz-cta.svg?v=bd5d0271" alt="Black-Scholes Simulator source code" /></a>
+
+</div>
+
 <h3 align="center">AI & Machine Learning</h3>
 
 <div align="center">
@@ -30,15 +41,7 @@
 <a href="https://github.com/Blizzeq/Prompt-Evolution-Engine"><img width="49%" src="assets/card-Prompt-Evolution-Engine-cta.svg?v=bd5d0271" alt="Prompt Evolution Engine source code" /></a>
 <a href="https://github.com/Blizzeq/neuro-racer-lab"><img width="49%" src="assets/card-neuro-racer-lab-cta.svg?v=bd5d0271" alt="Neuro Racer Lab source code" /></a>
 
-</div>
-
-<h3 align="center">Analysis & Modelling</h3>
-
-<div align="center">
-
-<a href="https://github.com/Blizzeq/black-scholes-viz"><img width="49%" src="assets/card-black-scholes-viz.svg?v=d51af9e8" alt="Black-Scholes Simulator — Monte Carlo price paths with fan charts, VaR and expected shortfall." /></a>
 <a href="https://github.com/Blizzeq/ai-student-impact-analysis"><img width="49%" src="assets/card-ai-student-impact-analysis.svg?v=ed6a58e0" alt="GenAI & Student Outcomes — How GenAI use relates to student grades, skill retention and burnout." /></a>
-<a href="https://github.com/Blizzeq/black-scholes-viz"><img width="49%" src="assets/card-black-scholes-viz-cta.svg?v=bd5d0271" alt="Black-Scholes Simulator source code" /></a>
 <a href="https://github.com/Blizzeq/ai-student-impact-analysis"><img width="49%" src="assets/card-ai-student-impact-analysis-cta.svg?v=bd5d0271" alt="GenAI & Student Outcomes source code" /></a>
 
 </div>
@@ -77,7 +80,7 @@
 
 <div align="center">
 
-<img src="assets/stats.svg?v=82cc15c7" alt="Contributions, repositories touched, public repositories, years on GitHub, and language mix" />
+<img src="assets/stats.svg?v=950683f6" alt="Contributions, repositories touched, public repositories, years on GitHub, and language mix" />
 
 <img src="https://raw.githubusercontent.com/Blizzeq/Blizzeq/output/profile-3d-emerald.svg" alt="3D contribution calendar" />
 

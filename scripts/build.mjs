@@ -168,18 +168,28 @@ function readme(groups) {
   const cta = (c, width) =>
     `<a href="${c.ctaHref}"><img width="${width}" src="assets/${c.cta}" alt="${p(c).display} source code" /></a>`;
 
-  // Cards first, then their strips: at 49% two fit per line, so the strips land
-  // directly under the cards they belong to.
-  const grid = (cards, width) => `<div align="center">
+  // Emit one row of cards, then that row's source strips, then the next row.
+  //
+  // Writing every card first and every strip afterwards reads as the simpler
+  // spelling, and it happens to look right — but only while a group holds
+  // exactly one row. With three projects at 49% the third card wraps onto the
+  // row where the first strips land, and each strip ends up under somebody
+  // else's card. Chunking by row keeps a strip with its own card at any count.
+  const grid = (cards, width, perRow) => {
+    const rows = [];
+    for (let i = 0; i < cards.length; i += perRow) rows.push(cards.slice(i, i + perRow));
+    const block = (row) => `${row.map((c) => card(c, width)).join('\n')}
+${row.map((c) => cta(c, width)).join('\n')}`;
+    return `<div align="center">
 
-${cards.map((c) => card(c, width)).join('\n')}
-${cards.map((c) => cta(c, width)).join('\n')}
+${rows.map(block).join('\n\n')}
 
 </div>`;
+  };
 
   const group = (g) => `<h3 align="center">${g.title}</h3>
 
-${grid(g.cards, '49%')}${g.compact.length ? `\n\n${grid(g.compact, '32%')}` : ''}`;
+${grid(g.cards, '49%', 2)}${g.compact.length ? `\n\n${grid(g.compact, '32%', 3)}` : ''}`;
 
   return `<div align="center">
 

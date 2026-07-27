@@ -70,16 +70,17 @@
   "flagship": "gridpulse",
   "projectGroups": [
     {
-      "title": "AI & Machine Learning",
+      "title": "Energy & Quantitative",
       "projects": [
-        "Prompt-Evolution-Engine",
-        "neuro-racer-lab"
+        "grid-balancing-tool",
+        "black-scholes-viz"
       ]
     },
     {
-      "title": "Analysis & Modelling",
+      "title": "AI & Machine Learning",
       "projects": [
-        "black-scholes-viz",
+        "Prompt-Evolution-Engine",
+        "neuro-racer-lab",
         "ai-student-impact-analysis"
       ]
     },
@@ -109,6 +110,17 @@
         "ENTSO-E API"
       ],
       "demo": "https://gridpulse-eu.vercel.app"
+    },
+    "grid-balancing-tool": {
+      "display": "Grid Balancing Simulator",
+      "pitch": "Trade Poland's balancing market against a bot, settled at the imbalance price.",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Recharts",
+        "Balancing Market"
+      ],
+      "demo": "https://grid-balancing-tool.vercel.app"
     },
     "black-scholes-viz": {
       "display": "Black-Scholes Simulator",
