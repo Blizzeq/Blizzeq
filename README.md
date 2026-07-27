@@ -25,7 +25,7 @@
 
 <div align="center">
 
-<a href="https://grid-balancing-tool.vercel.app"><img width="49%" src="assets/card-grid-balancing-tool.svg?v=ffe735fe" alt="Grid Balancing Simulator — Trade Poland's balancing market against a bot, settled at the imbalance price." /></a>
+<a href="https://grid-balancing-tool.vercel.app"><img width="49%" src="assets/card-grid-balancing-tool.svg?v=15008077" alt="Grid Balancing Simulator — Trade Poland's balancing market against a bot, settled at the imbalance price." /></a>
 <a href="https://github.com/Blizzeq/black-scholes-viz"><img width="49%" src="assets/card-black-scholes-viz.svg?v=d51af9e8" alt="Black-Scholes Simulator — Monte Carlo price paths with fan charts, VaR and expected shortfall." /></a>
 <a href="https://github.com/Blizzeq/grid-balancing-tool"><img width="49%" src="assets/card-grid-balancing-tool-cta.svg?v=bd5d0271" alt="Grid Balancing Simulator source code" /></a>
 <a href="https://github.com/Blizzeq/black-scholes-viz"><img width="49%" src="assets/card-black-scholes-viz-cta.svg?v=bd5d0271" alt="Black-Scholes Simulator source code" /></a>
@@ -80,7 +80,7 @@
 
 <div align="center">
 
-<img src="assets/stats.svg?v=950683f6" alt="Contributions, repositories touched, public repositories, years on GitHub, and language mix" />
+<img src="assets/stats.svg?v=03384841" alt="Contributions, repositories touched, public repositories, years on GitHub, and language mix" />
 
 <img src="https://raw.githubusercontent.com/Blizzeq/Blizzeq/output/profile-3d-emerald.svg" alt="3D contribution calendar" />
 
