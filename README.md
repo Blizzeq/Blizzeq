@@ -16,7 +16,7 @@
 
 <div align="center">
 
-<a href="https://gridpulse-eu.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-gridpulse-narrow.svg?v=b6bc2b81" /><img width="804" src="assets/card-gridpulse.svg?v=8a7c54d7" alt="GridPulse — Live European power prices, cross-border flows and a trading simulator, built on real ENTSO-E market data across 28+ countries." /></picture></a>
+<a href="https://gridpulse-eu.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-gridpulse-narrow.svg?v=b79a5a26" /><img width="804" src="assets/card-gridpulse.svg?v=8a7c54d7" alt="GridPulse — Live European power prices, cross-border flows and a trading simulator, built on real ENTSO-E market data across 28+ countries." /></picture></a>
 
 </div>
 
@@ -26,8 +26,8 @@
 
 <div align="center">
 
-<a href="https://grid-balancing-tool.vercel.app"><img width="400" src="assets/card-grid-balancing-tool.svg?v=1a1fffe1" alt="Grid Balancing Simulator — Trade Poland's balancing market against a bot, settled at the imbalance price." /></a>
-<a href="https://github.com/Blizzeq/black-scholes-viz"><img width="400" src="assets/card-black-scholes-viz.svg?v=3fb0258a" alt="Black-Scholes Simulator — Monte Carlo price paths with fan charts, VaR and expected shortfall." /></a>
+<a href="https://grid-balancing-tool.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-grid-balancing-tool-narrow.svg?v=1a1fffe1" /><img width="640" src="assets/card-grid-balancing-tool.svg?v=0ea0e01b" alt="Grid Balancing Simulator — Trade Poland's balancing market against a bot, settled at the imbalance price." /></picture></a>
+<a href="https://github.com/Blizzeq/black-scholes-viz"><picture><source media="(max-width: 700px)" srcset="assets/card-black-scholes-viz-narrow.svg?v=3fb0258a" /><img width="640" src="assets/card-black-scholes-viz.svg?v=f10a8f78" alt="Black-Scholes Simulator — Monte Carlo price paths with fan charts, VaR and expected shortfall." /></picture></a>
 
 </div>
 
@@ -37,9 +37,9 @@
 
 <div align="center">
 
-<a href="https://prompt-evolution-engine.vercel.app"><img width="400" src="assets/card-Prompt-Evolution-Engine.svg?v=e6b82c2f" alt="Prompt Evolution Engine — Genetic algorithms that evolve LLM prompts, scored by an LLM judge." /></a>
-<a href="https://neuro-racer-lab.vercel.app"><img width="400" src="assets/card-neuro-racer-lab.svg?v=33a75cf0" alt="Neuro Racer Lab — Draw a track, train neural-net cars on it, then race the champion." /></a>
-<a href="https://github.com/Blizzeq/ai-student-impact-analysis"><img width="400" src="assets/card-ai-student-impact-analysis.svg?v=ab03e520" alt="GenAI & Student Outcomes — How GenAI use relates to student grades, skill retention and burnout." /></a>
+<a href="https://prompt-evolution-engine.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-Prompt-Evolution-Engine-narrow.svg?v=e6b82c2f" /><img width="640" src="assets/card-Prompt-Evolution-Engine.svg?v=be938869" alt="Prompt Evolution Engine — Genetic algorithms that evolve LLM prompts, scored by an LLM judge." /></picture></a>
+<a href="https://neuro-racer-lab.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-neuro-racer-lab-narrow.svg?v=33a75cf0" /><img width="640" src="assets/card-neuro-racer-lab.svg?v=e92cda68" alt="Neuro Racer Lab — Draw a track, train neural-net cars on it, then race the champion." /></picture></a>
+<a href="https://github.com/Blizzeq/ai-student-impact-analysis"><picture><source media="(max-width: 700px)" srcset="assets/card-ai-student-impact-analysis-narrow.svg?v=ab03e520" /><img width="640" src="assets/card-ai-student-impact-analysis.svg?v=51c16062" alt="GenAI & Student Outcomes — How GenAI use relates to student grades, skill retention and burnout." /></picture></a>
 
 </div>
 
@@ -49,16 +49,16 @@
 
 <div align="center">
 
-<a href="https://protocol-lab-three.vercel.app"><img width="400" src="assets/card-protocol-lab.svg?v=ca781171" alt="Protocol Lab — One task board served over REST, GraphQL, WebSocket, webhooks, gRPC and MCP." /></a>
-<a href="https://github.com/Blizzeq/league-of-legends-data-collector"><img width="400" src="assets/card-league-of-legends-data-collector.svg?v=11a56d49" alt="LoL Data Collector — Python ETL pulling match and player stats from the Riot API into CSV." /></a>
+<a href="https://protocol-lab-three.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-protocol-lab-narrow.svg?v=ca781171" /><img width="640" src="assets/card-protocol-lab.svg?v=ea52bcbb" alt="Protocol Lab — One task board served over REST, GraphQL, WebSocket, webhooks, gRPC and MCP." /></picture></a>
+<a href="https://github.com/Blizzeq/league-of-legends-data-collector"><picture><source media="(max-width: 700px)" srcset="assets/card-league-of-legends-data-collector-narrow.svg?v=11a56d49" /><img width="640" src="assets/card-league-of-legends-data-collector.svg?v=18500db3" alt="LoL Data Collector — Python ETL pulling match and player stats from the Riot API into CSV." /></picture></a>
 
 </div>
 
 <div align="center">
 
-<a href="https://graph-viz-one.vercel.app"><img width="265" src="assets/card-sm-graph-viz.svg?v=4d0be815" alt="Graph Visualizer — Seven graph algorithms animated in real time, including Kruskal and Prim." /></a>
-<a href="https://pathfinder-dun.vercel.app"><img width="265" src="assets/card-sm-pathfinder.svg?v=f2c829d2" alt="Pathfinder — A*, Dijkstra, BFS and DFS with waypoints, mazes and live comparison." /></a>
-<a href="https://sort-vizualzation.vercel.app"><img width="265" src="assets/card-sm-sort-vizualzation.svg?v=c5a3e3ff" alt="Sort Visualizer — Sorting algorithms visualised with real-time complexity analysis." /></a>
+<a href="https://graph-viz-one.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-sm-graph-viz-narrow.svg?v=ae044f89" /><img width="460" src="assets/card-sm-graph-viz.svg?v=c7273fd3" alt="Graph Visualizer — Seven graph algorithms animated in real time, including Kruskal and Prim." /></picture></a>
+<a href="https://pathfinder-dun.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-sm-pathfinder-narrow.svg?v=4b8d318c" /><img width="460" src="assets/card-sm-pathfinder.svg?v=bdbf6b5e" alt="Pathfinder — A*, Dijkstra, BFS and DFS with waypoints, mazes and live comparison." /></picture></a>
+<a href="https://sort-vizualzation.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-sm-sort-vizualzation-narrow.svg?v=869d22f3" /><img width="460" src="assets/card-sm-sort-vizualzation.svg?v=ebf9934b" alt="Sort Visualizer — Sorting algorithms visualised with real-time complexity analysis." /></picture></a>
 
 </div>
 

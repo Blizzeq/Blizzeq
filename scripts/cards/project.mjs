@@ -1,7 +1,7 @@
-// Project cards in three sizes. Size encodes weight: the flagship is widest,
-// the main set narrower, and the algorithm-visualiser family narrower still —
-// rather than pretending eleven projects matter equally. Cards stack one per
-// row, so the width difference is the ranking a reader actually sees.
+// Project cards in three sizes, each drawn twice: once for a monitor and once
+// for a phone. Size encodes weight — the flagship widest, the main set
+// narrower, the algorithm-visualiser family narrower still — rather than
+// pretending eleven projects matter equally.
 //
 // Vertical rhythm is walked top to bottom and the height falls out of where the
 // layout ends, so the gaps stay equal instead of being pinned to a guessed
@@ -17,50 +17,58 @@ import { doc, text, n, panel, wrap, clamp, langBar, chip, ENTRANCE } from '../li
 /**
  * Card width per variant, exported so nothing has to restate it.
  *
- * These are pixel widths, and that is what makes the README responsive without
- * a single media query. GitHub caps README images at the column width, so a
- * row holds as many cards as fit and the rest wrap. The profile column is
- * about 840px on a monitor and 293px on a phone, which turns two 400px cards
- * into a row on one and a single full-width card on the other.
- *
- * Percentages cannot do this. Two cards at 49% came to 98%, the whitespace
- * between two inline elements took roughly 4.4px more, and on a phone that
- * left 0.6px of slack — so whether the row held came down to how one browser
- * rounded a fraction of a pixel.
- *
- * `heroNarrow` is the flagship redrawn for a phone; see the note in SIZES.
+ * Three widths, one visible ranking. Cards sit one per row because GitHub
+ * forces README images to display:block — verified in the page: setting the
+ * images back to inline drops them onto a single row, and a freshly created
+ * <img> in the same paragraph computes block too. Nothing but a table can put
+ * two side by side, and GitHub strips the `style` needed to hide a table's
+ * cell borders. So the layout stops fighting that and uses width to rank.
  */
-export const CARD_WIDTHS = { hero: 804, heroNarrow: 400, std: 400, compact: 265 };
+export const CARD_WIDTHS = { hero: 804, std: 640, compact: 460 };
+
+/** Every card is also drawn at this width, for phones. */
+export const NARROW_WIDTH = 400;
 
 const SIZES = {
-  // The flagship spans a whole row, so on a monitor it is exactly as wide as
-  // the two cards beneath it — which is what marks it as the flagship.
-  //
-  // That width is also why it needs a second drawing. A phone caps every image
-  // at ~293px, so the wider the canvas the smaller the type: at 804px the
-  // flagship would render at 0.36 scale and end up the least readable card on
-  // the page, below the cards under it. `heroNarrow` is the same content drawn
-  // for 400px, served to phones through <picture>, which GitHub passes through
-  // with its media query intact.
+  // Three widths on a monitor, one ranking a reader can see at a glance.
   hero: {
     w: CARD_WIDTHS.hero, pad: 28, name: 22, pitch: 13, lead: 19, lines: 2,
     chipSize: 11, chipH: 24, barH: 5, foot: 9.5, band: 36, action: 11.5,
     afterName: 28, afterPitch: 20, afterChips: 22, afterBar: 17, bottom: 16,
   },
-  heroNarrow: {
-    w: CARD_WIDTHS.heroNarrow, pad: 20, name: 15.5, pitch: 11.5, lead: 18, lines: 2,
-    chipSize: 10, chipH: 22, barH: 5, foot: 9.5, band: 32, action: 11,
-    afterName: 24, afterPitch: 18, afterChips: 20, afterBar: 16, bottom: 14,
-  },
   std: {
-    w: CARD_WIDTHS.std, pad: 20, name: 15.5, pitch: 11.5, lead: 18, lines: 2,
-    chipSize: 10, chipH: 22, barH: 5, foot: 9.5, band: 32, action: 11,
-    afterName: 24, afterPitch: 18, afterChips: 20, afterBar: 16, bottom: 14,
+    w: CARD_WIDTHS.std, pad: 24, name: 18, pitch: 12, lead: 18, lines: 2,
+    chipSize: 10.5, chipH: 23, barH: 5, foot: 9.5, band: 34, action: 11,
+    afterName: 26, afterPitch: 19, afterChips: 21, afterBar: 16, bottom: 15,
   },
   compact: {
-    w: CARD_WIDTHS.compact, pad: 16, name: 13, pitch: 10, lead: 15, lines: 2,
-    chipSize: 9.5, chipH: 0, barH: 4, foot: 8.5, band: 28, action: 10,
-    afterName: 22, afterPitch: 16, afterChips: 0, afterBar: 14, bottom: 12,
+    w: CARD_WIDTHS.compact, pad: 20, name: 14.5, pitch: 10.5, lead: 16, lines: 2,
+    chipSize: 9.5, chipH: 0, barH: 4, foot: 8.5, band: 30, action: 10,
+    afterName: 23, afterPitch: 17, afterChips: 0, afterBar: 14, bottom: 13,
+  },
+
+  // The same three, redrawn for a phone.
+  //
+  // GitHub caps a README image at the column width — about 293px on a phone —
+  // so the wider the canvas, the smaller the type ends up. An 804px card lands
+  // at 0.36 scale and turns 13px text into under 5px. Drawing the same content
+  // on a 400px canvas puts every card at roughly 0.73 instead, and <picture>
+  // picks the right one; GitHub keeps the media query, which was checked
+  // against its own renderer.
+  heroNarrow: {
+    w: NARROW_WIDTH, pad: 20, name: 17, pitch: 12, lead: 18, lines: 2,
+    chipSize: 10, chipH: 22, barH: 5, foot: 9.5, band: 33, action: 11,
+    afterName: 25, afterPitch: 18, afterChips: 20, afterBar: 16, bottom: 14,
+  },
+  stdNarrow: {
+    w: NARROW_WIDTH, pad: 20, name: 15.5, pitch: 11.5, lead: 18, lines: 2,
+    chipSize: 10, chipH: 22, barH: 5, foot: 9.5, band: 32, action: 11,
+    afterName: 24, afterPitch: 18, afterChips: 20, afterBar: 16, bottom: 14,
+  },
+  compactNarrow: {
+    w: NARROW_WIDTH, pad: 20, name: 14, pitch: 10.5, lead: 16, lines: 2,
+    chipSize: 9.5, chipH: 0, barH: 4, foot: 8.5, band: 30, action: 10,
+    afterName: 23, afterPitch: 17, afterChips: 0, afterBar: 14, bottom: 13,
   },
 };
 
@@ -82,7 +90,7 @@ export function projectCard(repo, project, stats, variant = 'std') {
   const s = SIZES[variant];
   const langs = languages(stats.languagesByRepo?.[repo]);
   const primary = langs[0];
-  const hasChips = variant !== 'compact' && Boolean(project.tags?.length);
+  const hasChips = !variant.startsWith('compact') && Boolean(project.tags?.length);
 
   const usableChars = Math.floor((s.w - s.pad * 2) / (s.pitch * 0.6));
   const pitchLines = wrap(project.pitch, usableChars, s.lines);
@@ -110,9 +118,10 @@ export function projectCard(repo, project, stats, variant = 'std') {
   const bandTop = Math.round(footY + s.bottom);
   const h = bandTop + s.band;
 
-  const badgeSize = variant === 'compact' ? 8.5 : 9.5;
+  const isCompact = variant.startsWith('compact');
+  const badgeSize = isCompact ? 8.5 : 9.5;
   const badgeW = textWidth(badgeText, badgeSize) + (isDemo ? 26 : 18);
-  const badgeH = variant === 'compact' ? 16 : 18;
+  const badgeH = isCompact ? 16 : 18;
   const badgeY = s.pad - 4;
   const badgeX = s.w - s.pad - badgeW;
 
@@ -137,7 +146,7 @@ export function projectCard(repo, project, stats, variant = 'std') {
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
 .langbar{transform-box:fill-box;transform-origin:left center;animation:grow 1s cubic-bezier(.4,0,.2,1) .25s}
 @keyframes grow{from{transform:scaleX(0)}}
-${variant === 'compact' ? '' : `
+${isCompact ? '' : `
 /* Slow diagonal sweep. Parks off the left edge at rest, so a still frame is clean. */
 .sweep{animation:sweep 9s ease-in-out infinite}
 @keyframes sweep{0%,22%{transform:translateX(0)}70%,100%{transform:translateX(${n(s.w + 300)}px)}}`}`;
@@ -156,7 +165,7 @@ ${variant === 'compact' ? '' : `
 </linearGradient>`;
 
   const sweep =
-    variant === 'compact'
+    isCompact
       ? ''
       : `<g clip-path="url(#card)"><rect class="sweep" x="-260" y="0" width="180" height="${h}" fill="url(#sweepGrad)" transform="skewX(-18)"/></g>`;
 
@@ -175,7 +184,7 @@ ${sweep}
   ${pitch}
   ${chips}
   ${langBar(langs, { x: s.pad, y: barY, w: s.w - s.pad * 2, h: s.barH, delay: 0.25 })}
-  ${text(clamp(`${repo}`, variant === 'compact' ? 30 : 46), { x: s.pad, y: footY, size: s.foot, fill: color.dim })}
+  ${text(clamp(`${repo}`, isCompact ? 30 : 46), { x: s.pad, y: footY, size: s.foot, fill: color.dim })}
   ${primary ? text(primary.name, { x: s.w - s.pad, y: footY, size: s.foot, fill: color.dim, anchor: 'end' }) : ''}
 </g>
 

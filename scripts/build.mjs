@@ -98,18 +98,13 @@ async function emitProject(repo, variant) {
   const project = profile.projects[repo];
   const prefix = variant === 'compact' ? 'card-sm' : 'card';
   const file = `${prefix}-${repo}.svg`;
+  const narrow = `${prefix}-${repo}-narrow.svg`;
   const url = `https://github.com/${profile.identity.github}/${repo}`;
 
   await emit(file, projectCard(repo, project, data, variant));
+  await emit(narrow, projectCard(repo, project, data, `${variant}Narrow`));
 
-  const out = { file, repo, url, href: project.demo ?? url, width: CARD_WIDTHS[variant] };
-
-  if (variant === 'hero') {
-    out.narrow = `${prefix}-${repo}-narrow.svg`;
-    await emit(out.narrow, projectCard(repo, project, data, 'heroNarrow'));
-  }
-
-  return out;
+  return { file, narrow, repo, url, href: project.demo ?? url, width: CARD_WIDTHS[variant] };
 }
 
 // The flagship spans a full row, so on a monitor it is exactly as wide as the
