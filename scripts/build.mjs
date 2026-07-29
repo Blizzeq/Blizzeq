@@ -15,7 +15,7 @@ import { dirname, join } from 'node:path';
 
 import { hero } from './cards/hero.mjs';
 import { terminal } from './cards/terminal.mjs';
-import { projectCard, ctaButton } from './cards/project.mjs';
+import { projectCard, ctaButton, CARD_WIDTHS } from './cards/project.mjs';
 import { stack } from './cards/stack.mjs';
 import { stats as statsCard } from './cards/stats.mjs';
 import { badge, footer } from './cards/contact.mjs';
@@ -81,7 +81,6 @@ const data = await loadStats();
 await emit('hero.svg', hero(profile));
 await emit('about-terminal.svg', terminal(profile));
 
-const CARD_W = { hero: 1000, std: 492, compact: 325 };
 
 /**
  * Emit a card plus the strip beneath it.
@@ -99,13 +98,13 @@ async function emitProject(repo, variant) {
   const url = `https://github.com/Blizzeq/${repo}`;
 
   await emit(file, projectCard(repo, project, data, variant));
-  await emit(cta, ctaButton({ width: CARD_W[variant], label: 'view code' }));
+  await emit(cta, ctaButton({ width: CARD_WIDTHS[variant], label: 'view code' }));
 
   return { file, cta, repo, href: project.demo ?? url, ctaHref: url };
 }
 
-// One full-width flagship, then groups of exactly two half cards, so no row is
-// ever left with a hole in it.
+// The flagship leads at the widest size, then one project per row within each
+// group. Width carries the ranking; rows no longer have to divide evenly.
 const flagship = await emitProject(profile.flagship, 'hero');
 
 const layout = [];
@@ -168,28 +167,35 @@ function readme(groups) {
   const cta = (c, width) =>
     `<a href="${c.ctaHref}"><img width="${width}" src="assets/${c.cta}" alt="${p(c).display} source code" /></a>`;
 
-  // Emit one row of cards, then that row's source strips, then the next row.
-  //
-  // Writing every card first and every strip afterwards reads as the simpler
-  // spelling, and it happens to look right — but only while a group holds
-  // exactly one row. With three projects at 49% the third card wraps onto the
-  // row where the first strips land, and each strip ends up under somebody
-  // else's card. Chunking by row keeps a strip with its own card at any count.
-  const grid = (cards, width, perRow) => {
-    const rows = [];
-    for (let i = 0; i < cards.length; i += perRow) rows.push(cards.slice(i, i + perRow));
-    const block = (row) => `${row.map((c) => card(c, width)).join('\n')}
-${row.map((c) => cta(c, width)).join('\n')}`;
-    return `<div align="center">
+  /**
+   * One project per row, sized in pixels rather than percent.
+   *
+   * Side-by-side cards were the original idea and they read well on a laptop,
+   * but they cannot survive a phone. GitHub's README column is about 293px
+   * there, so a two-up row renders each 492px card at ~140px — a scale of
+   * 0.28, which turns 11px body text into roughly 3px. The layout was also
+   * balanced on a knife edge: two cards at 49% come to 98%, the whitespace
+   * between two inline elements takes about 4.4px more, and that left 0.6px
+   * of slack. Whether it held came down to how a given browser rounded a
+   * fraction of a pixel — hence the same README looking fine on one device
+   * and coming apart on the next, cards stacked at half width with the
+   * "view code" strips orphaned underneath.
+   *
+   * A pixel width fixes both. GitHub caps README images at the column width,
+   * so a card renders at its natural size on a laptop and shrinks to fit a
+   * phone — 0.6 scale for a standard card, 0.9 for a compact one, both
+   * legible. Nothing depends on how percentages round, so there is no width
+   * at which the layout can come apart.
+   */
+  const grid = (cards, width) => `<div align="center">
 
-${rows.map(block).join('\n\n')}
+${cards.map((c) => `${card(c, width)}\n${cta(c, width)}`).join('\n\n')}
 
 </div>`;
-  };
 
   const group = (g) => `<h3 align="center">${g.title}</h3>
 
-${grid(g.cards, '49%', 2)}${g.compact.length ? `\n\n${grid(g.compact, '32%', 3)}` : ''}`;
+${grid(g.cards, CARD_WIDTHS.std)}${g.compact.length ? `\n\n${grid(g.compact, CARD_WIDTHS.compact)}` : ''}`;
 
   return `<div align="center">
 
@@ -209,8 +215,8 @@ ${grid(g.cards, '49%', 2)}${g.compact.length ? `\n\n${grid(g.compact, '32%', 3)}
 
 <div align="center">
 
-<a href="${flagship.href}"><img src="assets/${flagship.file}" alt="${profile.projects[profile.flagship].display} — ${profile.projects[profile.flagship].pitch}" /></a>
-<a href="${flagship.ctaHref}"><img src="assets/${flagship.cta}" alt="${profile.projects[profile.flagship].display} source code" /></a>
+<a href="${flagship.href}"><img width="${CARD_WIDTHS.hero}" src="assets/${flagship.file}" alt="${profile.projects[profile.flagship].display} — ${profile.projects[profile.flagship].pitch}" /></a>
+<a href="${flagship.ctaHref}"><img width="${CARD_WIDTHS.hero}" src="assets/${flagship.cta}" alt="${profile.projects[profile.flagship].display} source code" /></a>
 
 </div>
 
