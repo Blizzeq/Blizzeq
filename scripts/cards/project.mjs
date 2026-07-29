@@ -135,7 +135,11 @@ export function projectCard(repo, project, stats, variant = 'std') {
     const repoW = textWidth(clamp(repo, isCompact ? 24 : 40), s.foot) + 16;
     let x = s.pad;
     let out = '';
-    for (const l of langs.slice(0, 3)) {
+    // Anything that rounds to 0% is noise — a few hundred bytes of config
+    // reported as a language. Listing "JavaScript 0%" says nothing and reads
+    // as a mistake.
+    const shown = langs.filter((l) => Math.round((l.value / total) * 100) >= 1);
+    for (const l of shown.slice(0, 3)) {
       const label = `${l.name} ${Math.round((l.value / total) * 100)}%`;
       const w = textWidth(label, s.foot);
       if (x + 10 + w > s.w - s.pad - repoW) break;

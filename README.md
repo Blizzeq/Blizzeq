@@ -16,7 +16,7 @@
 
 <div align="center">
 
-<a href="https://gridpulse-eu.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-gridpulse-narrow.svg?v=20f9ff28" /><img width="804" src="assets/card-gridpulse.svg?v=2e8c7da5" alt="GridPulse — Live European power prices, cross-border flows and a trading simulator, built on real ENTSO-E market data across 28+ countries." /></picture></a>
+<a href="https://gridpulse-eu.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-gridpulse-narrow.svg?v=baa1f608" /><img width="804" src="assets/card-gridpulse.svg?v=69b06c7c" alt="GridPulse — Live European power prices, cross-border flows and a trading simulator, built on real ENTSO-E market data across 28+ countries." /></picture></a>
 
 </div>
 
@@ -33,7 +33,7 @@
 
 <div align="center">
 
-<a href="https://prompt-evolution-engine.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-Prompt-Evolution-Engine-narrow.svg?v=13d15a48" /><img width="640" src="assets/card-Prompt-Evolution-Engine.svg?v=d5ee1346" alt="Prompt Evolution Engine — Genetic algorithms that evolve LLM prompts, scored by an LLM judge." /></picture></a>
+<a href="https://prompt-evolution-engine.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-Prompt-Evolution-Engine-narrow.svg?v=13d15a48" /><img width="640" src="assets/card-Prompt-Evolution-Engine.svg?v=0fe975ca" alt="Prompt Evolution Engine — Genetic algorithms that evolve LLM prompts, scored by an LLM judge." /></picture></a>
 <a href="https://neuro-racer-lab.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-neuro-racer-lab-narrow.svg?v=c33e4e29" /><img width="640" src="assets/card-neuro-racer-lab.svg?v=51f8a454" alt="Neuro Racer Lab — Draw a track, train neural-net cars on it, then race the champion." /></picture></a>
 <a href="https://github.com/Blizzeq/ai-student-impact-analysis"><picture><source media="(max-width: 700px)" srcset="assets/card-ai-student-impact-analysis-narrow.svg?v=a50da037" /><img width="640" src="assets/card-ai-student-impact-analysis.svg?v=6fe0ef41" alt="GenAI & Student Outcomes — How GenAI use relates to student grades, skill retention and burnout." /></picture></a>
 
@@ -50,8 +50,8 @@
 
 <div align="center">
 
-<a href="https://graph-viz-one.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-sm-graph-viz-narrow.svg?v=04eb4d14" /><img width="460" src="assets/card-sm-graph-viz.svg?v=0ab9d1f3" alt="Graph Visualizer — Seven graph algorithms animated in real time, including Kruskal and Prim." /></picture></a>
-<a href="https://pathfinder-dun.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-sm-pathfinder-narrow.svg?v=fc2f57a1" /><img width="460" src="assets/card-sm-pathfinder.svg?v=10fdd90a" alt="Pathfinder — A*, Dijkstra, BFS and DFS with waypoints, mazes and live comparison." /></picture></a>
+<a href="https://graph-viz-one.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-sm-graph-viz-narrow.svg?v=47e2a1fa" /><img width="460" src="assets/card-sm-graph-viz.svg?v=0259b2bc" alt="Graph Visualizer — Seven graph algorithms animated in real time, including Kruskal and Prim." /></picture></a>
+<a href="https://pathfinder-dun.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-sm-pathfinder-narrow.svg?v=10b56ee5" /><img width="460" src="assets/card-sm-pathfinder.svg?v=4ce2dc02" alt="Pathfinder — A*, Dijkstra, BFS and DFS with waypoints, mazes and live comparison." /></picture></a>
 <a href="https://sort-vizualzation.vercel.app"><picture><source media="(max-width: 700px)" srcset="assets/card-sm-sort-vizualzation-narrow.svg?v=48bc51fe" /><img width="460" src="assets/card-sm-sort-vizualzation.svg?v=437c728e" alt="Sort Visualizer — Sorting algorithms visualised with real-time complexity analysis." /></picture></a>
 
 </div>
@@ -68,7 +68,7 @@
 
 <div align="center">
 
-<img src="assets/stats.svg?v=411fe62c" alt="Contributions, repositories touched, public repositories, years on GitHub, and language mix" />
+<img src="assets/stats.svg?v=f42ff6e9" alt="Contributions, repositories touched, public repositories, years on GitHub, and language mix" />
 
 <img src="https://raw.githubusercontent.com/Blizzeq/Blizzeq/output/profile-3d-emerald.svg" alt="3D contribution calendar" />
 
