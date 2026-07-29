@@ -1,15 +1,23 @@
 {
   "createdAt": "2021-06-15T21:41:47Z",
-  "publicRepos": 26,
-  "contributions": 4881,
-  "publicCommits": 219,
-  "privateContributions": 4644,
-  "activeRepos": 20,
+  "publicRepos": 20,
+  "contributions": 4891,
+  "publicCommits": 205,
+  "privateContributions": 4669,
+  "activeRepos": 19,
   "languagesByRepo": {
     "gridpulse": {
       "TypeScript": 258339,
       "CSS": 9085,
       "JavaScript": 559
+    },
+    "grid-balancing-tool": {
+      "TypeScript": 378643,
+      "JavaScript": 10865,
+      "CSS": 5129
+    },
+    "black-scholes-viz": {
+      "Python": 65444
     },
     "Prompt-Evolution-Engine": {
       "TypeScript": 373562,
@@ -21,9 +29,6 @@
       "JavaScript": 19582,
       "CSS": 8098,
       "HTML": 1520
-    },
-    "black-scholes-viz": {
-      "Python": 65444
     },
     "ai-student-impact-analysis": {
       "Python": 57693,
@@ -55,11 +60,11 @@
     }
   },
   "languageTotals": {
-    "TypeScript": 1300071,
-    "CSS": 44381,
-    "JavaScript": 22434,
-    "HTML": 1520,
+    "TypeScript": 1678714,
+    "CSS": 49510,
+    "JavaScript": 33299,
     "Python": 290888,
+    "HTML": 1520,
     "Makefile": 940
   }
 }
