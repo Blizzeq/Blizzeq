@@ -55,8 +55,11 @@ const SIZES = {
   // on a 400px canvas puts every card at roughly 0.73 instead, and <picture>
   // picks the right one; GitHub keeps the media query, which was checked
   // against its own renderer.
+  // Three pitch lines, not two: the flagship has the longest pitch on the page
+  // and a 400px canvas fits about 50 characters to a line, so two lines cut it
+  // off mid-sentence with an ellipsis.
   heroNarrow: {
-    w: NARROW_WIDTH, pad: 20, name: 17, pitch: 12, lead: 18, lines: 2,
+    w: NARROW_WIDTH, pad: 20, name: 17, pitch: 12, lead: 18, lines: 3,
     chipSize: 10, chipH: 22, barH: 5, foot: 9.5, band: 33, action: 11,
     afterName: 25, afterPitch: 18, afterChips: 20, afterBar: 16, bottom: 14,
   },
