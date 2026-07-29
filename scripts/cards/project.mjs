@@ -1,11 +1,12 @@
-// Project cards in three sizes. Size encodes weight: the flagship gets the
-// full width, the main set a half column, and the algorithm-visualiser family
-// a compact row — rather than pretending ten projects matter equally.
+// Project cards in three sizes. Size encodes weight: the flagship is widest,
+// the main set narrower, and the algorithm-visualiser family narrower still —
+// rather than pretending eleven projects matter equally. Cards stack one per
+// row, so the width difference is the ranking a reader actually sees.
 //
 // Vertical rhythm is walked top to bottom and the height falls out of where the
 // layout ends, so the gaps stay equal instead of being pinned to a guessed
 // height. Space for every pitch line is reserved whether or not the text needs
-// it, which keeps two cards sitting side by side exactly the same height.
+// it, so cards of one size are all exactly the same height.
 //
 // No star counts anywhere: they would read as a row of zeroes and say nothing
 // about the work.
@@ -13,19 +14,35 @@
 import { color, emerald, langColor, textWidth, radius } from '../lib/tokens.mjs';
 import { doc, text, n, panel, wrap, clamp, langBar, chip, ENTRANCE } from '../lib/svg.mjs';
 
+/**
+ * Card width per variant, exported so nothing has to restate it.
+ *
+ * The strip under each card is generated separately and has to match its card
+ * exactly. build.mjs used to carry its own copy of these numbers; changing the
+ * flagship here left the strip at the old width, and the two no longer lined
+ * up. One source, read by both.
+ */
+export const CARD_WIDTHS = { hero: 660, std: 492, compact: 325 };
+
 const SIZES = {
+  // The flagship stays the widest card, but not by as much as it once was.
+  // At 1000px it was drawn for a laptop: on a phone, where the README column
+  // is about 309px, it shrank to 0.31 scale and ended up the least readable
+  // card on the page — less legible than the 492px cards directly beneath it,
+  // which is backwards. 660px keeps it a clear third wider than those while
+  // lifting it to 0.47, so the type lands close to theirs.
   hero: {
-    w: 1000, pad: 28, name: 22, pitch: 13, lead: 19, lines: 2,
+    w: CARD_WIDTHS.hero, pad: 28, name: 22, pitch: 13, lead: 19, lines: 2,
     chipSize: 11, chipH: 24, barH: 5, foot: 9.5,
     afterName: 28, afterPitch: 20, afterChips: 22, afterBar: 17, bottom: 16,
   },
   std: {
-    w: 492, pad: 20, name: 15.5, pitch: 11.5, lead: 18, lines: 2,
+    w: CARD_WIDTHS.std, pad: 20, name: 15.5, pitch: 11.5, lead: 18, lines: 2,
     chipSize: 10, chipH: 22, barH: 5, foot: 9.5,
     afterName: 24, afterPitch: 18, afterChips: 20, afterBar: 16, bottom: 14,
   },
   compact: {
-    w: 325, pad: 16, name: 13, pitch: 10, lead: 15, lines: 2,
+    w: CARD_WIDTHS.compact, pad: 16, name: 13, pitch: 10, lead: 15, lines: 2,
     chipSize: 9.5, chipH: 0, barH: 4, foot: 8.5,
     afterName: 22, afterPitch: 16, afterChips: 0, afterBar: 14, bottom: 12,
   },

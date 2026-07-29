@@ -16,8 +16,8 @@
 
 <div align="center">
 
-<a href="https://gridpulse-eu.vercel.app"><img src="assets/card-gridpulse.svg?v=1b592116" alt="GridPulse — Live European power prices, cross-border flows and a trading simulator, built on real ENTSO-E market data across 28+ countries." /></a>
-<a href="https://github.com/Blizzeq/gridpulse"><img src="assets/card-gridpulse-cta.svg?v=73dbb9ed" alt="GridPulse source code" /></a>
+<a href="https://gridpulse-eu.vercel.app"><img width="660" src="assets/card-gridpulse.svg?v=1175b121" alt="GridPulse — Live European power prices, cross-border flows and a trading simulator, built on real ENTSO-E market data across 28+ countries." /></a>
+<a href="https://github.com/Blizzeq/gridpulse"><img width="660" src="assets/card-gridpulse-cta.svg?v=b7fd262f" alt="GridPulse source code" /></a>
 
 </div>
 

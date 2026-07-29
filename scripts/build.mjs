@@ -15,7 +15,7 @@ import { dirname, join } from 'node:path';
 
 import { hero } from './cards/hero.mjs';
 import { terminal } from './cards/terminal.mjs';
-import { projectCard, ctaButton } from './cards/project.mjs';
+import { projectCard, ctaButton, CARD_WIDTHS } from './cards/project.mjs';
 import { stack } from './cards/stack.mjs';
 import { stats as statsCard } from './cards/stats.mjs';
 import { badge, footer } from './cards/contact.mjs';
@@ -81,7 +81,6 @@ const data = await loadStats();
 await emit('hero.svg', hero(profile));
 await emit('about-terminal.svg', terminal(profile));
 
-const CARD_W = { hero: 1000, std: 492, compact: 325 };
 
 /**
  * Emit a card plus the strip beneath it.
@@ -99,13 +98,13 @@ async function emitProject(repo, variant) {
   const url = `https://github.com/Blizzeq/${repo}`;
 
   await emit(file, projectCard(repo, project, data, variant));
-  await emit(cta, ctaButton({ width: CARD_W[variant], label: 'view code' }));
+  await emit(cta, ctaButton({ width: CARD_WIDTHS[variant], label: 'view code' }));
 
   return { file, cta, repo, href: project.demo ?? url, ctaHref: url };
 }
 
-// One full-width flagship, then groups of exactly two half cards, so no row is
-// ever left with a hole in it.
+// The flagship leads at the widest size, then one project per row within each
+// group. Width carries the ranking; rows no longer have to divide evenly.
 const flagship = await emitProject(profile.flagship, 'hero');
 
 const layout = [];
@@ -196,7 +195,7 @@ ${cards.map((c) => `${card(c, width)}\n${cta(c, width)}`).join('\n\n')}
 
   const group = (g) => `<h3 align="center">${g.title}</h3>
 
-${grid(g.cards, 492)}${g.compact.length ? `\n\n${grid(g.compact, 325)}` : ''}`;
+${grid(g.cards, CARD_WIDTHS.std)}${g.compact.length ? `\n\n${grid(g.compact, CARD_WIDTHS.compact)}` : ''}`;
 
   return `<div align="center">
 
@@ -216,8 +215,8 @@ ${grid(g.cards, 492)}${g.compact.length ? `\n\n${grid(g.compact, 325)}` : ''}`;
 
 <div align="center">
 
-<a href="${flagship.href}"><img src="assets/${flagship.file}" alt="${profile.projects[profile.flagship].display} — ${profile.projects[profile.flagship].pitch}" /></a>
-<a href="${flagship.ctaHref}"><img src="assets/${flagship.cta}" alt="${profile.projects[profile.flagship].display} source code" /></a>
+<a href="${flagship.href}"><img width="${CARD_WIDTHS.hero}" src="assets/${flagship.file}" alt="${profile.projects[profile.flagship].display} — ${profile.projects[profile.flagship].pitch}" /></a>
+<a href="${flagship.ctaHref}"><img width="${CARD_WIDTHS.hero}" src="assets/${flagship.cta}" alt="${profile.projects[profile.flagship].display} source code" /></a>
 
 </div>
 
