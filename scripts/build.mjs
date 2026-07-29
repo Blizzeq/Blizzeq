@@ -15,7 +15,7 @@ import { dirname, join } from 'node:path';
 
 import { hero } from './cards/hero.mjs';
 import { terminal } from './cards/terminal.mjs';
-import { projectCard, ctaButton, CARD_WIDTHS } from './cards/project.mjs';
+import { projectCard, CARD_WIDTHS } from './cards/project.mjs';
 import { stack } from './cards/stack.mjs';
 import { stats as statsCard } from './cards/stats.mjs';
 import { badge, footer } from './cards/contact.mjs';
@@ -69,9 +69,9 @@ async function emit(name, svg) {
  */
 function stamp(markup) {
   const hashes = new Map(written.map((w) => [w.name, w.hash]));
-  return markup.replace(/src="((?:\.\.\/)?assets\/)([\w.-]+\.svg)"/g, (whole, dir, file) => {
+  return markup.replace(/(?:src|srcset)="((?:\.\.\/)?assets\/)([\w.-]+\.svg)"/g, (whole, dir, file) => {
     const hash = hashes.get(file);
-    return hash ? `src="${dir}${file}?v=${hash}"` : whole;
+    return hash ? whole.replace(`${dir}${file}`, `${dir}${file}?v=${hash}`) : whole;
   });
 }
 
@@ -83,28 +83,37 @@ await emit('about-terminal.svg', terminal(profile));
 
 
 /**
- * Emit a card plus the strip beneath it.
+ * Emit one image per project.
  *
  * The card goes to the live demo when there is one — that is what the badge
  * drawn on it promises, and a link inside an SVG does nothing once GitHub
- * embeds it through <img>. The strip carries the repository link, so both
- * destinations stay reachable and every row keeps the same shape.
+ * embeds it through <img>. The action band at the foot of the card names that
+ * destination, so a reader is never guessing where a click leads. Source links
+ * are carried by a line under each group instead of by a second image, because
+ * a second image could not be kept beside the card it belonged to.
+ *
+ * The flagship also gets a narrow drawing for phones, served through <picture>.
  */
 async function emitProject(repo, variant) {
   const project = profile.projects[repo];
   const prefix = variant === 'compact' ? 'card-sm' : 'card';
   const file = `${prefix}-${repo}.svg`;
-  const cta = `${prefix}-${repo}-cta.svg`;
-  const url = `https://github.com/Blizzeq/${repo}`;
+  const url = `https://github.com/${profile.identity.github}/${repo}`;
 
   await emit(file, projectCard(repo, project, data, variant));
-  await emit(cta, ctaButton({ width: CARD_WIDTHS[variant], label: 'view code' }));
 
-  return { file, cta, repo, href: project.demo ?? url, ctaHref: url };
+  const out = { file, repo, url, href: project.demo ?? url, width: CARD_WIDTHS[variant] };
+
+  if (variant === 'hero') {
+    out.narrow = `${prefix}-${repo}-narrow.svg`;
+    await emit(out.narrow, projectCard(repo, project, data, 'heroNarrow'));
+  }
+
+  return out;
 }
 
-// The flagship leads at the widest size, then one project per row within each
-// group. Width carries the ranking; rows no longer have to divide evenly.
+// The flagship spans a full row, so on a monitor it is exactly as wide as the
+// two cards under it. Width carries the ranking.
 const flagship = await emitProject(profile.flagship, 'hero');
 
 const layout = [];
@@ -162,40 +171,52 @@ console.log(`\n${written.length} assets · ${(total / 1024).toFixed(0)} kB total
 function readme(groups) {
   const USER = 'Blizzeq';
   const p = (c) => profile.projects[c.repo];
-  const card = (c, width) =>
-    `<a href="${c.href}"><img width="${width}" src="assets/${c.file}" alt="${p(c).display} — ${p(c).pitch}" /></a>`;
-  const cta = (c, width) =>
-    `<a href="${c.ctaHref}"><img width="${width}" src="assets/${c.cta}" alt="${p(c).display} source code" /></a>`;
+  const alt = (c) => `${p(c).display} — ${p(c).pitch}`;
 
   /**
-   * One project per row, sized in pixels rather than percent.
+   * A card, and for the flagship a second drawing for narrow screens.
    *
-   * Side-by-side cards were the original idea and they read well on a laptop,
-   * but they cannot survive a phone. GitHub's README column is about 293px
-   * there, so a two-up row renders each 492px card at ~140px — a scale of
-   * 0.28, which turns 11px body text into roughly 3px. The layout was also
-   * balanced on a knife edge: two cards at 49% come to 98%, the whitespace
-   * between two inline elements takes about 4.4px more, and that left 0.6px
-   * of slack. Whether it held came down to how a given browser rounded a
-   * fraction of a pixel — hence the same README looking fine on one device
-   * and coming apart on the next, cards stacked at half width with the
-   * "view code" strips orphaned underneath.
-   *
-   * A pixel width fixes both. GitHub caps README images at the column width,
-   * so a card renders at its natural size on a laptop and shrinks to fit a
-   * phone — 0.6 scale for a standard card, 0.9 for a compact one, both
-   * legible. Nothing depends on how percentages round, so there is no width
-   * at which the layout can come apart.
+   * GitHub keeps the media query on <source>, verified against its own
+   * markdown renderer, so the phone gets a card drawn for 400px instead of one
+   * drawn for 804px and shrunk. It strips `style`, so this is the only
+   * responsive lever available.
    */
-  const grid = (cards, width) => `<div align="center">
+  const card = (c) => {
+    const img = `<img width="${c.width}" src="assets/${c.file}" alt="${alt(c)}" />`;
+    const picture = c.narrow
+      ? `<picture><source media="(max-width: 700px)" srcset="assets/${c.narrow}" />${img}</picture>`
+      : img;
+    return `<a href="${c.href}">${picture}</a>`;
+  };
 
-${cards.map((c) => `${card(c, width)}\n${cta(c, width)}`).join('\n\n')}
+  /**
+   * Cards flow and wrap; the pixel widths decide how many land on a row.
+   *
+   * Two 400px cards plus the whitespace between them come to about 804px,
+   * which fits the ~840px profile column on a monitor and cannot fit the
+   * ~293px column on a phone — so a monitor gets two per row and a phone gets
+   * one, full width, with no media query involved. Percentages could not do
+   * this: two cards at 49% left 0.6px of slack on a phone, and whether the row
+   * held came down to how a browser rounded a fraction of a pixel.
+   */
+  const grid = (cards) => `<div align="center">
+
+${cards.map(card).join('\n')}
 
 </div>`;
 
+  // Cards with a demo open the demo, so the source lives here instead. One
+  // line of ordinary markdown, which wraps on its own at any width.
+  const sources = (cards) =>
+    `<p align="center"><sub>source · ${cards
+      .map((c) => `<a href="${c.url}">${c.repo}</a>`)
+      .join(' · ')}</sub></p>`;
+
   const group = (g) => `<h3 align="center">${g.title}</h3>
 
-${grid(g.cards, CARD_WIDTHS.std)}${g.compact.length ? `\n\n${grid(g.compact, CARD_WIDTHS.compact)}` : ''}`;
+${grid(g.cards)}${g.compact.length ? `\n\n${grid(g.compact)}` : ''}
+
+${sources([...g.cards, ...g.compact])}`;
 
   return `<div align="center">
 
@@ -215,10 +236,11 @@ ${grid(g.cards, CARD_WIDTHS.std)}${g.compact.length ? `\n\n${grid(g.compact, CAR
 
 <div align="center">
 
-<a href="${flagship.href}"><img width="${CARD_WIDTHS.hero}" src="assets/${flagship.file}" alt="${profile.projects[profile.flagship].display} — ${profile.projects[profile.flagship].pitch}" /></a>
-<a href="${flagship.ctaHref}"><img width="${CARD_WIDTHS.hero}" src="assets/${flagship.cta}" alt="${profile.projects[profile.flagship].display} source code" /></a>
+${card(flagship)}
 
 </div>
+
+${sources([flagship])}
 
 ${groups.map(group).join('\n\n')}
 
@@ -258,7 +280,7 @@ ${contacts.map((c) => `<a href="${c.href}"><img src="assets/${c.file}" alt="${c.
 
 function previewPage(groups) {
   const img = (f, cls = '') => `<img class="${cls}" src="../assets/${f}" alt="${f}">`;
-  const pair = (c, cls) => `<div class="${cls}">${img(c.file)}${img(c.cta)}</div>`;
+  const pair = (c, cls) => `<div class="${cls}">${img(c.file)}</div>`;
   const section = (g) => `
   <h2>${g.title}</h2>
   <div class="row">${g.cards.map((c) => pair(c, 'half')).join('')}</div>
@@ -294,7 +316,7 @@ function previewPage(groups) {
 
 <h2>Hero</h2>${img('hero.svg')}
 <h2>About</h2>${img('about-terminal.svg')}
-<h2>Featured</h2>${img(flagship.file)}${img(flagship.cta)}
+<h2>Featured</h2>${img(flagship.file)}
 ${groups.map(section).join('\n')}
 <h2>Tech stack</h2>${img('tech-stack.svg')}
 <h2>GitHub activity</h2>${img('stats.svg')}

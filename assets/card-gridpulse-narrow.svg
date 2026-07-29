@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="201" viewBox="0 0 400 201" role="img" aria-label="Protocol Lab — One task board served over REST, GraphQL, WebSocket, webhooks, gRPC and MCP." font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace">
-<title>Protocol Lab — One task board served over REST, GraphQL, WebSocket, webhooks, gRPC and MCP.</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="201" viewBox="0 0 400 201" role="img" aria-label="GridPulse — Live European power prices, cross-border flows and a trading simulator, built on real ENTSO-E market data across 28+ countries." font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace">
+<title>GridPulse — Live European power prices, cross-border flows and a trading simulator, built on real ENTSO-E market data across 28+ countries.</title>
 <defs>
 <clipPath id="card"><rect width="400" height="201" rx="10"/></clipPath>
 <linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
@@ -32,12 +32,12 @@
 <rect x="0.5" y="0.5" width="399" height="2.5" rx="1" fill="url(#accent)" opacity="0.9"/>
 
 <g class="fade">
-  <text x="20" y="32.09" font-size="15.5" fill="#6ee7b7" font-weight="bold">Protocol Lab</text>
+  <text x="20" y="32.09" font-size="15.5" fill="#6ee7b7" font-weight="bold">GridPulse</text>
   <g><rect x="302.7" y="16" width="77.3" height="18" rx="9" fill="rgba(16,185,129,0.12)" stroke="#047857"/><circle cx="313.7" cy="25" r="3" fill="#34d399" class="pulse"/><text x="347.35" y="28.33" font-size="9.5" fill="#6ee7b7" text-anchor="middle">live demo</text></g>
-  <text x="20" y="56.09" font-size="11.5" fill="#8b949e">One task board served over REST, GraphQL, WebSocket,</text><text x="20" y="74.09" font-size="11.5" fill="#8b949e">webhooks, gRPC and MCP.</text>
-  <g><rect x="20" y="92.09" width="60" height="22" rx="6" fill="rgba(16,185,129,0.22)" stroke="#10b981"/><text x="50" y="106.69" font-size="10" fill="#a7f3d0" text-anchor="middle">FastAPI</text></g><g><rect x="87" y="92.09" width="60" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="117" y="106.69" font-size="10" fill="#34d399" text-anchor="middle">GraphQL</text></g><g><rect x="154" y="92.09" width="42" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="175" y="106.69" font-size="10" fill="#34d399" text-anchor="middle">gRPC</text></g><g><rect x="203" y="92.09" width="36" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="221" y="106.69" font-size="10" fill="#34d399" text-anchor="middle">MCP</text></g><g><rect x="246" y="92.09" width="72" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="282" y="106.69" font-size="10" fill="#34d399" text-anchor="middle">WebSocket</text></g>
-  <g class="langbar" style="animation-delay:0.25s"><rect x="20" y="134.09" width="198.18" height="5" fill="#3b82f6"/><rect x="218.18" y="134.09" width="156.23" height="5" fill="#34d399"/><rect x="374.41" y="134.09" width="4.59" height="5" fill="#a78bfa"/><rect x="379" y="134.09" width="1" height="5" fill="#fbbf24"/></g>
-  <text x="20" y="155.09" font-size="9.5" fill="#6b7280">protocol-lab</text>
+  <text x="20" y="56.09" font-size="11.5" fill="#8b949e">Live European power prices, cross-border flows and a</text><text x="20" y="74.09" font-size="11.5" fill="#8b949e">trading simulator, built on real ENTSO-E market dat…</text>
+  <g><rect x="20" y="92.09" width="60" height="22" rx="6" fill="rgba(16,185,129,0.22)" stroke="#10b981"/><text x="50" y="106.69" font-size="10" fill="#a7f3d0" text-anchor="middle">Next.js</text></g><g><rect x="87" y="92.09" width="78" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="126" y="106.69" font-size="10" fill="#34d399" text-anchor="middle">TypeScript</text></g><g><rect x="172" y="92.09" width="48" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="196" y="106.69" font-size="10" fill="#34d399" text-anchor="middle">D3.js</text></g><g><rect x="227" y="92.09" width="66" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="260" y="106.69" font-size="10" fill="#34d399" text-anchor="middle">Supabase</text></g>
+  <g class="langbar" style="animation-delay:0.25s"><rect x="20" y="134.09" width="347.04" height="5" fill="#3b82f6"/><rect x="367.04" y="134.09" width="12.2" height="5" fill="#a78bfa"/><rect x="379.25" y="134.09" width="0.75" height="5" fill="#fbbf24"/></g>
+  <text x="20" y="155.09" font-size="9.5" fill="#6b7280">gridpulse</text>
   <text x="380" y="155.09" font-size="9.5" fill="#6b7280" text-anchor="end">TypeScript</text>
 </g>
 

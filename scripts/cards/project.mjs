@@ -17,33 +17,49 @@ import { doc, text, n, panel, wrap, clamp, langBar, chip, ENTRANCE } from '../li
 /**
  * Card width per variant, exported so nothing has to restate it.
  *
- * The strip under each card is generated separately and has to match its card
- * exactly. build.mjs used to carry its own copy of these numbers; changing the
- * flagship here left the strip at the old width, and the two no longer lined
- * up. One source, read by both.
+ * These are pixel widths, and that is what makes the README responsive without
+ * a single media query. GitHub caps README images at the column width, so a
+ * row holds as many cards as fit and the rest wrap. The profile column is
+ * about 840px on a monitor and 293px on a phone, which turns two 400px cards
+ * into a row on one and a single full-width card on the other.
+ *
+ * Percentages cannot do this. Two cards at 49% came to 98%, the whitespace
+ * between two inline elements took roughly 4.4px more, and on a phone that
+ * left 0.6px of slack — so whether the row held came down to how one browser
+ * rounded a fraction of a pixel.
+ *
+ * `heroNarrow` is the flagship redrawn for a phone; see the note in SIZES.
  */
-export const CARD_WIDTHS = { hero: 660, std: 492, compact: 325 };
+export const CARD_WIDTHS = { hero: 804, heroNarrow: 400, std: 400, compact: 265 };
 
 const SIZES = {
-  // The flagship stays the widest card, but not by as much as it once was.
-  // At 1000px it was drawn for a laptop: on a phone, where the README column
-  // is about 309px, it shrank to 0.31 scale and ended up the least readable
-  // card on the page — less legible than the 492px cards directly beneath it,
-  // which is backwards. 660px keeps it a clear third wider than those while
-  // lifting it to 0.47, so the type lands close to theirs.
+  // The flagship spans a whole row, so on a monitor it is exactly as wide as
+  // the two cards beneath it — which is what marks it as the flagship.
+  //
+  // That width is also why it needs a second drawing. A phone caps every image
+  // at ~293px, so the wider the canvas the smaller the type: at 804px the
+  // flagship would render at 0.36 scale and end up the least readable card on
+  // the page, below the cards under it. `heroNarrow` is the same content drawn
+  // for 400px, served to phones through <picture>, which GitHub passes through
+  // with its media query intact.
   hero: {
     w: CARD_WIDTHS.hero, pad: 28, name: 22, pitch: 13, lead: 19, lines: 2,
-    chipSize: 11, chipH: 24, barH: 5, foot: 9.5,
+    chipSize: 11, chipH: 24, barH: 5, foot: 9.5, band: 36, action: 11.5,
     afterName: 28, afterPitch: 20, afterChips: 22, afterBar: 17, bottom: 16,
+  },
+  heroNarrow: {
+    w: CARD_WIDTHS.heroNarrow, pad: 20, name: 15.5, pitch: 11.5, lead: 18, lines: 2,
+    chipSize: 10, chipH: 22, barH: 5, foot: 9.5, band: 32, action: 11,
+    afterName: 24, afterPitch: 18, afterChips: 20, afterBar: 16, bottom: 14,
   },
   std: {
     w: CARD_WIDTHS.std, pad: 20, name: 15.5, pitch: 11.5, lead: 18, lines: 2,
-    chipSize: 10, chipH: 22, barH: 5, foot: 9.5,
+    chipSize: 10, chipH: 22, barH: 5, foot: 9.5, band: 32, action: 11,
     afterName: 24, afterPitch: 18, afterChips: 20, afterBar: 16, bottom: 14,
   },
   compact: {
     w: CARD_WIDTHS.compact, pad: 16, name: 13, pitch: 10, lead: 15, lines: 2,
-    chipSize: 9.5, chipH: 0, barH: 4, foot: 8.5,
+    chipSize: 9.5, chipH: 0, barH: 4, foot: 8.5, band: 28, action: 10,
     afterName: 22, afterPitch: 16, afterChips: 0, afterBar: 14, bottom: 12,
   },
 };
@@ -84,7 +100,15 @@ export function projectCard(repo, project, stats, variant = 'std') {
     ? chipsTop + s.chipH + s.afterChips
     : pitchBottom + s.afterPitch;
   const footY = barY + s.barH + s.afterBar;
-  const h = Math.round(footY + s.bottom);
+  // The action band lives inside the card rather than under it. As a separate
+  // image it could only ever be a second box butted against the first: two
+  // borders meeting made a doubled line, and the two sets of rounded corners
+  // pinched where they met. Worse, nothing could hold the pair together —
+  // cards flow and wrap to suit the screen, so on a narrow one the strips came
+  // away from their cards. Drawn in, it is part of the card at every width and
+  // there is exactly one divider, which this file controls.
+  const bandTop = Math.round(footY + s.bottom);
+  const h = bandTop + s.band;
 
   const badgeSize = variant === 'compact' ? 8.5 : 9.5;
   const badgeW = textWidth(badgeText, badgeSize) + (isDemo ? 26 : 18);
@@ -153,6 +177,21 @@ ${sweep}
   ${langBar(langs, { x: s.pad, y: barY, w: s.w - s.pad * 2, h: s.barH, delay: 0.25 })}
   ${text(clamp(`${repo}`, variant === 'compact' ? 30 : 46), { x: s.pad, y: footY, size: s.foot, fill: color.dim })}
   ${primary ? text(primary.name, { x: s.w - s.pad, y: footY, size: s.foot, fill: color.dim, anchor: 'end' }) : ''}
+</g>
+
+<!-- The band names where the click actually goes. A card with a demo opens the
+     demo, because that is what the badge above promises and what a reader
+     wants to see first; everything else opens the source. -->
+<line x1="0" y1="${bandTop}" x2="${s.w}" y2="${bandTop}" stroke="${color.border}"/>
+<g class="fade">
+  ${text(isDemo ? 'open live demo   →' : 'view source   →', {
+    x: s.w / 2,
+    y: n(bandTop + s.band / 2 + s.action * 0.36),
+    size: s.action,
+    fill: isDemo ? emerald[400] : color.muted,
+    anchor: 'middle',
+    spacing: 0.6,
+  })}
 </g>`;
 
   return doc({
