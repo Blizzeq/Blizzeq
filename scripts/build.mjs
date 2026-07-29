@@ -163,33 +163,55 @@ console.log(`\n${written.length} assets · ${(total / 1024).toFixed(0)} kB total
 function readme(groups) {
   const USER = 'Blizzeq';
   const p = (c) => profile.projects[c.repo];
-  const card = (c, width) =>
-    `<a href="${c.href}"><img width="${width}" src="assets/${c.file}" alt="${p(c).display} — ${p(c).pitch}" /></a>`;
-  const cta = (c, width) =>
-    `<a href="${c.ctaHref}"><img width="${width}" src="assets/${c.cta}" alt="${p(c).display} source code" /></a>`;
+  const card = (c) =>
+    `<a href="${c.href}"><img width="100%" src="assets/${c.file}" alt="${p(c).display} — ${p(c).pitch}" /></a>`;
+  const cta = (c) =>
+    `<a href="${c.ctaHref}"><img width="100%" src="assets/${c.cta}" alt="${p(c).display} source code" /></a>`;
 
-  // Emit one row of cards, then that row's source strips, then the next row.
-  //
-  // Writing every card first and every strip afterwards reads as the simpler
-  // spelling, and it happens to look right — but only while a group holds
-  // exactly one row. With three projects at 49% the third card wraps onto the
-  // row where the first strips land, and each strip ends up under somebody
-  // else's card. Chunking by row keeps a strip with its own card at any count.
-  const grid = (cards, width, perRow) => {
+  /**
+   * Project grid, laid out as a table.
+   *
+   * The obvious spelling — floating images at `width="49%"` and letting them
+   * wrap — is a knife edge. Two of them come to 98%, but they are inline, so
+   * the whitespace between them counts too. On a phone GitHub's README column
+   * is about 293px wide: the pair measures 288px and the gap about 4.4px,
+   * leaving 0.6px of slack. Whether that fits comes down to how one browser
+   * rounds a fractional pixel, which is why the same README looked right on
+   * one device and came apart on the next — cards dropped onto separate rows
+   * at half width, and the "view code" strips piled up under the wrong cards.
+   *
+   * A table has no such margin of error. Each cell holds a card together with
+   * its own strip, so the two cannot be separated at any width, and the
+   * columns divide the row rather than competing for it.
+   */
+  const grid = (cards, perRow) => {
     const rows = [];
     for (let i = 0; i < cards.length; i += perRow) rows.push(cards.slice(i, i + perRow));
-    const block = (row) => `${row.map((c) => card(c, width)).join('\n')}
-${row.map((c) => cta(c, width)).join('\n')}`;
-    return `<div align="center">
+    const width = `${Math.floor(100 / perRow)}%`;
+    const cell = (c) => `<td width="${width}" valign="top" align="center">
 
-${rows.map(block).join('\n\n')}
+${card(c)}
+${cta(c)}
 
-</div>`;
+</td>`;
+    // Pad the final row so a lone card keeps its column width instead of
+    // stretching across the table.
+    const pad = (row) => [...row, ...Array(perRow - row.length).fill(null)];
+    const tr = (row) => `<tr>
+${pad(row).map((c) => (c ? cell(c) : `<td width="${width}"></td>`)).join('\n')}
+</tr>`;
+    return `<table>
+${rows.map(tr).join('\n')}
+</table>`;
   };
 
   const group = (g) => `<h3 align="center">${g.title}</h3>
 
-${grid(g.cards, '49%', 2)}${g.compact.length ? `\n\n${grid(g.compact, '32%', 3)}` : ''}`;
+<div align="center">
+
+${grid(g.cards, 2)}${g.compact.length ? `\n\n${grid(g.compact, 3)}` : ''}
+
+</div>`;
 
   return `<div align="center">
 

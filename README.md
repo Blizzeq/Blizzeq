@@ -25,10 +25,22 @@
 
 <div align="center">
 
-<a href="https://grid-balancing-tool.vercel.app"><img width="49%" src="assets/card-grid-balancing-tool.svg?v=ffe735fe" alt="Grid Balancing Simulator — Trade Poland's balancing market against a bot, settled at the imbalance price." /></a>
-<a href="https://github.com/Blizzeq/black-scholes-viz"><img width="49%" src="assets/card-black-scholes-viz.svg?v=d51af9e8" alt="Black-Scholes Simulator — Monte Carlo price paths with fan charts, VaR and expected shortfall." /></a>
-<a href="https://github.com/Blizzeq/grid-balancing-tool"><img width="49%" src="assets/card-grid-balancing-tool-cta.svg?v=bd5d0271" alt="Grid Balancing Simulator source code" /></a>
-<a href="https://github.com/Blizzeq/black-scholes-viz"><img width="49%" src="assets/card-black-scholes-viz-cta.svg?v=bd5d0271" alt="Black-Scholes Simulator source code" /></a>
+<table>
+<tr>
+<td width="50%" valign="top" align="center">
+
+<a href="https://grid-balancing-tool.vercel.app"><img width="100%" src="assets/card-grid-balancing-tool.svg?v=ffe735fe" alt="Grid Balancing Simulator — Trade Poland's balancing market against a bot, settled at the imbalance price." /></a>
+<a href="https://github.com/Blizzeq/grid-balancing-tool"><img width="100%" src="assets/card-grid-balancing-tool-cta.svg?v=bd5d0271" alt="Grid Balancing Simulator source code" /></a>
+
+</td>
+<td width="50%" valign="top" align="center">
+
+<a href="https://github.com/Blizzeq/black-scholes-viz"><img width="100%" src="assets/card-black-scholes-viz.svg?v=d51af9e8" alt="Black-Scholes Simulator — Monte Carlo price paths with fan charts, VaR and expected shortfall." /></a>
+<a href="https://github.com/Blizzeq/black-scholes-viz"><img width="100%" src="assets/card-black-scholes-viz-cta.svg?v=bd5d0271" alt="Black-Scholes Simulator source code" /></a>
+
+</td>
+</tr>
+</table>
 
 </div>
 
@@ -36,13 +48,31 @@
 
 <div align="center">
 
-<a href="https://prompt-evolution-engine.vercel.app"><img width="49%" src="assets/card-Prompt-Evolution-Engine.svg?v=f110c985" alt="Prompt Evolution Engine — Genetic algorithms that evolve LLM prompts, scored by an LLM judge." /></a>
-<a href="https://neuro-racer-lab.vercel.app"><img width="49%" src="assets/card-neuro-racer-lab.svg?v=351c63e3" alt="Neuro Racer Lab — Draw a track, train neural-net cars on it, then race the champion." /></a>
-<a href="https://github.com/Blizzeq/Prompt-Evolution-Engine"><img width="49%" src="assets/card-Prompt-Evolution-Engine-cta.svg?v=bd5d0271" alt="Prompt Evolution Engine source code" /></a>
-<a href="https://github.com/Blizzeq/neuro-racer-lab"><img width="49%" src="assets/card-neuro-racer-lab-cta.svg?v=bd5d0271" alt="Neuro Racer Lab source code" /></a>
+<table>
+<tr>
+<td width="50%" valign="top" align="center">
 
-<a href="https://github.com/Blizzeq/ai-student-impact-analysis"><img width="49%" src="assets/card-ai-student-impact-analysis.svg?v=ed6a58e0" alt="GenAI & Student Outcomes — How GenAI use relates to student grades, skill retention and burnout." /></a>
-<a href="https://github.com/Blizzeq/ai-student-impact-analysis"><img width="49%" src="assets/card-ai-student-impact-analysis-cta.svg?v=bd5d0271" alt="GenAI & Student Outcomes source code" /></a>
+<a href="https://prompt-evolution-engine.vercel.app"><img width="100%" src="assets/card-Prompt-Evolution-Engine.svg?v=f110c985" alt="Prompt Evolution Engine — Genetic algorithms that evolve LLM prompts, scored by an LLM judge." /></a>
+<a href="https://github.com/Blizzeq/Prompt-Evolution-Engine"><img width="100%" src="assets/card-Prompt-Evolution-Engine-cta.svg?v=bd5d0271" alt="Prompt Evolution Engine source code" /></a>
+
+</td>
+<td width="50%" valign="top" align="center">
+
+<a href="https://neuro-racer-lab.vercel.app"><img width="100%" src="assets/card-neuro-racer-lab.svg?v=351c63e3" alt="Neuro Racer Lab — Draw a track, train neural-net cars on it, then race the champion." /></a>
+<a href="https://github.com/Blizzeq/neuro-racer-lab"><img width="100%" src="assets/card-neuro-racer-lab-cta.svg?v=bd5d0271" alt="Neuro Racer Lab source code" /></a>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" align="center">
+
+<a href="https://github.com/Blizzeq/ai-student-impact-analysis"><img width="100%" src="assets/card-ai-student-impact-analysis.svg?v=ed6a58e0" alt="GenAI & Student Outcomes — How GenAI use relates to student grades, skill retention and burnout." /></a>
+<a href="https://github.com/Blizzeq/ai-student-impact-analysis"><img width="100%" src="assets/card-ai-student-impact-analysis-cta.svg?v=bd5d0271" alt="GenAI & Student Outcomes source code" /></a>
+
+</td>
+<td width="50%"></td>
+</tr>
+</table>
 
 </div>
 
@@ -50,21 +80,45 @@
 
 <div align="center">
 
-<a href="https://protocol-lab-three.vercel.app"><img width="49%" src="assets/card-protocol-lab.svg?v=909a7c7b" alt="Protocol Lab — One task board served over REST, GraphQL, WebSocket, webhooks, gRPC and MCP." /></a>
-<a href="https://github.com/Blizzeq/league-of-legends-data-collector"><img width="49%" src="assets/card-league-of-legends-data-collector.svg?v=ba2063a4" alt="LoL Data Collector — Python ETL pulling match and player stats from the Riot API into CSV." /></a>
-<a href="https://github.com/Blizzeq/protocol-lab"><img width="49%" src="assets/card-protocol-lab-cta.svg?v=bd5d0271" alt="Protocol Lab source code" /></a>
-<a href="https://github.com/Blizzeq/league-of-legends-data-collector"><img width="49%" src="assets/card-league-of-legends-data-collector-cta.svg?v=bd5d0271" alt="LoL Data Collector source code" /></a>
+<table>
+<tr>
+<td width="50%" valign="top" align="center">
 
-</div>
+<a href="https://protocol-lab-three.vercel.app"><img width="100%" src="assets/card-protocol-lab.svg?v=909a7c7b" alt="Protocol Lab — One task board served over REST, GraphQL, WebSocket, webhooks, gRPC and MCP." /></a>
+<a href="https://github.com/Blizzeq/protocol-lab"><img width="100%" src="assets/card-protocol-lab-cta.svg?v=bd5d0271" alt="Protocol Lab source code" /></a>
 
-<div align="center">
+</td>
+<td width="50%" valign="top" align="center">
 
-<a href="https://graph-viz-one.vercel.app"><img width="32%" src="assets/card-sm-graph-viz.svg?v=9af13a70" alt="Graph Visualizer — Seven graph algorithms animated in real time, including Kruskal and Prim." /></a>
-<a href="https://pathfinder-dun.vercel.app"><img width="32%" src="assets/card-sm-pathfinder.svg?v=32ec2c58" alt="Pathfinder — A*, Dijkstra, BFS and DFS with waypoints, mazes and live comparison." /></a>
-<a href="https://sort-vizualzation.vercel.app"><img width="32%" src="assets/card-sm-sort-vizualzation.svg?v=0db0ceee" alt="Sort Visualizer — Sorting algorithms visualised with real-time complexity analysis." /></a>
-<a href="https://github.com/Blizzeq/graph-viz"><img width="32%" src="assets/card-sm-graph-viz-cta.svg?v=1e176b9c" alt="Graph Visualizer source code" /></a>
-<a href="https://github.com/Blizzeq/pathfinder"><img width="32%" src="assets/card-sm-pathfinder-cta.svg?v=1e176b9c" alt="Pathfinder source code" /></a>
-<a href="https://github.com/Blizzeq/sort-vizualzation"><img width="32%" src="assets/card-sm-sort-vizualzation-cta.svg?v=1e176b9c" alt="Sort Visualizer source code" /></a>
+<a href="https://github.com/Blizzeq/league-of-legends-data-collector"><img width="100%" src="assets/card-league-of-legends-data-collector.svg?v=ba2063a4" alt="LoL Data Collector — Python ETL pulling match and player stats from the Riot API into CSV." /></a>
+<a href="https://github.com/Blizzeq/league-of-legends-data-collector"><img width="100%" src="assets/card-league-of-legends-data-collector-cta.svg?v=bd5d0271" alt="LoL Data Collector source code" /></a>
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="33%" valign="top" align="center">
+
+<a href="https://graph-viz-one.vercel.app"><img width="100%" src="assets/card-sm-graph-viz.svg?v=9af13a70" alt="Graph Visualizer — Seven graph algorithms animated in real time, including Kruskal and Prim." /></a>
+<a href="https://github.com/Blizzeq/graph-viz"><img width="100%" src="assets/card-sm-graph-viz-cta.svg?v=1e176b9c" alt="Graph Visualizer source code" /></a>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://pathfinder-dun.vercel.app"><img width="100%" src="assets/card-sm-pathfinder.svg?v=32ec2c58" alt="Pathfinder — A*, Dijkstra, BFS and DFS with waypoints, mazes and live comparison." /></a>
+<a href="https://github.com/Blizzeq/pathfinder"><img width="100%" src="assets/card-sm-pathfinder-cta.svg?v=1e176b9c" alt="Pathfinder source code" /></a>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<a href="https://sort-vizualzation.vercel.app"><img width="100%" src="assets/card-sm-sort-vizualzation.svg?v=0db0ceee" alt="Sort Visualizer — Sorting algorithms visualised with real-time complexity analysis." /></a>
+<a href="https://github.com/Blizzeq/sort-vizualzation"><img width="100%" src="assets/card-sm-sort-vizualzation-cta.svg?v=1e176b9c" alt="Sort Visualizer source code" /></a>
+
+</td>
+</tr>
+</table>
 
 </div>
 
