@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="492" height="169" viewBox="0 0 492 169" role="img" aria-label="LoL Data Collector — Python ETL pulling match and player stats from the Riot API into CSV." font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace">
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="215" viewBox="0 0 640 215" role="img" aria-label="LoL Data Collector — Python ETL pulling match and player stats from the Riot API into CSV." font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace">
 <title>LoL Data Collector — Python ETL pulling match and player stats from the Riot API into CSV.</title>
 <defs>
-<clipPath id="card"><rect width="492" height="169" rx="10"/></clipPath>
+<clipPath id="card"><rect width="640" height="215" rx="10"/></clipPath>
 <linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
   <stop offset="0%" stop-color="#34d399" stop-opacity="0"/>
   <stop offset="50%" stop-color="#34d399" stop-opacity="0.07"/>
@@ -22,22 +22,30 @@
 
 /* Slow diagonal sweep. Parks off the left edge at rest, so a still frame is clean. */
 .sweep{animation:sweep 9s ease-in-out infinite}
-@keyframes sweep{0%,22%{transform:translateX(0)}70%,100%{transform:translateX(792px)}}
+@keyframes sweep{0%,22%{transform:translateX(0)}70%,100%{transform:translateX(940px)}}
 @media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
 
-<rect x="0.5" y="0.5" width="491" height="168" rx="10" fill="#161b22" stroke="#30363d"/>
-<g clip-path="url(#card)"><rect class="sweep" x="-260" y="0" width="180" height="169" fill="url(#sweepGrad)" transform="skewX(-18)"/></g>
+<rect x="0.5" y="0.5" width="639" height="214" rx="10" fill="#161b22" stroke="#30363d"/>
+<g clip-path="url(#card)"><rect class="sweep" x="-260" y="0" width="180" height="215" fill="url(#sweepGrad)" transform="skewX(-18)"/></g>
 <!-- Accent stays emerald on every card; language colour lives in the data bar
      at the foot, where it reads as information rather than decoration. -->
-<rect x="0.5" y="0.5" width="491" height="2.5" rx="1" fill="url(#accent)" opacity="0.9"/>
+<rect x="0.5" y="0.5" width="639" height="2.5" rx="1" fill="url(#accent)" opacity="0.9"/>
 
 <g class="fade">
-  <text x="20" y="32.09" font-size="15.5" fill="#6ee7b7" font-weight="bold">LoL Data Collector</text>
-  <g><rect x="385.6" y="16" width="86.4" height="18" rx="9" fill="#0d1117" stroke="#30363d"/><text x="428.8" y="28.33" font-size="9.5" fill="#8b949e" text-anchor="middle">Python · ETL</text></g>
-  <text x="20" y="56.09" font-size="11.5" fill="#8b949e">Python ETL pulling match and player stats from the Riot API into</text><text x="20" y="74.09" font-size="11.5" fill="#8b949e">CSV.</text>
-  <g><rect x="20" y="92.09" width="54" height="22" rx="6" fill="rgba(16,185,129,0.22)" stroke="#10b981"/><text x="47" y="106.69" font-size="10" fill="#a7f3d0" text-anchor="middle">Python</text></g><g><rect x="81" y="92.09" width="36" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="99" y="106.69" font-size="10" fill="#34d399" text-anchor="middle">ETL</text></g><g><rect x="124" y="92.09" width="66" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="157" y="106.69" font-size="10" fill="#34d399" text-anchor="middle">REST API</text></g>
-  <g class="langbar" style="animation-delay:0.25s"><rect x="20" y="134.09" width="452" height="5" fill="#34d399"/></g>
-  <text x="20" y="155.09" font-size="9.5" fill="#6b7280">league-of-legends-data-collector</text>
-  <text x="472" y="155.09" font-size="9.5" fill="#6b7280" text-anchor="end">Python</text>
+  <text x="24" y="38.04" font-size="18" fill="#6ee7b7" font-weight="bold">LoL Data Collector</text>
+  <g><rect x="529.6" y="20" width="86.4" height="18" rx="9" fill="#0d1117" stroke="#30363d"/><text x="572.8" y="32.33" font-size="9.5" fill="#8b949e" text-anchor="middle">Python · ETL</text></g>
+  <text x="24" y="64.04" font-size="12" fill="#8b949e">Python ETL pulling match and player stats from the Riot API into CSV.</text>
+  <g><rect x="24" y="101.04" width="55.8" height="23" rx="6" fill="rgba(16,185,129,0.22)" stroke="#10b981"/><text x="51.9" y="116.32" font-size="10.5" fill="#a7f3d0" text-anchor="middle">Python</text></g><g><rect x="86.8" y="101.04" width="36.9" height="23" rx="6" fill="#0d1117" stroke="#30363d"/><text x="105.25" y="116.32" font-size="10.5" fill="#34d399" text-anchor="middle">ETL</text></g><g><rect x="130.7" y="101.04" width="68.4" height="23" rx="6" fill="#0d1117" stroke="#30363d"/><text x="164.9" y="116.32" font-size="10.5" fill="#34d399" text-anchor="middle">REST API</text></g>
+  <g class="langbar" style="animation-delay:0.25s"><rect x="24" y="145.04" width="592" height="5" fill="#34d399"/></g>
+  <text x="24" y="166.04" font-size="9.5" fill="#6b7280">league-of-legends-data-collector</text>
+  <text x="616" y="166.04" font-size="9.5" fill="#6b7280" text-anchor="end">Python</text>
+</g>
+
+<!-- The band names where the click actually goes. A card with a demo opens the
+     demo, because that is what the badge above promises and what a reader
+     wants to see first; everything else opens the source. -->
+<line x1="0" y1="181" x2="640" y2="181" stroke="#30363d"/>
+<g class="fade">
+  <text x="320" y="201.96" font-size="11" fill="#8b949e" text-anchor="middle" letter-spacing="0.6">view source   →</text>
 </g>
 </svg>

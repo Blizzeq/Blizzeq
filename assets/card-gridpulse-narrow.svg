@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="222" viewBox="0 0 400 222" role="img" aria-label="GridPulse — Live European power prices, cross-border flows and a trading simulator, built on real ENTSO-E market data across 28+ countries." font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace">
+<title>GridPulse — Live European power prices, cross-border flows and a trading simulator, built on real ENTSO-E market data across 28+ countries.</title>
+<defs>
+<clipPath id="card"><rect width="400" height="222" rx="10"/></clipPath>
+<linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0%" stop-color="#34d399" stop-opacity="0"/>
+  <stop offset="50%" stop-color="#34d399" stop-opacity="0.07"/>
+  <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0%" stop-color="#047857"/>
+  <stop offset="50%" stop-color="#34d399"/>
+  <stop offset="100%" stop-color="#047857"/>
+</linearGradient></defs>
+<style>
+.fade{animation:fade .9s ease-out}
+@keyframes fade{from{opacity:0}}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.langbar{transform-box:fill-box;transform-origin:left center;animation:grow 1s cubic-bezier(.4,0,.2,1) .25s}
+@keyframes grow{from{transform:scaleX(0)}}
+
+/* Slow diagonal sweep. Parks off the left edge at rest, so a still frame is clean. */
+.sweep{animation:sweep 9s ease-in-out infinite}
+@keyframes sweep{0%,22%{transform:translateX(0)}70%,100%{transform:translateX(700px)}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
+
+<rect x="0.5" y="0.5" width="399" height="221" rx="10" fill="#161b22" stroke="#30363d"/>
+<g clip-path="url(#card)"><rect class="sweep" x="-260" y="0" width="180" height="222" fill="url(#sweepGrad)" transform="skewX(-18)"/></g>
+<!-- Accent stays emerald on every card; language colour lives in the data bar
+     at the foot, where it reads as information rather than decoration. -->
+<rect x="0.5" y="0.5" width="399" height="2.5" rx="1" fill="url(#accent)" opacity="0.9"/>
+
+<g class="fade">
+  <text x="20" y="33.26" font-size="17" fill="#6ee7b7" font-weight="bold">GridPulse</text>
+  <g><rect x="302.7" y="16" width="77.3" height="18" rx="9" fill="rgba(16,185,129,0.12)" stroke="#047857"/><circle cx="313.7" cy="25" r="3" fill="#34d399" class="pulse"/><text x="347.35" y="28.33" font-size="9.5" fill="#6ee7b7" text-anchor="middle">live demo</text></g>
+  <text x="20" y="58.26" font-size="12" fill="#8b949e">Live European power prices, cross-border flows and</text><text x="20" y="76.26" font-size="12" fill="#8b949e">a trading simulator, built on real ENTSO-E market</text><text x="20" y="94.26" font-size="12" fill="#8b949e">data across 28+ countries.</text>
+  <g><rect x="20" y="112.26" width="60" height="22" rx="6" fill="rgba(16,185,129,0.22)" stroke="#10b981"/><text x="50" y="126.86" font-size="10" fill="#a7f3d0" text-anchor="middle">Next.js</text></g><g><rect x="87" y="112.26" width="78" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="126" y="126.86" font-size="10" fill="#34d399" text-anchor="middle">TypeScript</text></g><g><rect x="172" y="112.26" width="48" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="196" y="126.86" font-size="10" fill="#34d399" text-anchor="middle">D3.js</text></g><g><rect x="227" y="112.26" width="66" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="260" y="126.86" font-size="10" fill="#34d399" text-anchor="middle">Supabase</text></g>
+  <g class="langbar" style="animation-delay:0.25s"><rect x="20" y="154.26" width="347.04" height="5" fill="#3b82f6"/><rect x="367.04" y="154.26" width="12.2" height="5" fill="#a78bfa"/><rect x="379.25" y="154.26" width="0.75" height="5" fill="#fbbf24"/></g>
+  <text x="20" y="175.26" font-size="9.5" fill="#6b7280">gridpulse</text>
+  <text x="380" y="175.26" font-size="9.5" fill="#6b7280" text-anchor="end">TypeScript</text>
+</g>
+
+<!-- The band names where the click actually goes. A card with a demo opens the
+     demo, because that is what the badge above promises and what a reader
+     wants to see first; everything else opens the source. -->
+<line x1="0" y1="189" x2="400" y2="189" stroke="#30363d"/>
+<g class="fade">
+  <text x="200" y="209.46" font-size="11" fill="#34d399" text-anchor="middle" letter-spacing="0.6">open live demo   →</text>
+</g>
+</svg>
