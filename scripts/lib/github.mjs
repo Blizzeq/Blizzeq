@@ -47,7 +47,7 @@ const CONTRIB_QUERY = `{
       totalCommitContributions
       restrictedContributionsCount
       contributionCalendar { totalContributions }
-      commitContributionsByRepository(maxRepositories: 100) { repository { name } }
+      commitContributionsByRepository(maxRepositories: 100) { repository { name isPrivate } }
     }
     repositories(first: 100, ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC) {
       totalCount
@@ -91,7 +91,14 @@ export async function fetchAll(repos) {
     contributions: cc.contributionCalendar.totalContributions,
     publicCommits: cc.totalCommitContributions,
     privateContributions: cc.restrictedContributionsCount,
-    activeRepos: cc.commitContributionsByRepository.length,
+    // Public repositories only, deliberately.
+    //
+    // This field returns whatever the token can see, so a personal token
+    // counted 70 and the Actions token counted 19 — the same card showing a
+    // different number depending on who ran the build. Counting public repos
+    // makes it the same figure either way, and it is the honest one to publish
+    // next to a public profile.
+    activeRepos: cc.commitContributionsByRepository.filter((r) => !r.repository.isPrivate).length,
     languagesByRepo: Object.fromEntries(langEntries),
     languageTotals: totals,
   };
