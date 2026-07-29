@@ -163,55 +163,40 @@ console.log(`\n${written.length} assets · ${(total / 1024).toFixed(0)} kB total
 function readme(groups) {
   const USER = 'Blizzeq';
   const p = (c) => profile.projects[c.repo];
-  const card = (c) =>
-    `<a href="${c.href}"><img width="100%" src="assets/${c.file}" alt="${p(c).display} — ${p(c).pitch}" /></a>`;
-  const cta = (c) =>
-    `<a href="${c.ctaHref}"><img width="100%" src="assets/${c.cta}" alt="${p(c).display} source code" /></a>`;
+  const card = (c, width) =>
+    `<a href="${c.href}"><img width="${width}" src="assets/${c.file}" alt="${p(c).display} — ${p(c).pitch}" /></a>`;
+  const cta = (c, width) =>
+    `<a href="${c.ctaHref}"><img width="${width}" src="assets/${c.cta}" alt="${p(c).display} source code" /></a>`;
 
   /**
-   * Project grid, laid out as a table.
+   * One project per row, sized in pixels rather than percent.
    *
-   * The obvious spelling — floating images at `width="49%"` and letting them
-   * wrap — is a knife edge. Two of them come to 98%, but they are inline, so
-   * the whitespace between them counts too. On a phone GitHub's README column
-   * is about 293px wide: the pair measures 288px and the gap about 4.4px,
-   * leaving 0.6px of slack. Whether that fits comes down to how one browser
-   * rounds a fractional pixel, which is why the same README looked right on
-   * one device and came apart on the next — cards dropped onto separate rows
-   * at half width, and the "view code" strips piled up under the wrong cards.
+   * Side-by-side cards were the original idea and they read well on a laptop,
+   * but they cannot survive a phone. GitHub's README column is about 293px
+   * there, so a two-up row renders each 492px card at ~140px — a scale of
+   * 0.28, which turns 11px body text into roughly 3px. The layout was also
+   * balanced on a knife edge: two cards at 49% come to 98%, the whitespace
+   * between two inline elements takes about 4.4px more, and that left 0.6px
+   * of slack. Whether it held came down to how a given browser rounded a
+   * fraction of a pixel — hence the same README looking fine on one device
+   * and coming apart on the next, cards stacked at half width with the
+   * "view code" strips orphaned underneath.
    *
-   * A table has no such margin of error. Each cell holds a card together with
-   * its own strip, so the two cannot be separated at any width, and the
-   * columns divide the row rather than competing for it.
+   * A pixel width fixes both. GitHub caps README images at the column width,
+   * so a card renders at its natural size on a laptop and shrinks to fit a
+   * phone — 0.6 scale for a standard card, 0.9 for a compact one, both
+   * legible. Nothing depends on how percentages round, so there is no width
+   * at which the layout can come apart.
    */
-  const grid = (cards, perRow) => {
-    const rows = [];
-    for (let i = 0; i < cards.length; i += perRow) rows.push(cards.slice(i, i + perRow));
-    const width = `${Math.floor(100 / perRow)}%`;
-    const cell = (c) => `<td width="${width}" valign="top" align="center">
+  const grid = (cards, width) => `<div align="center">
 
-${card(c)}
-${cta(c)}
+${cards.map((c) => `${card(c, width)}\n${cta(c, width)}`).join('\n\n')}
 
-</td>`;
-    // Pad the final row so a lone card keeps its column width instead of
-    // stretching across the table.
-    const pad = (row) => [...row, ...Array(perRow - row.length).fill(null)];
-    const tr = (row) => `<tr>
-${pad(row).map((c) => (c ? cell(c) : `<td width="${width}"></td>`)).join('\n')}
-</tr>`;
-    return `<table>
-${rows.map(tr).join('\n')}
-</table>`;
-  };
+</div>`;
 
   const group = (g) => `<h3 align="center">${g.title}</h3>
 
-<div align="center">
-
-${grid(g.cards, 2)}${g.compact.length ? `\n\n${grid(g.compact, 3)}` : ''}
-
-</div>`;
+${grid(g.cards, 492)}${g.compact.length ? `\n\n${grid(g.compact, 325)}` : ''}`;
 
   return `<div align="center">
 
