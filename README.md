@@ -76,7 +76,7 @@
 
 <div align="center">
 
-<img src="assets/stats.svg?v=f42ff6e9" alt="Contributions, repositories touched, public repositories, years on GitHub, and language mix" />
+<img src="assets/stats.svg?v=411fe62c" alt="Contributions, repositories touched, public repositories, years on GitHub, and language mix" />
 
 <img src="https://raw.githubusercontent.com/Blizzeq/Blizzeq/output/profile-3d-emerald.svg" alt="3D contribution calendar" />
 
