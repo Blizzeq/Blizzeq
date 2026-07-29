@@ -37,8 +37,8 @@
   <text x="20" y="56.09" font-size="11.5" fill="#8b949e">Trade Poland&apos;s balancing market against a bot,</text><text x="20" y="74.09" font-size="11.5" fill="#8b949e">settled at the imbalance price.</text>
   <g><rect x="20" y="92.09" width="60" height="22" rx="6" fill="rgba(16,185,129,0.22)" stroke="#10b981"/><text x="50" y="106.69" font-size="10" fill="#a7f3d0" text-anchor="middle">Next.js</text></g><g><rect x="87" y="92.09" width="78" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="126" y="106.69" font-size="10" fill="#34d399" text-anchor="middle">TypeScript</text></g><g><rect x="172" y="92.09" width="66" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="205" y="106.69" font-size="10" fill="#34d399" text-anchor="middle">Recharts</text></g><g><rect x="245" y="92.09" width="114" height="22" rx="6" fill="#0d1117" stroke="#30363d"/><text x="302" y="106.69" font-size="10" fill="#34d399" text-anchor="middle">Balancing Market</text></g>
   <g class="langbar" style="animation-delay:0.25s"><rect x="20" y="134.09" width="345.41" height="5" fill="#3b82f6"/><rect x="365.41" y="134.09" width="9.91" height="5" fill="#fbbf24"/><rect x="375.32" y="134.09" width="4.68" height="5" fill="#a78bfa"/></g>
-  <text x="20" y="155.09" font-size="9.5" fill="#6b7280">grid-balancing-tool</text>
-  <text x="380" y="155.09" font-size="9.5" fill="#6b7280" text-anchor="end">TypeScript</text>
+  <circle cx="23" cy="152.05" r="3" fill="#3b82f6"/><text x="30" y="155.09" font-size="9.5" fill="#6b7280">TypeScript 96%</text><circle cx="124.8" cy="152.05" r="3" fill="#fbbf24"/><text x="131.8" y="155.09" font-size="9.5" fill="#6b7280">JavaScript 3%</text>
+  <text x="380" y="155.09" font-size="9.5" fill="#6b7280" text-anchor="end">grid-balancing-tool</text>
 </g>
 
 <!-- The band names where the click actually goes. A card with a demo opens the

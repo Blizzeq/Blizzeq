@@ -34,8 +34,8 @@
   <text x="20" y="53.92" font-size="10.5" fill="#8b949e">Sorting algorithms visualised with real-time complexity</text><text x="20" y="69.92" font-size="10.5" fill="#8b949e">analysis.</text>
   
   <g class="langbar" style="animation-delay:0.25s"><rect x="20" y="86.92" width="344.75" height="4" fill="#3b82f6"/><rect x="364.75" y="86.92" width="13.32" height="4" fill="#a78bfa"/><rect x="378.07" y="86.92" width="1.93" height="4" fill="#fbbf24"/></g>
-  <text x="20" y="104.92" font-size="8.5" fill="#6b7280">sort-vizualzation</text>
-  <text x="380" y="104.92" font-size="8.5" fill="#6b7280" text-anchor="end">TypeScript</text>
+  <circle cx="23" cy="102.2" r="3" fill="#3b82f6"/><text x="30" y="104.92" font-size="8.5" fill="#6b7280">TypeScript 96%</text><circle cx="116.4" cy="102.2" r="3" fill="#a78bfa"/><text x="123.4" y="104.92" font-size="8.5" fill="#6b7280">CSS 4%</text><circle cx="169" cy="102.2" r="3" fill="#fbbf24"/><text x="176" y="104.92" font-size="8.5" fill="#6b7280">JavaScript 1%</text>
+  <text x="380" y="104.92" font-size="8.5" fill="#6b7280" text-anchor="end">sort-vizualzation</text>
 </g>
 
 <!-- The band names where the click actually goes. A card with a demo opens the

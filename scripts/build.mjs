@@ -200,18 +200,10 @@ ${cards.map(card).join('\n')}
 
 </div>`;
 
-  // Cards with a demo open the demo, so the source lives here instead. One
-  // line of ordinary markdown, which wraps on its own at any width.
-  const sources = (cards) =>
-    `<p align="center"><sub>source · ${cards
-      .map((c) => `<a href="${c.url}">${c.repo}</a>`)
-      .join(' · ')}</sub></p>`;
 
   const group = (g) => `<h3 align="center">${g.title}</h3>
 
-${grid(g.cards)}${g.compact.length ? `\n\n${grid(g.compact)}` : ''}
-
-${sources([...g.cards, ...g.compact])}`;
+${grid(g.cards)}${g.compact.length ? `\n\n${grid(g.compact)}` : ''}`;
 
   return `<div align="center">
 
@@ -234,8 +226,6 @@ ${sources([...g.cards, ...g.compact])}`;
 ${card(flagship)}
 
 </div>
-
-${sources([flagship])}
 
 ${groups.map(group).join('\n\n')}
 

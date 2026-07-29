@@ -37,8 +37,8 @@
   <text x="24" y="64.04" font-size="12" fill="#8b949e">Draw a track, train neural-net cars on it, then race the champion.</text>
   <g><rect x="24" y="101.04" width="106.2" height="23" rx="6" fill="rgba(16,185,129,0.22)" stroke="#10b981"/><text x="77.1" y="116.32" font-size="10.5" fill="#a7f3d0" text-anchor="middle">Neuroevolution</text></g><g><rect x="137.2" y="101.04" width="68.4" height="23" rx="6" fill="#0d1117" stroke="#30363d"/><text x="171.4" y="116.32" font-size="10.5" fill="#34d399" text-anchor="middle">Phaser 3</text></g><g><rect x="212.6" y="101.04" width="74.7" height="23" rx="6" fill="#0d1117" stroke="#30363d"/><text x="249.95" y="116.32" font-size="10.5" fill="#34d399" text-anchor="middle">Matter.js</text></g>
   <g class="langbar" style="animation-delay:0.25s"><rect x="24" y="145.04" width="488.85" height="5" fill="#3b82f6"/><rect x="512.85" y="145.04" width="69.17" height="5" fill="#fbbf24"/><rect x="582.02" y="145.04" width="28.61" height="5" fill="#a78bfa"/><rect x="610.63" y="145.04" width="5.37" height="5" fill="#fb7185"/></g>
-  <text x="24" y="166.04" font-size="9.5" fill="#6b7280">neuro-racer-lab</text>
-  <text x="616" y="166.04" font-size="9.5" fill="#6b7280" text-anchor="end">TypeScript</text>
+  <circle cx="27" cy="163" r="3" fill="#3b82f6"/><text x="34" y="166.04" font-size="9.5" fill="#6b7280">TypeScript 83%</text><circle cx="128.8" cy="163" r="3" fill="#fbbf24"/><text x="135.8" y="166.04" font-size="9.5" fill="#6b7280">JavaScript 12%</text><circle cx="230.6" cy="163" r="3" fill="#a78bfa"/><text x="237.6" y="166.04" font-size="9.5" fill="#6b7280">CSS 5%</text>
+  <text x="616" y="166.04" font-size="9.5" fill="#6b7280" text-anchor="end">neuro-racer-lab</text>
 </g>
 
 <!-- The band names where the click actually goes. A card with a demo opens the

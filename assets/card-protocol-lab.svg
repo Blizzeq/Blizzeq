@@ -37,8 +37,8 @@
   <text x="24" y="64.04" font-size="12" fill="#8b949e">One task board served over REST, GraphQL, WebSocket, webhooks, gRPC and MCP.</text>
   <g><rect x="24" y="101.04" width="62.1" height="23" rx="6" fill="rgba(16,185,129,0.22)" stroke="#10b981"/><text x="55.05" y="116.32" font-size="10.5" fill="#a7f3d0" text-anchor="middle">FastAPI</text></g><g><rect x="93.1" y="101.04" width="62.1" height="23" rx="6" fill="#0d1117" stroke="#30363d"/><text x="124.15" y="116.32" font-size="10.5" fill="#34d399" text-anchor="middle">GraphQL</text></g><g><rect x="162.2" y="101.04" width="43.2" height="23" rx="6" fill="#0d1117" stroke="#30363d"/><text x="183.8" y="116.32" font-size="10.5" fill="#34d399" text-anchor="middle">gRPC</text></g><g><rect x="212.4" y="101.04" width="36.9" height="23" rx="6" fill="#0d1117" stroke="#30363d"/><text x="230.85" y="116.32" font-size="10.5" fill="#34d399" text-anchor="middle">MCP</text></g><g><rect x="256.3" y="101.04" width="74.7" height="23" rx="6" fill="#0d1117" stroke="#30363d"/><text x="293.65" y="116.32" font-size="10.5" fill="#34d399" text-anchor="middle">WebSocket</text></g>
   <g class="langbar" style="animation-delay:0.25s"><rect x="24" y="145.04" width="325.9" height="5" fill="#3b82f6"/><rect x="349.9" y="145.04" width="256.91" height="5" fill="#34d399"/><rect x="606.82" y="145.04" width="7.54" height="5" fill="#a78bfa"/><rect x="614.36" y="145.04" width="1.64" height="5" fill="#fbbf24"/></g>
-  <text x="24" y="166.04" font-size="9.5" fill="#6b7280">protocol-lab</text>
-  <text x="616" y="166.04" font-size="9.5" fill="#6b7280" text-anchor="end">TypeScript</text>
+  <circle cx="27" cy="163" r="3" fill="#3b82f6"/><text x="34" y="166.04" font-size="9.5" fill="#6b7280">TypeScript 55%</text><circle cx="128.8" cy="163" r="3" fill="#34d399"/><text x="135.8" y="166.04" font-size="9.5" fill="#6b7280">Python 43%</text><circle cx="207.8" cy="163" r="3" fill="#a78bfa"/><text x="214.8" y="166.04" font-size="9.5" fill="#6b7280">CSS 1%</text>
+  <text x="616" y="166.04" font-size="9.5" fill="#6b7280" text-anchor="end">protocol-lab</text>
 </g>
 
 <!-- The band names where the click actually goes. A card with a demo opens the

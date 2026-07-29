@@ -92,7 +92,6 @@ function languages(bytes = {}) {
 export function projectCard(repo, project, stats, variant = 'std') {
   const s = SIZES[variant];
   const langs = languages(stats.languagesByRepo?.[repo]);
-  const primary = langs[0];
   const hasChips = !variant.startsWith('compact') && Boolean(project.tags?.length);
 
   const usableChars = Math.floor((s.w - s.pad * 2) / (s.pitch * 0.6));
@@ -127,6 +126,25 @@ export function projectCard(repo, project, stats, variant = 'std') {
   const badgeH = isCompact ? 16 : 18;
   const badgeY = s.pad - 4;
   const badgeX = s.w - s.pad - badgeW;
+
+  // The bar alone was a row of unexplained colours. A dot and a share per
+  // language says what it is measuring; the repo name moves to the right so
+  // the reading runs from the data outward.
+  const legend = (() => {
+    const total = langs.reduce((sum, l) => sum + l.value, 0) || 1;
+    const repoW = textWidth(clamp(repo, isCompact ? 24 : 40), s.foot) + 16;
+    let x = s.pad;
+    let out = '';
+    for (const l of langs.slice(0, 3)) {
+      const label = `${l.name} ${Math.round((l.value / total) * 100)}%`;
+      const w = textWidth(label, s.foot);
+      if (x + 10 + w > s.w - s.pad - repoW) break;
+      out += `<circle cx="${n(x + 3)}" cy="${n(footY - s.foot * 0.32)}" r="3" fill="${l.color}"/>`;
+      out += text(label, { x: n(x + 10), y: footY, size: s.foot, fill: color.dim });
+      x += 10 + w + 12;
+    }
+    return out;
+  })();
 
   const pitch = pitchLines
     .map((line, i) => text(line, { x: s.pad, y: pitchTop + i * s.lead, size: s.pitch, fill: color.muted }))
@@ -187,8 +205,8 @@ ${sweep}
   ${pitch}
   ${chips}
   ${langBar(langs, { x: s.pad, y: barY, w: s.w - s.pad * 2, h: s.barH, delay: 0.25 })}
-  ${text(clamp(`${repo}`, isCompact ? 30 : 46), { x: s.pad, y: footY, size: s.foot, fill: color.dim })}
-  ${primary ? text(primary.name, { x: s.w - s.pad, y: footY, size: s.foot, fill: color.dim, anchor: 'end' }) : ''}
+  ${legend}
+  ${text(clamp(`${repo}`, isCompact ? 24 : 40), { x: s.w - s.pad, y: footY, size: s.foot, fill: color.dim, anchor: 'end' })}
 </g>
 
 <!-- The band names where the click actually goes. A card with a demo opens the
