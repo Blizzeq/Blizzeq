@@ -128,21 +128,6 @@ function smoothPath(pts) {
   return d;
 }
 
-/**
- * The same day curve, drawn to arbitrary bounds.
- *
- * Exported so the footer can close the page with the shape the hero opened
- * with, rather than an unrelated sine that happens to be wavy.
- */
-export function dayCurvePath({ width, top, base, pad }) {
-  const span = width - pad * 2;
-  const pts = PROFILE.map((v, i) => ({
-    x: pad + (i / (HOURS - 1)) * span,
-    y: base - v * (base - top),
-  }));
-  return smoothPath(pts);
-}
-
 export function hero(profile) {
   const { name, role, location, github } = profile.identity;
   const pts = points();

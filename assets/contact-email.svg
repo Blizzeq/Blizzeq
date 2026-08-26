@@ -1,7 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="261" height="46" viewBox="0 0 261 46" role="img" aria-label="Email" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace">
 <title>Email</title>
 <defs></defs>
-<style>
+<style>:root{color-scheme:dark}
+
 .fade{animation:fade .9s ease-out}
 @keyframes fade{from{opacity:0}}
 @media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>

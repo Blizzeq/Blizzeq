@@ -56,7 +56,8 @@ export function doc({ width, height, title, defs = '', style = '', body }) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${esc(title)}" font-family="${font}">
 <title>${esc(title)}</title>
 <defs>${defs}</defs>
-<style>${style}
+<style>:root{color-scheme:dark}
+${style}
 @media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
 ${body}
 </svg>

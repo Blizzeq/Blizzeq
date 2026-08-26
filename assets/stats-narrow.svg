@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="236" viewBox="0 0 400 236" role="img" aria-label="GitHub activity" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace">
+<title>GitHub activity</title>
+<defs></defs>
+<style>:root{color-scheme:dark}
+
+.fade{animation:fade .9s ease-out}
+@keyframes fade{from{opacity:0}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
+
+<rect x="0.5" y="0.5" width="399" height="235" rx="10" fill="#161b22" stroke="#30363d"/>
+<line x1="200" y1="18" x2="200" y2="218" stroke="#21262d"/>
+<line x1="18" y1="118" x2="382" y2="118" stroke="#21262d"/>
+<g class="fade" style="animation-delay:0s">
+  <text x="109" y="62" font-size="31" fill="#6ee7b7" text-anchor="middle" font-weight="bold">4.8k</text>
+  <text x="109" y="84" font-size="10" fill="#e6edf3" text-anchor="middle" letter-spacing="0.5">contributions</text>
+  <text x="109" y="100" font-size="8.5" fill="#6b7280" text-anchor="middle" letter-spacing="0.3">past 12 months · incl. private</text>
+</g><g class="fade" style="animation-delay:0.08s">
+  <text x="291" y="62" font-size="31" fill="#6ee7b7" text-anchor="middle" font-weight="bold">18</text>
+  <text x="291" y="84" font-size="10" fill="#e6edf3" text-anchor="middle" letter-spacing="0.5">repositories</text>
+  <text x="291" y="100" font-size="8.5" fill="#6b7280" text-anchor="middle" letter-spacing="0.3">active, past 12 months</text>
+</g><g class="fade" style="animation-delay:0.16s">
+  <text x="109" y="166" font-size="31" fill="#6ee7b7" text-anchor="middle" font-weight="bold">21</text>
+  <text x="109" y="188" font-size="10" fill="#e6edf3" text-anchor="middle" letter-spacing="0.5">public repositories</text>
+  <text x="109" y="204" font-size="8.5" fill="#6b7280" text-anchor="middle" letter-spacing="0.3">excluding forks</text>
+</g><g class="fade" style="animation-delay:0.24s">
+  <text x="291" y="166" font-size="31" fill="#6ee7b7" text-anchor="middle" font-weight="bold">5.1</text>
+  <text x="291" y="188" font-size="10" fill="#e6edf3" text-anchor="middle" letter-spacing="0.5">years</text>
+  <text x="291" y="204" font-size="8.5" fill="#6b7280" text-anchor="middle" letter-spacing="0.3">on GitHub</text>
+</g>
+</svg>

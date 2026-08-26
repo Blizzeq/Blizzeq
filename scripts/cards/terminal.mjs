@@ -7,11 +7,10 @@
 import { color, emerald, ADVANCE } from '../lib/tokens.mjs';
 import { doc, text, n, esc, ENTRANCE } from '../lib/svg.mjs';
 
-const W = 1000;
-const CHROME = 42;
-const PAD = 26;
-const LINE = 22;
-const SIZE = 13.5;
+const LAYOUTS = {
+  desktop: { width: 1000, chrome: 42, pad: 26, line: 22, size: 13.5, titleSize: 12 },
+  narrow: { width: 400, chrome: 38, pad: 18, line: 20, size: 11.5, titleSize: 10.5 },
+};
 
 const TONE = {
   dim: color.muted,
@@ -19,7 +18,11 @@ const TONE = {
   bright: color.text,
 };
 
-export function terminal(profile) {
+export function terminal(profile, variant = 'desktop') {
+  const layout = LAYOUTS[variant];
+  if (!layout) throw new Error(`Unknown terminal layout: ${variant}`);
+  const { width: W, chrome: CHROME, pad: PAD, line: LINE, size: SIZE, titleSize } = layout;
+
   const rows = [];
   for (const entry of profile.terminal) {
     rows.push({ kind: 'cmd', text: entry.cmd });
@@ -80,7 +83,7 @@ export function terminal(profile) {
 <circle cx="${PAD}" cy="${CHROME / 2}" r="6" fill="#ff5f56"/>
 <circle cx="${PAD + 20}" cy="${CHROME / 2}" r="6" fill="#ffbd2e"/>
 <circle cx="${PAD + 40}" cy="${CHROME / 2}" r="6" fill="#27c93f"/>
-${text('jakub@axpo: ~', { x: W / 2, y: CHROME / 2 + 4, size: 12, fill: color.muted, anchor: 'middle' })}
+${text('jakub@axpo: ~', { x: W / 2, y: CHROME / 2 + 4, size: titleSize, fill: color.muted, anchor: 'middle' })}
 <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="12" fill="none" stroke="${color.border}"/>
 
 <g class="fade">

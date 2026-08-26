@@ -6,7 +6,7 @@ name: Build profile assets
 
 on:
   schedule:
-    # After profile-3d (03:00 UTC), so both are fresh each morning.
+    # Refresh the summary numbers once each morning.
     - cron: "20 3 * * *"
   workflow_dispatch:
   push:

@@ -12,18 +12,6 @@ function token() {
   return process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
 }
 
-async function api(path) {
-  const res = await fetch(`${API}${path}`, {
-    headers: {
-      Accept: 'application/vnd.github+json',
-      'User-Agent': 'blizzeq-profile-build',
-      ...(token() ? { Authorization: `Bearer ${token()}` } : {}),
-    },
-  });
-  if (!res.ok) throw new Error(`GET ${path} → ${res.status} ${res.statusText}`);
-  return res.json();
-}
-
 async function graphql(query) {
   const res = await fetch(`${API}/graphql`, {
     method: 'POST',
@@ -55,35 +43,12 @@ const CONTRIB_QUERY = `{
   }
 }`;
 
-/**
- * Collect everything the cards need.
- * @param {string[]} repos repo names that get their own project card
- */
-export async function fetchAll(repos) {
-  const [contrib, langEntries] = await Promise.all([
-    graphql(CONTRIB_QUERY),
-    Promise.all(
-      repos.map(async (name) => {
-        try {
-          return [name, await api(`/repos/${USER}/${name}/languages`)];
-        } catch {
-          return [name, {}];
-        }
-      })
-    ),
-  ]);
+/** Collect the activity summary shown on the profile. */
+export async function fetchAll() {
+  const contrib = await graphql(CONTRIB_QUERY);
 
   const u = contrib.user;
   const cc = u.contributionsCollection;
-
-  // Aggregate language bytes across the featured repos. This is a more honest
-  // picture than a top-langs widget over every scratch repo on the account.
-  const totals = {};
-  for (const [, langs] of langEntries) {
-    for (const [lang, bytes] of Object.entries(langs)) {
-      totals[lang] = (totals[lang] || 0) + bytes;
-    }
-  }
 
   return {
     createdAt: u.createdAt,
@@ -99,8 +64,6 @@ export async function fetchAll(repos) {
     // makes it the same figure either way, and it is the honest one to publish
     // next to a public profile.
     activeRepos: cc.commitContributionsByRepository.filter((r) => !r.repository.isPrivate).length,
-    languagesByRepo: Object.fromEntries(langEntries),
-    languageTotals: totals,
   };
 }
 
