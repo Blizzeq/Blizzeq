@@ -16,7 +16,7 @@
 
 <div align="center">
 
-<picture><source media="(max-width: 700px)" srcset="assets/stats-narrow.svg?v=cef1c0c3" /><img src="assets/stats.svg?v=089fdc19" alt="Contributions, repositories touched, public repositories, and years on GitHub" /></picture>
+<picture><source media="(max-width: 700px)" srcset="assets/stats-narrow.svg?v=7b7ccaf7" /><img src="assets/stats.svg?v=30c5c883" alt="Contributions, repositories touched, public repositories, and years on GitHub" /></picture>
 
 </div>
 
